@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -7,9 +7,11 @@ import { Analytics } from "@/components/analytics";
 import { OrganizationSchema, WebsiteSchema } from "@/components/structured-data";
 import { businessInfo, siteConfig } from "@/lib/config";
 
-const inter = Inter({
+const robotoCondensed = Roboto_Condensed({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -52,13 +54,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={robotoCondensed.variable}>
       <body className="min-h-screen font-sans antialiased">
         <OrganizationSchema />
         <WebsiteSchema />
         <Analytics />
         <SiteHeader />
-        <main id="main-content" className="flex-1">
+        <main id="main-content" className="flex-1 pt-[4.5rem]">
           {children}
         </main>
         <SiteFooter />

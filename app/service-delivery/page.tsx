@@ -18,6 +18,7 @@ export default function ServiceDeliveryPage() {
       <PageHero
         title="Service Delivery"
         description="How we scope, deliver and support business technology services."
+        gradient
       />
       <section className="py-14 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

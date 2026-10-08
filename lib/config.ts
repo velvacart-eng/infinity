@@ -5,7 +5,7 @@ export const businessInfo: BusinessInfo = {
   legalName: process.env.NEXT_PUBLIC_LEGAL_NAME || "Advanced Vision Software LLC",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://infinitytechiez.com",
   address: process.env.NEXT_PUBLIC_BUSINESS_ADDRESS || "",
-  email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "",
+  email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "info@infinitytechiez.com",
   phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "",
   hours: process.env.NEXT_PUBLIC_BUSINESS_HOURS || "",
 };

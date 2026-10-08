@@ -87,7 +87,7 @@ export function ContactForm() {
         type="submit"
         size="lg"
         disabled={status === "submitting"}
-        className="rounded-full bg-brand-accent px-8 text-white transition-colors hover:bg-brand-accent-bright"
+        className="rounded-full bg-gradient-to-r from-primary to-brand-violet px-8 text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:bg-right hover:shadow-xl hover:shadow-primary/25 disabled:opacity-70"
       >
         {status === "submitting" ? "Sending..." : "Send message"}
       </Button>

@@ -18,6 +18,7 @@ export default function PrivacyPolicyPage() {
       <PageHero
         title="Privacy Policy"
         description="How we handle information in connection with our business technology services."
+        gradient
       />
       <section className="py-14 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -42,7 +43,7 @@ export default function PrivacyPolicyPage() {
               },
               {
                 title: "Contact us",
-                text: "If you have questions about this Privacy Policy, please contact us through the information on our Contact page.",
+                text: `If you have questions about this Privacy Policy, please contact us at ${businessInfo.email || "our Contact page"}.`,
               },
             ].map((item) => (
               <div key={item.title}>

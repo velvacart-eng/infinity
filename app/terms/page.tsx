@@ -18,6 +18,7 @@ export default function TermsPage() {
       <PageHero
         title="Terms of Service"
         description="The terms that apply to the use of our website and services."
+        gradient
       />
       <section className="py-14 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -43,6 +44,10 @@ export default function TermsPage() {
               {
                 title: "Changes to these terms",
                 text: "We may update these terms from time to time. Continued use of the website after changes constitutes acceptance of the updated terms.",
+              },
+              {
+                title: "Contact us",
+                text: `If you have questions about these Terms of Service, please contact us at ${businessInfo.email || "our Contact page"}.`,
               },
             ].map((item) => (
               <div key={item.title}>

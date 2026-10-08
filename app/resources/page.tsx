@@ -4,6 +4,7 @@ import { PageHero } from "@/components/page-hero";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { SectionHeading } from "@/components/section-heading";
 import { CTAButton } from "@/components/cta-button";
+import { FadeIn, StaggerContainer, StaggerItem, ScaleOnHover } from "@/components/motion-wrapper";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
@@ -54,82 +55,89 @@ export default function ResourcesPage() {
       <PageHero
         title="Resources"
         description="Practical information about business technology, IT services and digital operations."
+        gradient
       />
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Browse by Topic"
-            title="Resource categories"
-            description="Browse practical information by topic. Each category links to the related service area where you can learn more about how we help."
-          />
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <FadeIn>
+            <SectionHeading
+              eyebrow="Browse by Topic"
+              title="Resource categories"
+              description="Browse practical information by topic. Each category links to the related service area where you can learn more about how we help."
+            />
+          </FadeIn>
+          <StaggerContainer className="grid gap-5 md:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
             {categories.map((category) => (
-              <Link
-                key={category.title}
-                href={category.href}
-                className="group rounded-2xl border border-border/60 bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:bg-white hover:shadow-sm"
-              >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-accent/10 text-brand-accent transition-colors group-hover:bg-brand-accent/15">
-                  <category.icon className="h-5 w-5" aria-hidden="true" />
-                </div>
-                <h3 className="mt-5 text-h3 font-semibold text-foreground">{category.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {category.description}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand-accent transition-colors group-hover:text-brand-accent-bright">
-                  Explore
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                </span>
-              </Link>
+              <StaggerItem key={category.title}>
+                <ScaleOnHover>
+                  <Link
+                    href={category.href}
+                    className="group block h-full rounded-3xl border border-border/60 bg-card p-7 transition-all duration-300 hover:border-primary/30 hover:bg-white hover:shadow-lg hover:shadow-primary/5"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/10 to-brand-violet/10 text-primary transition-colors group-hover:from-primary group-hover:to-brand-violet group-hover:text-white">
+                      <category.icon className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <h3 className="mt-5 text-h3 font-bold text-foreground">{category.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {category.description}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-primary transition-colors group-hover:text-brand-violet">
+                      Explore
+                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                    </span>
+                  </Link>
+                </ScaleOnHover>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       <section className="border-y border-border/40 bg-brand-muted py-16 md:py-24">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Guides"
-            title="Topics we cover"
-            description="Practical guidance aligned to our services and solutions. Full guides will be published as they become available."
-          />
-          <div className="grid gap-5 md:grid-cols-2">
+          <FadeIn>
+            <SectionHeading
+              eyebrow="Guides"
+              title="Topics we cover"
+              description="Practical guidance aligned to our services and solutions. Full guides will be published as they become available."
+            />
+          </FadeIn>
+          <StaggerContainer className="grid gap-5 md:grid-cols-2" staggerDelay={0.08}>
             {upcomingTopics.map((topic) => (
-              <Link
-                key={topic.title}
-                href={topic.href}
-                className="group flex items-start justify-between rounded-2xl border border-border/60 bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:bg-white hover:shadow-sm"
-              >
-                <div>
-                  <h3 className="text-h3 font-semibold text-foreground">{topic.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{topic.description}</p>
-                </div>
-                <ArrowRight className="ml-4 mt-1 h-4 w-4 shrink-0 text-brand-accent transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </Link>
+              <StaggerItem key={topic.title}>
+                <ScaleOnHover>
+                  <Link
+                    href={topic.href}
+                    className="group flex h-full items-start justify-between rounded-3xl border border-border/60 bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:bg-white hover:shadow-lg hover:shadow-primary/5"
+                  >
+                    <div>
+                      <h3 className="text-h3 font-bold text-foreground">{topic.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{topic.description}</p>
+                    </div>
+                    <ArrowRight className="ml-4 mt-1 h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                  </Link>
+                </ScaleOnHover>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-brand-navy py-16 md:py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(37,99,235,0.18),transparent_40%)]" />
-        <div className="container relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-h2 font-bold tracking-tight text-white">Need help with a specific technology challenge?</h2>
+      <section className="relative overflow-hidden bg-brand-ink py-20 md:py-28">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(37,99,235,0.2),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.12),transparent_45%)]" />
+        <FadeIn className="container relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="text-h1 font-bold tracking-tight text-white">Need help with a specific technology challenge?</h2>
           <p className="mt-5 text-lg leading-relaxed text-slate-300">
             Our team can review your requirements and recommend a practical approach. Reach out to start the conversation.
           </p>
           <div className="mt-8">
-            <CTAButton
-              href="/contact"
-              size="lg"
-              showArrow
-              className="rounded-full bg-brand-accent-bright text-white hover:bg-brand-accent-soft hover:text-brand-accent"
-            >
+            <CTAButton href="/contact" size="lg" showArrow>
               Talk to Us
             </CTAButton>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   );

@@ -18,6 +18,7 @@ export default function RefundPolicyPage() {
       <PageHero
         title="Refund Policy"
         description="Our approach to refunds and service credits."
+        gradient
       />
       <section className="py-14 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -42,7 +43,7 @@ export default function RefundPolicyPage() {
               },
               {
                 title: "Contact us",
-                text: "To discuss a refund or billing concern, please contact us through the information on our Contact page.",
+                text: `To discuss a refund or billing concern, please contact us at ${businessInfo.email || "our Contact page"}.`,
               },
             ].map((item) => (
               <div key={item.title}>

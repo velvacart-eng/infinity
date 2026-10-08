@@ -20,12 +20,12 @@ export function ServiceStrip({ className }: ServiceStripProps) {
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className="group shrink-0 whitespace-nowrap rounded-full border border-transparent px-3 py-1.5 text-sm text-muted-foreground transition-all hover:border-border hover:bg-muted hover:text-foreground"
+              className="group shrink-0 whitespace-nowrap rounded-full border border-border/60 bg-card px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:bg-primary/5 hover:text-primary"
             >
-              <span className="text-xs text-muted-foreground/60 group-hover:text-primary/60">
+              <span className="text-xs font-bold text-primary/60 group-hover:text-primary/80">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <span className="ml-1.5">{service.title}</span>
+              <span className="ml-2">{service.title}</span>
             </Link>
           ))}
         </div>

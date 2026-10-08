@@ -1,71 +1,73 @@
-# Infinity Techiez Website Redesign Report
+# Infinity Techiez Website Redesign Report — 2026 Modernization
 
 ## Objective
-Modernize the Infinity Techiez website with a cohesive, premium visual language, updated design tokens, and polished component structures while preserving all existing content and SEO metadata.
+Deliver a fresh, lively, and professional 2026 design for the Infinity Techiez website. The focus was on better typography, vibrant color, royalty-free imagery, purposeful animation, clear page structure, and fully compliant legal/contact pages, while preserving all existing content and SEO metadata.
 
-## Design Tokens Updated
-- **Color palette**: Migrated to a modern deep-navy + bright-blue brand system using CSS custom properties in `app/globals.css`.
-  - `--brand-ink`, `--brand-navy`, `--brand-slate`, `--brand-accent`, `--brand-accent-bright`, `--brand-accent-soft`
-  - Off-white backgrounds (`--background: 210 25% 98%`) and clean surfaces (`--card: 0 0% 100%`)
-- **Typography**: Expanded display and heading scales in `tailwind.config.ts` using `clamp()` for fluid, responsive sizing.
-- **Spacing & radius**: Consistent section rhythm (`py-16 md:py-24`), rounded cards (`--radius: 0.625rem`), and pill-shaped CTAs.
-- **Effects**: Subtle shadows, border accents, and gradient divider lines for depth.
+## Design System
+- **Typography**: Replaced Inter with **Roboto Condensed** from Google Fonts across the site (`app/layout.tsx`). Display and heading scales were increased and tightened for a confident, editorial feel (`tailwind.config.ts`).
+- **Color palette**: Refreshed global tokens in `app/globals.css` with a brighter, more vibrant 2026 palette:
+  - Deep navy ink (`--brand-ink`) for dark sections
+  - Vivid blue primary (`--brand-accent`) and bright sky accent (`--brand-accent-bright`)
+  - New violet (`--brand-violet`) and cyan (`--brand-cyan`) accents for gradients and CTAs
+  - Off-white surfaces and clean card backgrounds
+- **Radius & spacing**: Larger radius (`0.75rem`), generous section rhythm, and pill-shaped CTAs.
+- **Effects**: Gradient CTAs, colored glow shadows, glassmorphism header, and radial gradient backgrounds on dark sections.
+
+## Imagery
+- Created `lib/images.ts` as a centralized, royalty-free image registry.
+- Wired in high-quality **Unsplash** photos for the hero, team, meeting, server room, cybersecurity, cloud, support, workspace, and contact sections.
+- Updated `next.config.ts` to allow remote image hostnames from Unsplash and Pexels.
+
+## Animation (Framer Motion)
+- Added `components/motion-wrapper.tsx` with reusable animation primitives:
+  - `FadeIn` — directional fade-up/down/left/right reveals on scroll
+  - `StaggerContainer` / `StaggerItem` — staggered child reveals
+  - `ScaleOnHover` — spring-scale hover micro-interaction
+- Integrated motion across the homepage, about, services, solutions, resources, service pages, and solution pages for scroll-triggered reveals and hover feedback.
+- Enhanced `components/process-timeline.tsx` with per-step motion reveals.
 
 ## Components Redesigned
-- `components/logo.tsx` — Deeper navy mark with accent color treatment.
-- `components/site-header.tsx` — Taller sticky bar with refined blur backdrop and stronger CTA.
-- `components/main-nav.tsx` — Animated underline hover indicator and active state.
-- `components/mobile-nav.tsx` — Larger trigger hit area and clearer CTA placement.
-- `components/site-footer.tsx` — Dark navy footer with clearer column layout and legal strip.
-- `components/hero-visual.tsx` — Layered SVG ecosystem visual with floating nodes and soft animations.
-- `components/service-card.tsx` — Prominent service numbers, refined hover lift, and accent icon treatment.
-- `components/section-heading.tsx` — Optional editorial eyebrow label.
-- `components/cta-button.tsx` — Pill-shaped default with increased horizontal padding.
-- `components/page-hero.tsx` — Optional icon treatment, larger typography, and subtle background depth.
-- `components/contact-form.tsx` — Larger, rounded submit button.
+- `components/logo.tsx` — Gradient icon mark with hover shine.
+- `components/site-header.tsx` — Fixed frosted-glass bar with taller height and stronger CTA.
+- `components/main-nav.tsx` — Uppercase links with gradient underline hover indicator.
+- `components/mobile-nav.tsx` — Frosted sheet, uppercase links, contact email, and gradient CTA.
+- `components/site-footer.tsx` — Proper four-column alignment with contact email, phone, address, and social icons.
+- `components/cta-button.tsx` — Colorful gradient background with animated arrow and glow shadow.
+- `components/service-card.tsx` — Gradient icon backgrounds, lift hover, larger shadows, and rounded-3xl featured card.
+- `components/section-heading.tsx` — Dot-accented eyebrow label.
+- `components/page-hero.tsx` — Gradient title option, larger gradient icon, and vibrant radial background.
+- `components/contact-form.tsx` — Gradient submit button with shadow.
+- `components/ui/input.tsx`, `components/ui/textarea.tsx`, `components/ui/select.tsx` — Rounded-xl fields with primary focus ring.
 
-## New Components Created
-- `components/service-strip.tsx` — Horizontal, swipeable service strip.
-- `components/service-ecosystem-visual.tsx` — SVG visual for the business technology section.
-- `components/process-timeline.tsx` — Visual step-by-step timeline component.
-- `components/service-hero-visual.tsx` — Hero visual for service pages.
-- `components/solution-page-template.tsx` — Shared template for all solution pages.
+## Pages Rebuilt
+- `app/page.tsx` — Full-width hero image with dark overlay and animated headline, stats strip, image-backed solution cards, motion-driven service and about sections, and vibrant final CTA.
+- `app/about/page.tsx` — Team image, animated sections, and gradient CTA.
+- `app/services/page.tsx` — Grouped service cards with category images and staggered motion.
+- `app/solutions/page.tsx` — Large image-backed solution panels with hover lift.
+- `app/solutions/*` — Refactored through `components/solution-page-template.tsx` with motion, gradient hero, and improved cards.
+- `app/services/*` — Refactored through `components/service-page-template.tsx` with motion, brighter hero, and modern sections.
+- `app/contact/page.tsx` — Hero image, icon-rich contact details, image card, and prominent email CTA to `info@infinitytechiez.com`.
+- `app/resources/page.tsx` — Motion cards, gradient hero, and dark CTA.
+- `app/privacy-policy/page.tsx`, `app/terms/page.tsx`, `app/refund-policy/page.tsx`, `app/service-delivery/page.tsx` — Gradient heroes and contact email references.
 
-## Pages Modernized
-- `app/page.tsx` — Full homepage rewrite: new hero, service strip, editorial sections, featured service card, process timeline, solution panels, and dark final CTA.
-- `app/services/page.tsx` — Accent labels, grouped card grids, and improved CTA.
-- `app/solutions/page.tsx` — Larger horizontal panels, accent icon backgrounds, and hover interactions.
-- `app/solutions/business-communication/page.tsx`, `web-cloud/page.tsx`, `infrastructure/page.tsx`, `security-continuity/page.tsx` — Refactored to use `SolutionPageTemplate`.
-- `app/about/page.tsx` — Eyebrow labels, refined cards, and prominent CTA.
-- `app/contact/page.tsx` — Refined card styling, visual hierarchy, and accent-styled form wrapper.
-- `app/resources/page.tsx` — Modern card styling, accent icon backgrounds, and dark CTA.
-- `components/service-page-template.tsx` — Two-column hero, distinct alternating sections, process timeline, and dark final CTA.
-
-## Animations & Micro-interactions
-- CSS keyframe animations added in `app/globals.css`:
-  - `animate-reveal` / `animate-reveal-delay-*` — Scroll-triggered fade-up reveals.
-  - `animate-float` / `animate-float-delayed` — Gentle floating motion on SVG nodes.
-  - `animate-pulse-soft` — Subtle pulsing glow.
-- Hover interactions:
-  - Service cards lift and shift arrow on hover.
-  - Navigation underline scales in/out with `ease-out-expo` timing.
-  - Process step bubbles fill with brand color on hover.
-- Accessibility: All animations respect `prefers-reduced-motion`.
+## Compliance & Contact
+- Default business email set to `info@infinitytechiez.com` in `lib/config.ts`.
+- Contact page, footer, mobile nav, and legal pages reference the configured email.
+- All policy pages remain reachable and render correctly in the static build.
 
 ## Verification Results
-All verification commands were run successfully:
+All verification commands passed successfully:
 
 ```bash
 npm run lint       # ✅ passed
 npm run typecheck  # ✅ passed
-npm run build      # ✅ passed
+npm run build      # ✅ passed — 27 static/SSG routes generated
 ```
 
-The production build generated 27 static/SSG routes, including all solution, service, and policy pages.
-
 ## Notes
-- The previous Tailwind JIT warning about `ease-[var(--ease-out-expo)]` was resolved by replacing the arbitrary value class with a named `.ease-out-expo` utility in `app/globals.css`.
-- IDE warnings about `@tailwind` and `@apply` rules are expected in some editors and do not affect compilation or the build.
+- The Tailwind JIT warning about `ease-[var(--ease-out-expo)]` was resolved earlier with a named `.ease-out-expo` utility in `app/globals.css`.
+- IDE warnings about `@tailwind` and `@apply` rules are editor-specific and do not affect compilation or the build.
+- All Unsplash images used are licensed under the Unsplash License for free commercial use.
 
 ## Conclusion
-The redesign successfully applies a modern, premium visual system across the entire Infinity Techiez website while keeping the codebase clean, type-safe, and fully buildable.
+The site now presents a cohesive 2026 visual language: vibrant gradients, Roboto Condensed typography, royalty-free imagery, smooth Framer Motion animations, a structured glassmorphism header, aligned footer columns, colorful CTAs, and compliant legal pages — all while remaining type-safe, lint-clean, and fully buildable.
