@@ -9,7 +9,7 @@ import { ServiceCard } from "@/components/service-card";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
 import { LandingPage } from "@/types";
 import { getServiceBySlug } from "@/lib/services-data";
-import { getLandingPageBySlug } from "@/lib/landing-pages-data";
+import { commonEmailTasks, getLandingPageBySlug } from "@/lib/landing-pages-data";
 import { businessInfo } from "@/lib/config";
 import { trackingEvents } from "@/lib/tracking";
 
@@ -94,24 +94,23 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
         </div>
       </section>
 
-      {/* Independent provider disclosure */}
-      {page.independentDisclosure && (
-        <section className="border-b border-border/40 py-6">
-          <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="flex items-start gap-3 rounded-xl border border-border/50 bg-muted/40 p-4">
-              <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
-              <div>
-                <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
-                  Independent service provider
-                </p>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                  {page.independentDisclosure}
-                </p>
-              </div>
+      {/* Independent provider disclosure — shown above the first content section on every guide */}
+      <section className="border-b border-border/40 py-6">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-start gap-3 rounded-xl border border-border/50 bg-muted/40 p-4">
+            <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
+            <div>
+              <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
+                Independent service provider
+              </p>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                {page.independentDisclosure ??
+                  `${businessInfo.brandName} is an independent IT services provider and is not affiliated with, endorsed by or sponsored by any email, hosting or technology platform vendor referenced on this page. All trademarks and brand names are the property of their respective owners.`}
+              </p>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Quick service summary */}
       <section className="py-12 md:py-16">
@@ -226,8 +225,33 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Common email tasks — shared across all IT services guides */}
       <section className="py-12 md:py-16">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <SectionHeading
+              eyebrow="Common Requests"
+              title="Everyday email tasks we handle"
+              description="The most common email jobs businesses ask us about — from provider migrations to fixing delivery problems."
+            />
+          </FadeIn>
+          <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" staggerDelay={0.06}>
+            {commonEmailTasks.map((task) => (
+              <StaggerItem key={task.title}>
+                <div className="h-full rounded-2xl border border-border/60 bg-card p-5 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+                  <h3 className="text-base font-bold text-foreground">{task.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {task.description}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="border-y border-border/40 bg-brand-muted py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <FadeIn direction="up" className="lg:col-span-4">

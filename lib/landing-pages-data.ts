@@ -7,12 +7,59 @@ const baseBreadcrumbs = (title: string, slug: string) => [
   { label: title, href: `/it-services/${slug}` },
 ];
 
+/**
+ * Common email tasks shown on every IT services guide alongside the
+ * page-specific subheadings — these are the requests businesses ask for most.
+ */
+export const commonEmailTasks = [
+  {
+    title: "Email migration between providers",
+    description:
+      "Move mailboxes between providers — for example comcast.net to Yahoo Mail, or ISP email to a business platform — keeping messages, folders and contacts intact.",
+  },
+  {
+    title: "Bulk email deletion & cleanup",
+    description:
+      "Remove large volumes of old or unwanted messages safely, free up mailbox storage and organize folders without losing anything important.",
+  },
+  {
+    title: "IMAP / POP server setup",
+    description:
+      "Configure IMAP or POP incoming mail settings correctly so email syncs reliably across webmail, desktop and mobile.",
+  },
+  {
+    title: "Email client setup",
+    description:
+      "Set up Outlook, Apple Mail, Thunderbird, mobile mail apps and webmail with the right server, port and security options.",
+  },
+  {
+    title: "Email not receiving",
+    description:
+      "Diagnose why messages are not arriving — DNS or MX record problems, full mailboxes, filters, blocked senders or server-side issues.",
+  },
+  {
+    title: "Email not sending",
+    description:
+      "Fix outgoing mail failures — SMTP settings, authentication errors, port blocks, sending limits and reputation problems.",
+  },
+  {
+    title: "Domain MX record setup",
+    description:
+      "Create or correct MX, SPF, DKIM and DMARC records so mail for your domain routes to the right servers and passes authentication checks.",
+  },
+  {
+    title: "Email forwarding setup",
+    description:
+      "Configure forwarding, aliases and catch-all addresses so messages reach the right mailbox — and review forwarding before migrations.",
+  },
+];
+
 export const landingPages: LandingPage[] = [
   {
     slug: "business-email-setup",
     image: {
-      src: "/images/email-work.jpg",
-      alt: "Professional configuring business email accounts on a laptop",
+      src: "/images/lp-email-setup.svg",
+      alt: "Illustration of business email setup — envelope, settings and account configuration",
     },
     title: "Business Email Setup & Configuration",
     eyebrow: "Business Email Services",
@@ -159,8 +206,8 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-email-migration",
     image: {
-      src: "/images/handshake.jpg",
-      alt: "Consultants agreeing on a business email migration plan",
+      src: "/images/lp-email-migration.svg",
+      alt: "Illustration of mailboxes moving from an old provider to a new platform",
     },
     title: "Business Email Migration Services",
     eyebrow: "Email Migration",
@@ -309,8 +356,8 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-email-administration",
     image: {
-      src: "/images/tech-services.jpg",
-      alt: "Technician administering business email systems",
+      src: "/images/lp-email-admin.svg",
+      alt: "Illustration of a mail admin console managing mailboxes, aliases and forwarding",
     },
     title: "Business Email Administration Services",
     eyebrow: "Email Management",
@@ -452,8 +499,8 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-email-dns",
     image: {
-      src: "/images/abstract-tech.jpg",
-      alt: "Abstract circuit board representing DNS and email routing",
+      src: "/images/lp-dns-mx.svg",
+      alt: "Illustration of MX, SPF, DKIM and DMARC DNS records for a business domain",
     },
     title: "Business Email DNS Configuration",
     eyebrow: "Email DNS",
@@ -595,8 +642,8 @@ export const landingPages: LandingPage[] = [
   {
     slug: "email-security-authentication",
     image: {
-      src: "/images/cybersecurity.jpg",
-      alt: "Cybersecurity concept for protecting business email accounts",
+      src: "/images/lp-email-security.svg",
+      alt: "Illustration of a protected mailbox with SPF, DKIM and DMARC authentication",
     },
     title: "Email Security & Authentication",
     eyebrow: "Email Security",
@@ -745,13 +792,13 @@ export const landingPages: LandingPage[] = [
   {
     slug: "comcast-business-email",
     image: {
-      src: "/images/server-room.jpg",
-      alt: "Server room infrastructure supporting ISP email services",
+      src: "/images/lp-comcast-yahoo.svg",
+      alt: "Illustration of a comcast.net mailbox moving to Yahoo Mail",
     },
     title: "Comcast Business Email Services",
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
-      "Independent assistance with Comcast Business email configuration, account administration, DNS settings and email connectivity.",
+      "Independent assistance with Comcast email configuration, the comcast.net move to Yahoo Mail, account administration, DNS settings and email connectivity.",
     intro: [
       "Many businesses receive email services bundled with their Comcast Business internet or voice packages. These email accounts work like other business email, but the configuration details, DNS settings and account management options can be unfamiliar to teams that did not set them up originally.",
       "Infinity Techiez provides independent technology services for businesses that need help with Comcast Business email. We are not Comcast, we are not affiliated with Comcast, and we are not an official Comcast service channel. Our role is to help you configure, administer and troubleshoot the email environment you already have so it works reliably for your business.",
@@ -779,8 +826,12 @@ export const landingPages: LandingPage[] = [
         description: "Coordinate domain records, MX settings and authentication when using custom domains with Comcast email.",
       },
       {
+        title: "Comcast.net to Yahoo Mail migration",
+        description: "Help with the comcast.net email move to Yahoo Mail — preparing your mailbox, accepting the transition and reconfiguring devices.",
+      },
+      {
         title: "Migration planning",
-        description: "Plan moves from Comcast email to another platform or from another provider to Comcast email.",
+        description: "Plan moves from Comcast email to Yahoo Mail or another platform, or move existing mailboxes into Comcast email.",
       },
       {
         title: "Ongoing administration",
@@ -805,6 +856,10 @@ export const landingPages: LandingPage[] = [
         description: "Users are having trouble sending, receiving or syncing Comcast email on their devices.",
       },
       {
+        title: "Comcast.net account moved to Yahoo Mail",
+        description: "A comcast.net mailbox has been invited to move — or has already moved — to Yahoo Mail and needs preparation, verification or client re-setup.",
+      },
+      {
         title: "Moving to or from Comcast email",
         description: "A business wants to migrate mailboxes to another platform or move existing mailboxes into Comcast email.",
       },
@@ -815,6 +870,20 @@ export const landingPages: LandingPage[] = [
         paragraphs: [
           "Comcast Business email is often bundled with internet or voice services. It can be configured on standard email clients and devices using IMAP, POP or SMTP settings, though the exact configuration depends on the account type and any custom domain setup.",
           "We help you gather the correct settings, configure devices, set up aliases or shared access where supported, and review authentication or DNS records that affect deliverability.",
+        ],
+      },
+      {
+        title: "Comcast.net email is moving to Yahoo Mail",
+        paragraphs: [
+          "Comcast is migrating comcast.net email accounts to Yahoo Mail in phases through 2025 and 2026. When your mailbox is invited, you keep your comcast.net address, and your messages, folders and contacts carry over — but the move changes how you sign in and how your email clients connect.",
+          "There are practical limits worth preparing for: mailboxes with more than 4,100 folders are consolidated, only the first 10,000 contacts move, and messages larger than 25 MB are not migrated automatically — they must be downloaded first. Any comcast.net forwarding rules stop once the account moves, so they need to be recreated inside Yahoo Mail.",
+        ],
+      },
+      {
+        title: "Preparing for and recovering after the move",
+        paragraphs: [
+          "Before your comcast.net account moves, it pays to clean up large attachments, shorten folder names over 240 characters, trim excess folders and contacts, and note any forwarding rules. After accepting Yahoo's terms at sign-in, desktop and mobile email clients must be updated to Yahoo's IMAP or SMTP settings to keep working.",
+          "Because the transition has attracted phishing scams, we also help verify that notices are genuine — official invitations only appear after signing in at connect.xfinity.com or login.yahoo.com, never through links demanding urgent action. We walk you through the legitimate path and get your devices working on the new platform.",
         ],
       },
       {
@@ -864,6 +933,16 @@ export const landingPages: LandingPage[] = [
           "Yes. We can help configure desktops, laptops, phones and tablets to access Comcast Business email using standard protocols and current settings.",
       },
       {
+        question: "My comcast.net email is moving to Yahoo Mail — can you help?",
+        answer:
+          "Yes. Comcast is moving comcast.net accounts to Yahoo Mail in phases through 2025–2026. We can help you prepare the mailbox (folder, contact and large-message limits), complete the transition correctly, and reconfigure Outlook, phones and other email clients to use Yahoo's servers afterward.",
+      },
+      {
+        question: "Will I keep my comcast.net email address after the move?",
+        answer:
+          "Yes — your comcast.net address, messages, folders and contacts move to Yahoo Mail. Note that forwarding rules do not carry over and must be set up again, and mailboxes above 4,100 folders or 10,000 contacts are consolidated during the move.",
+      },
+      {
         question: "Can you help migrate away from Comcast email?",
         answer:
           "Yes. We can plan and carry out migrations from Comcast email to another platform, including moving messages and updating DNS records where needed.",
@@ -884,7 +963,7 @@ export const landingPages: LandingPage[] = [
       "Tell us about your Comcast email environment — accounts, domains and devices — and we can recommend a practical configuration or administration plan.",
     seoTitle: "Comcast Business Email Services",
     seoDescription:
-      "Independent help with Comcast Business email configuration, account administration, DNS and connectivity. Not affiliated with Comcast.",
+      "Independent help with Comcast email configuration, comcast.net to Yahoo Mail migration, account administration and connectivity. Not affiliated with Comcast.",
     canonical: `${businessInfo.siteUrl}/it-services/comcast-business-email`,
     noIndex: true,
     breadcrumbs: baseBreadcrumbs("Comcast Business Email", "comcast-business-email"),
@@ -892,8 +971,8 @@ export const landingPages: LandingPage[] = [
   {
     slug: "att-business-email",
     image: {
-      src: "/images/workspace.jpg",
-      alt: "Professional workspace with business email client open",
+      src: "/images/lp-email-client.svg",
+      alt: "Illustration of AT&T email configured across desktop and mobile clients",
     },
     title: "AT&T Business Email Services",
     eyebrow: "Provider-Specific Email Services",
@@ -1039,8 +1118,8 @@ export const landingPages: LandingPage[] = [
   {
     slug: "outlook-business-email",
     image: {
-      src: "/images/cloud.jpg",
-      alt: "Cloud services supporting Microsoft email environments",
+      src: "/images/lp-email-client.svg",
+      alt: "Illustration of Outlook email setup on desktop and phone clients",
     },
     title: "Outlook Business Email Configuration",
     eyebrow: "Provider-Specific Email Services",
@@ -1186,8 +1265,8 @@ export const landingPages: LandingPage[] = [
   {
     slug: "gmail-business-email",
     image: {
-      src: "/images/contact.jpg",
-      alt: "Laptop used for email communication and account management",
+      src: "/images/lp-email-client.svg",
+      alt: "Illustration of Gmail and business email configured on multiple devices",
     },
     title: "Gmail & Business Email Configuration",
     eyebrow: "Provider-Specific Email Services",
@@ -1333,13 +1412,13 @@ export const landingPages: LandingPage[] = [
   {
     slug: "yahoo-business-email",
     image: {
-      src: "/images/team.jpg",
-      alt: "Support team collaborating on email configuration",
+      src: "/images/lp-comcast-yahoo.svg",
+      alt: "Illustration of a comcast.net mailbox moved onto the Yahoo Mail platform",
     },
     title: "Yahoo Business Email Services",
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
-      "Independent help with Yahoo business email configuration, account administration and connectivity for legitimate business scenarios.",
+      "Independent help with Yahoo business email, comcast.net accounts migrated to Yahoo Mail, configuration, administration and connectivity.",
     intro: [
       "Yahoo Mail is primarily known as a consumer email service, but some businesses use it for specific purposes or have legacy accounts that need to be managed. Yahoo also offers business email options through certain plans or partnerships. When a business relies on Yahoo email, proper configuration and access control are important.",
       "Infinity Techiez provides independent technology services for businesses that need help with Yahoo email in legitimate business contexts. We are not Yahoo, we are not affiliated with Yahoo, and we are not an official Yahoo service channel. Our role is to help you configure, administer and troubleshoot the email environment you already have.",
@@ -1367,8 +1446,12 @@ export const landingPages: LandingPage[] = [
         description: "Manage users, aliases, forwarding and mailbox settings as your team changes.",
       },
       {
+        title: "Comcast.net accounts on Yahoo Mail",
+        description: "Help for comcast.net mailboxes that have moved — or are moving — to Yahoo Mail, including sign-in, settings and client updates.",
+      },
+      {
         title: "Migration planning",
-        description: "Plan moves to or from Yahoo email with minimal disruption to daily operations.",
+        description: "Plan moves to Yahoo email — such as the comcast.net transition — or from Yahoo to another platform with minimal disruption.",
       },
       {
         title: "Connectivity troubleshooting",
@@ -1389,6 +1472,10 @@ export const landingPages: LandingPage[] = [
         description: "A business has legacy Yahoo email accounts or uses Yahoo email for specific purposes and needs proper configuration.",
       },
       {
+        title: "Moved from comcast.net to Yahoo",
+        description: "A comcast.net mailbox has migrated to Yahoo Mail and the user needs help signing in, updating email clients or recreating forwarding.",
+      },
+      {
         title: "Moving to or from Yahoo email",
         description: "A company wants to migrate mailboxes to another platform or move existing mailboxes into Yahoo email.",
       },
@@ -1403,6 +1490,13 @@ export const landingPages: LandingPage[] = [
         paragraphs: [
           "Yahoo Mail is primarily a consumer service, but some businesses use it for specific workflows or have legacy accounts that need administration. Yahoo also offers business email options through certain plans, though these are less common than dedicated business platforms.",
           "We help you configure Yahoo email correctly for legitimate business use, including client setup, access controls and migration planning when a more suitable platform is needed.",
+        ],
+      },
+      {
+        title: "Comcast.net mailboxes now run on Yahoo Mail",
+        paragraphs: [
+          "Comcast is transitioning comcast.net email accounts to the Yahoo Mail platform in phases through 2025 and 2026. After the move, you sign in at login.yahoo.com with your full comcast.net address, and your email clients must use Yahoo's IMAP or SMTP server settings instead of the old Comcast ones.",
+          "We help users settle into the new platform — configuring Outlook, Apple Mail and mobile apps with the correct Yahoo settings, restoring forwarding rules that did not carry over, locating consolidated folders, and confirming that messages, contacts and calendars arrived as expected.",
         ],
       },
       {
@@ -1452,6 +1546,11 @@ export const landingPages: LandingPage[] = [
           "Yes. We can help configure desktops, laptops, phones and tablets to access Yahoo email using standard protocols and current settings.",
       },
       {
+        question: "My comcast.net email moved to Yahoo Mail — can you help?",
+        answer:
+          "Yes. Once a comcast.net mailbox moves to Yahoo Mail, you sign in with your full comcast.net address and your email clients need Yahoo's server settings. We can update Outlook, phones and tablets, recreate forwarding rules that stopped, and sort out folders or contacts that did not move cleanly.",
+      },
+      {
         question: "Can you help migrate away from Yahoo email?",
         answer:
           "Yes. We can plan and carry out migrations from Yahoo email to another platform, including moving messages and updating DNS records where needed.",
@@ -1472,7 +1571,7 @@ export const landingPages: LandingPage[] = [
       "Share the details of your Yahoo email setup and we can suggest a sensible way to configure or administer it.",
     seoTitle: "Yahoo Business Email Services",
     seoDescription:
-      "Independent help with Yahoo business email configuration, account administration and connectivity. Not affiliated with Yahoo.",
+      "Independent help with Yahoo business email, comcast.net accounts moved to Yahoo Mail, configuration and connectivity. Not affiliated with Yahoo.",
     canonical: `${businessInfo.siteUrl}/it-services/yahoo-business-email`,
     noIndex: true,
     breadcrumbs: baseBreadcrumbs("Yahoo Business Email", "yahoo-business-email"),
@@ -1480,8 +1579,8 @@ export const landingPages: LandingPage[] = [
   {
     slug: "aol-business-email",
     image: {
-      src: "/images/meeting.jpg",
-      alt: "Business consultation about email services",
+      src: "/images/lp-email-migration.svg",
+      alt: "Illustration of legacy AOL mailboxes migrating to a modern email platform",
     },
     title: "AOL Business Email Services",
     eyebrow: "Provider-Specific Email Services",
@@ -1627,8 +1726,8 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-domain-dns",
     image: {
-      src: "/images/hero.jpg",
-      alt: "Global network representing domains and DNS infrastructure",
+      src: "/images/lp-domain-dns.svg",
+      alt: "Illustration of a domain name connected to MX, A, CNAME and TXT DNS records",
     },
     title: "Business Domain & DNS Management",
     eyebrow: "Domain & DNS Services",
@@ -1812,8 +1911,8 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-email-configuration",
     image: {
-      src: "/images/email-work.jpg",
-      alt: "Workspace where business email clients are configured",
+      src: "/images/lp-email-setup.svg",
+      alt: "Illustration of email client configuration with server and security settings",
     },
     title: "Business Email Configuration Services",
     eyebrow: "Business Email Services",

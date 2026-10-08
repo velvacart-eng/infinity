@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/refund-policy",
     "/service-delivery",
     "/data-processing",
+    "/disclaimer",
     "/email",
     "/domains",
     "/servers",

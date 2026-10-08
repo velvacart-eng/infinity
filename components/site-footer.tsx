@@ -158,7 +158,19 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left">
+        <div className="mt-14 border-t border-white/10 pt-8">
+          <p className="text-xs leading-relaxed text-slate-500">
+            {businessInfo.brandName} is an independent third-party IT services provider. We are not
+            affiliated with, endorsed by or sponsored by Comcast, AT&T, Yahoo, AOL, Microsoft,
+            Google or any other email, hosting or technology platform vendor referenced on this
+            website. All trademarks, logos and brand names are the property of their respective
+            owners and are used for identification purposes only.{" "}
+            <Link href="/disclaimer" className="text-slate-400 underline-offset-2 transition-colors hover:text-white hover:underline">
+              Read the full disclaimer
+            </Link>
+          </p>
+        </div>
+        <div className="mt-6 flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
           <p className="text-sm text-slate-500">
             &copy; {currentYear} {businessInfo.brandName}. A brand operated by{" "}
             {businessInfo.legalName}.

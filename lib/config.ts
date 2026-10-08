@@ -56,4 +56,5 @@ export const footerNav: NavItem[] = [
   { label: "Refund Policy", href: "/refund-policy" },
   { label: "Service Delivery", href: "/service-delivery" },
   { label: "Data Processing", href: "/data-processing" },
+  { label: "Disclaimer", href: "/disclaimer" },
 ];
