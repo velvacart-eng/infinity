@@ -25,9 +25,9 @@ export const siteImages = {
     src: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1600&q=80",
     alt: "Cloud computing and connected services",
   },
-  support: {
+  techServices: {
     src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=80",
-    alt: "IT support professional helping a business",
+    alt: "IT services professional helping a business",
   },
   workspace: {
     src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80",

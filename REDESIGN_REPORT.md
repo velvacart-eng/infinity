@@ -15,7 +15,7 @@ Deliver a fresh, lively, and professional 2026 design for the Infinity Techiez w
 
 ## Imagery
 - Created `lib/images.ts` as a centralized, royalty-free image registry.
-- Wired in high-quality **Unsplash** photos for the hero, team, meeting, server room, cybersecurity, cloud, support, workspace, and contact sections.
+- Wired in high-quality **Unsplash** photos for the hero, team, meeting, server room, cybersecurity, cloud, IT services, workspace, and contact sections.
 - Updated `next.config.ts` to allow remote image hostnames from Unsplash and Pexels.
 
 ## Animation (Framer Motion)
@@ -27,11 +27,11 @@ Deliver a fresh, lively, and professional 2026 design for the Infinity Techiez w
 - Enhanced `components/process-timeline.tsx` with per-step motion reveals.
 
 ## Components Redesigned
-- `components/logo.tsx` — Gradient icon mark with hover shine.
-- `components/site-header.tsx` — Fixed frosted-glass bar with taller height and stronger CTA.
+- `components/logo.tsx` — 3D-style gradient icon mark with depth shadow, inset highlight and gradient text.
+- `components/site-header.tsx` — Added a slim top bar with contact info above a fixed frosted-glass header with stronger CTA.
 - `components/main-nav.tsx` — Uppercase links with gradient underline hover indicator.
 - `components/mobile-nav.tsx` — Frosted sheet, uppercase links, contact email, and gradient CTA.
-- `components/site-footer.tsx` — Proper four-column alignment with contact email, phone, address, and social icons.
+- `components/site-footer.tsx` — Removed the services menu and rebuilt footer into brand/contact, solutions, company and legal columns with better alignment.
 - `components/cta-button.tsx` — Colorful gradient background with animated arrow and glow shadow.
 - `components/service-card.tsx` — Gradient icon backgrounds, lift hover, larger shadows, and rounded-3xl featured card.
 - `components/section-heading.tsx` — Dot-accented eyebrow label.
@@ -49,6 +49,8 @@ Deliver a fresh, lively, and professional 2026 design for the Infinity Techiez w
 - `app/contact/page.tsx` — Hero image, icon-rich contact details, image card, and prominent email CTA to `info@infinitytechiez.com`.
 - `app/resources/page.tsx` — Motion cards, gradient hero, and dark CTA.
 - `app/privacy-policy/page.tsx`, `app/terms/page.tsx`, `app/refund-policy/page.tsx`, `app/service-delivery/page.tsx` — Gradient heroes and contact email references.
+- `app/cookie-policy/page.tsx`, `app/acceptable-use/page.tsx`, `app/data-processing/page.tsx` — New compliance pages with clear content and contact references.
+- `app/email/page.tsx`, `app/domains/page.tsx`, `app/servers/page.tsx` — New long-form SEO landing pages with hero sections, features, process, FAQ and CTA inspired by skytechiez-style service pages.
 
 ## Compliance & Contact
 - Default business email set to `info@infinitytechiez.com` in `lib/config.ts`.
@@ -61,7 +63,7 @@ All verification commands passed successfully:
 ```bash
 npm run lint       # ✅ passed
 npm run typecheck  # ✅ passed
-npm run build      # ✅ passed — 27 static/SSG routes generated
+npm run build      # ✅ passed — 33 static/SSG routes generated
 ```
 
 ## Notes

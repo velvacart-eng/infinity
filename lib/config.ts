@@ -41,7 +41,10 @@ export const contactNav: NavItem = { label: "Contact", href: "/contact" };
 
 export const footerNav: NavItem[] = [
   { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Cookie Policy", href: "/cookie-policy" },
   { label: "Terms of Service", href: "/terms" },
+  { label: "Acceptable Use", href: "/acceptable-use" },
   { label: "Refund Policy", href: "/refund-policy" },
   { label: "Service Delivery", href: "/service-delivery" },
+  { label: "Data Processing", href: "/data-processing" },
 ];

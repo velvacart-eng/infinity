@@ -30,7 +30,7 @@ const solutions = [
   {
     title: "IT Infrastructure",
     description:
-      "Networks, servers, systems and connectivity configured to support your business operations.",
+      "Networks, servers, systems and connectivity configured for your business operations.",
     icon: Network,
     services: ["IT Infrastructure", "Cloud Services"],
     href: "/solutions/infrastructure",
@@ -89,7 +89,7 @@ export default function SolutionsPage() {
                       <solution.icon className="h-6 w-6" aria-hidden="true" />
                     </div>
                     <div className="relative z-10 flex-1">
-                      <h2 className="text-h2 font-bold text-foreground">{solution.title}</h2>
+                      <h2 className="text-2xl font-bold leading-tight tracking-tight text-foreground">{solution.title}</h2>
                       <p className="mt-2 max-w-2xl text-base leading-relaxed text-muted-foreground">
                         {solution.description}
                       </p>

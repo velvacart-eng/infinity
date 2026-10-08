@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { footerNav, businessInfo, mainNav } from "@/lib/config";
-import { services } from "@/lib/services-data";
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -10,13 +9,13 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-white/10 bg-brand-ink py-14 text-slate-300 md:py-20">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
           {/* Brand & contact */}
-          <div className="space-y-6 lg:col-span-4">
+          <div className="space-y-6 lg:col-span-5">
             <Logo className="text-white" />
-            <p className="max-w-sm text-sm leading-relaxed text-slate-400">
-              Modern business IT services and technology solutions for organizations
-              that need secure, scalable, and well-managed infrastructure.
+            <p className="max-w-md text-sm leading-relaxed text-slate-400">
+              Business IT services and technology solutions for organizations
+              that need secure, scalable and well-managed infrastructure.
             </p>
             <div className="space-y-3 text-sm">
               {businessInfo.email && (
@@ -48,21 +47,21 @@ export function SiteFooter() {
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-400 transition-colors hover:border-primary/40 hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-400 transition-all hover:border-primary/40 hover:bg-primary/10 hover:text-white"
               >
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
                 href="#"
                 aria-label="Twitter"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-400 transition-colors hover:border-primary/40 hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-400 transition-all hover:border-primary/40 hover:bg-primary/10 hover:text-white"
               >
                 <Twitter className="h-4 w-4" />
               </a>
               <a
                 href="#"
                 aria-label="Facebook"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-400 transition-colors hover:border-primary/40 hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-400 transition-all hover:border-primary/40 hover:bg-primary/10 hover:text-white"
               >
                 <Facebook className="h-4 w-4" />
               </a>
@@ -96,23 +95,6 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div className="lg:col-span-3">
-            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white">Services</h3>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-3">
-              {services.slice(0, 8).map((service) => (
-                <li key={service.slug}>
-                  <Link
-                    href={`/services/${service.slug}`}
-                    className="text-sm text-slate-400 transition-colors hover:text-white"
-                  >
-                    {service.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Company */}
           <div className="lg:col-span-2">
             <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white">Company</h3>
@@ -130,8 +112,8 @@ export function SiteFooter() {
           </div>
 
           {/* Legal */}
-          <div className="lg:col-span-1">
-            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white">Legal</h3>
+          <div className="lg:col-span-3">
+            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white">Legal & Compliance</h3>
             <ul className="space-y-3">
               {footerNav.map((item) => (
                 <li key={item.href}>

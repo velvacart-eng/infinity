@@ -5,7 +5,7 @@ export const services: Service[] = [
     slug: "business-email",
     title: "Business Email",
     shortDescription:
-      "Professional business email using your own domain, with setup, migration and administration support.",
+      "Professional business email using your own domain, with setup, migration and administration.",
     description:
       "Business email services that help your company communicate professionally with a domain-based address, proper authentication and manageable administration.",
     icon: "Mail",
@@ -156,20 +156,20 @@ export const services: Service[] = [
     slug: "domains-dns",
     title: "Domains & DNS",
     shortDescription:
-      "Domain registration support, DNS management and record configuration for business services.",
+      "Domain registration services, DNS management and record configuration for business services.",
     description:
       "Domain and DNS services that help businesses own, manage and configure their domain names so websites, email and applications work reliably.",
     icon: "Globe",
     seoTitle: "Domains & DNS Services",
     seoDescription:
-      "Business domain management and DNS configuration services from Infinity Techiez. Support for records, transfers, email routing and troubleshooting.",
+      "Business domain management and DNS configuration services from Infinity Techiez. Services for records, transfers, email routing and troubleshooting.",
     overview: [
       "A domain name is your business address on the internet. It is what customers type to reach your website and what appears after the @ symbol in your business email. DNS, the Domain Name System, is the invisible infrastructure that tells the internet where to send traffic for that domain, whether it is a website visitor, an email message or an application request.",
       "When DNS is configured correctly, services work smoothly. When it is wrong, websites become unreachable, email stops delivering and business applications can break. Despite how small individual DNS records look, they have an outsized impact on daily operations.",
       "We help businesses register, manage, transfer and troubleshoot domains and DNS. We do not operate as a domain registry, but we act as an administrator and advisor for your domain assets, making sure records are correct, ownership is properly controlled and changes are planned to avoid unnecessary downtime.",
     ],
     includedServices: [
-      { title: "Domain registration support", description: "Assist with selecting, registering and renewing domain names through reputable registrars." },
+      { title: "Domain registration services", description: "Assist with selecting, registering and renewing domain names through reputable registrars." },
       { title: "Domain management and renewal tracking", description: "Keep track of registration dates, renewal windows and ownership settings so domains do not expire unexpectedly." },
       { title: "DNS configuration", description: "Set up and manage DNS records that direct traffic to the right services." },
       { title: "A, AAAA, CNAME, TXT and MX record setup", description: "Configure the core record types that control websites, subdomains, verification and email routing." },
@@ -223,7 +223,7 @@ export const services: Service[] = [
       {
         step: "03",
         title: "Architect",
-        description: "Design the DNS structure needed to support websites, email, subdomains and third-party services.",
+        description: "Design the DNS structure needed to serve websites, email, subdomains and third-party services.",
       },
       {
         step: "04",
@@ -324,7 +324,7 @@ export const services: Service[] = [
       "A hosting setup aligned with your website and business requirements",
       "Proper coordination between domain, DNS and SSL",
       "Clearer administration and easier future updates",
-      "Support for migrations, changes and growth",
+      "Help with migrations, changes and growth",
       "Documentation of the hosting environment and access details",
       "Reduced risk of misconfiguration causing downtime",
     ],
@@ -435,7 +435,7 @@ export const services: Service[] = [
     shortDescription:
       "Cloud consulting, migration and ongoing management for business applications and infrastructure.",
     description:
-      "Cloud services that help businesses use cloud-based applications, storage and infrastructure in a way that supports their operations and budget.",
+      "Cloud services that help businesses use cloud-based applications, storage and infrastructure in a way that serves their operations and budget.",
     icon: "Cloud",
     seoTitle: "Business Cloud Services",
     seoDescription:
@@ -521,7 +521,7 @@ export const services: Service[] = [
     considerations: [
       { title: "Access controls", description: "User roles and permissions should be reviewed regularly as staff and responsibilities change." },
       { title: "Sharing policies", description: "External sharing, link expiration and default permissions should match your business data policies." },
-      { title: "Multi-factor authentication", description: "MFA should be enabled for administrator accounts and ideally for all users where supported." },
+      { title: "Multi-factor authentication", description: "MFA should be enabled for administrator accounts and ideally for all users where available." },
       { title: "Backup and retention", description: "Cloud data should still be backed up or retention policies understood; cloud providers are not always responsible for restoring deleted data." },
     ],
     whoFor: [
@@ -571,13 +571,13 @@ export const services: Service[] = [
     shortDescription:
       "Business infrastructure services covering servers, networks, devices and connectivity.",
     description:
-      "IT infrastructure services that design, deploy and support the servers, networks and systems businesses rely on every day.",
+      "IT infrastructure services that design, deploy and manage the servers, networks and systems businesses rely on every day.",
     icon: "Network",
     seoTitle: "Business IT Infrastructure Services",
     seoDescription:
       "IT infrastructure planning, deployment and administration for businesses. Servers, networks, devices and connectivity from Infinity Techiez.",
     overview: [
-      "IT infrastructure is the combination of servers, networks, devices and connectivity that keeps a business running. It supports applications, communication, data access and security. When infrastructure is well planned, employees can work productively, customers can reach your services and data moves reliably between systems.",
+      "IT infrastructure is the combination of servers, networks, devices and connectivity that keeps a business running. It powers applications, communication, data access and security. When infrastructure is well planned, employees can work productively, customers can reach your services and data moves reliably between systems.",
       "Infrastructure needs vary widely between businesses. A small professional services firm may need little more than reliable internet, business email, cloud storage and secure laptops. A growing organization may need multiple locations, virtual servers, VPN access, structured network equipment and integration between on-site and cloud systems. There is no universal correct answer.",
       "We help businesses plan, deploy and manage infrastructure that fits their size, workflows and budget. We do not sell hardware or internet service. Our role is to assess requirements, design an approach, configure and document systems and coordinate with vendors so the environment remains manageable.",
     ],
@@ -595,7 +595,7 @@ export const services: Service[] = [
     benefits: [
       "Infrastructure designed around actual business workflows",
       "Clear documentation of systems, access and vendors",
-      "Support for remote, hybrid and distributed teams",
+      "Options for remote, hybrid and distributed teams",
       "Easier troubleshooting and faster problem isolation",
       "A scalable foundation that can grow with the business",
       "Better coordination between internal systems and cloud services",
@@ -607,7 +607,7 @@ export const services: Service[] = [
           "A business needs network equipment, internet connectivity, servers and devices configured before employees can work productively.",
       },
       {
-        title: "Supporting remote workers",
+        title: "Enabling remote workers",
         description:
           "A company needs secure access to business systems for employees working from home or on the road.",
       },
@@ -663,7 +663,7 @@ export const services: Service[] = [
     whoFor: [
       "Businesses setting up a new office or location",
       "Companies with aging infrastructure that needs modernization",
-      "Organizations supporting remote or hybrid employees",
+      "Organizations with remote or hybrid employees",
       "Businesses experiencing network or connectivity issues",
       "Companies that need structured infrastructure documentation and management",
     ],
@@ -691,7 +691,7 @@ export const services: Service[] = [
       {
         question: "Can you help with remote business environments?",
         answer:
-          "Yes. We design and support infrastructure that lets remote teams access business systems securely and reliably.",
+          "Yes. We design and manage infrastructure that lets remote teams access business systems securely and reliably.",
       },
       {
         question: "Do you sell hardware or internet service?",
@@ -725,7 +725,7 @@ export const services: Service[] = [
       { title: "Domain security review", description: "Review domain registration, DNS and authentication records for unauthorized change risk." },
       { title: "Endpoint security considerations", description: "Assess device settings, encryption, patching and policies that protect laptops, phones and desktops." },
       { title: "Security policy guidance", description: "Help document simple, usable security policies for passwords, access and acceptable use." },
-      { title: "Security awareness support", description: "Provide guidance and materials that help employees recognize phishing and handle data safely." },
+      { title: "Security awareness guidance", description: "Provide guidance and materials that help employees recognize phishing and handle data safely." },
       { title: "Backup and recovery coordination", description: "Ensure backups are in place so the business can recover from ransomware, deletion or failure." },
     ],
     benefits: [
@@ -1001,7 +1001,7 @@ export const services: Service[] = [
       { title: "User and access management", description: "Manage accounts, permissions and access lifecycles across business services." },
       { title: "Infrastructure administration", description: "Oversee servers, networks, devices and connectivity settings on an ongoing basis." },
       { title: "Vendor coordination", description: "Act as a point of contact with technology vendors and service providers." },
-      { title: "Technology planning and budgeting support", description: "Help plan upgrades, migrations and technology spending based on business priorities." },
+      { title: "Technology planning and budgeting assistance", description: "Help plan upgrades, migrations and technology spending based on business priorities." },
       { title: "Routine maintenance scheduling", description: "Coordinate updates, patches, renewals and other recurring technology tasks." },
       { title: "System documentation", description: "Maintain clear records of systems, access, vendors and configurations." },
     ],

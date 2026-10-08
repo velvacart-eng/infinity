@@ -15,9 +15,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/resources",
     "/privacy-policy",
+    "/cookie-policy",
     "/terms",
+    "/acceptable-use",
     "/refund-policy",
     "/service-delivery",
+    "/data-processing",
+    "/email",
+    "/domains",
+    "/servers",
   ];
 
   const pages = routes.map((route) => ({

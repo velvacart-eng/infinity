@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Service Delivery",
-  description: `How ${businessInfo.brandName} delivers business IT services, from onboarding to ongoing support.`,
+  description: `How ${businessInfo.brandName} delivers business IT services, from onboarding to ongoing service management.`,
   path: "/service-delivery",
 });
 
@@ -17,7 +17,7 @@ export default function ServiceDeliveryPage() {
       </div>
       <PageHero
         title="Service Delivery"
-        description="How we scope, deliver and support business technology services."
+        description="How we scope, deliver and manage business technology services."
         gradient
       />
       <section className="py-14 md:py-20">
@@ -41,12 +41,12 @@ export default function ServiceDeliveryPage() {
                 text: "We implement the agreed solution with minimal disruption to your operations, communicating progress throughout the process.",
               },
               {
-                title: "4. Handover and support",
-                text: "After delivery, we provide documentation, training if needed and ongoing support according to the agreed service level.",
+                title: "4. Handover and service",
+                text: "After delivery, we provide documentation, training if needed and ongoing service according to the agreed service level.",
               },
               {
                 title: "Service levels",
-                text: "Support response times and availability are defined in each client agreement. Standard business hours apply unless an extended support plan is in place.",
+                text: "Service response times and availability are defined in each client agreement. Standard business hours apply unless an extended service plan is in place.",
               },
             ].map((item) => (
               <div key={item.title}>

@@ -44,7 +44,7 @@ const groups = [
     description:
       "Keep technology organized and responsive with ongoing IT administration, vendor coordination and technology management.",
     slugs: ["it-management"],
-    image: siteImages.support,
+    image: siteImages.techServices,
   },
 ];
 
@@ -134,7 +134,7 @@ export default function ServicesPage() {
             <SectionHeading
               eyebrow="Integration"
               title="How these services work together"
-              description="Our services are designed as building blocks that support each other across your business technology environment."
+              description="Our services are designed as building blocks that work together across your business technology environment."
             />
           </FadeIn>
           <StaggerContainer className="grid gap-5 md:grid-cols-2" staggerDelay={0.08}>

@@ -51,3 +51,32 @@ export interface Service {
   faqs: FaqItem[];
   relatedServices: string[];
 }
+
+export interface LandingPage {
+  slug: string;
+  title: string; // H1
+  eyebrow?: string;
+  shortDescription: string;
+  intro: string[];
+  providerName?: string;
+  independentDisclosure?: string;
+  serviceCategory?: string;
+  searchIntent?: string;
+  whatWeHelpWith: { title: string; description: string }[];
+  benefits: string[];
+  scenarios?: Scenario[];
+  detailedSections?: { title: string; paragraphs: string[] }[];
+  process?: { step: string; title: string; description: string }[];
+  technicalConsiderations?: Consideration[];
+  securityConsiderations?: Consideration[];
+  whoItIsFor: string[];
+  relatedServices: string[]; // slugs from services-data or landing-pages-data
+  faqs: FaqItem[];
+  ctaTitle: string;
+  ctaDescription: string;
+  seoTitle: string;
+  seoDescription: string;
+  canonical?: string;
+  noIndex?: boolean;
+  breadcrumbs: NavItem[];
+}

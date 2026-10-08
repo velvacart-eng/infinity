@@ -39,7 +39,7 @@ export function ServiceCard({ service, index, variant = "default", className }: 
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-brand-violet text-white shadow-lg shadow-primary/15">
             <Icon className="h-6 w-6" aria-hidden="true" />
           </div>
-          <h3 className="mt-6 text-h2 font-bold text-foreground">{service.title}</h3>
+          <h3 className="mt-6 text-2xl font-bold leading-tight tracking-tight text-foreground">{service.title}</h3>
           <p className="mt-3 text-base leading-relaxed text-muted-foreground">
             {service.shortDescription}
           </p>

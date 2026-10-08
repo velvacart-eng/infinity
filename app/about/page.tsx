@@ -68,7 +68,7 @@ export default function AboutPage() {
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 Our focus is on practical delivery, clear communication and responsible
-                technology practices. We do not promise guarantees we cannot support, and
+                technology practices. We do not promise outcomes we cannot deliver, and
                 we do not claim partnerships or certifications that are not in place.
               </p>
             </FadeIn>
@@ -119,7 +119,7 @@ export default function AboutPage() {
               <span className="text-xs font-bold uppercase tracking-[0.12em] text-primary">Technology Areas</span>
               <h2 className="mt-3 text-h2 font-bold tracking-tight">Areas of technology</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                We support businesses across the core technology areas that keep
+                We help businesses across the core technology areas that keep
                 operations running.
               </p>
             </FadeIn>

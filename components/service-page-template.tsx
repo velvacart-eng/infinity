@@ -116,7 +116,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
             <FadeIn direction="up" className="lg:col-span-4">
               <span className="text-xs font-bold uppercase tracking-[0.12em] text-primary">Outcomes</span>
               <h2 className="mt-3 text-h2 font-bold tracking-tight">Business benefits</h2>
-              <p className="mt-4 text-muted-foreground">How this service can support your operations.</p>
+              <p className="mt-4 text-muted-foreground">How this service can help your operations.</p>
             </FadeIn>
             <StaggerContainer className="grid gap-4 sm:grid-cols-2 lg:col-span-8" staggerDelay={0.08}>
               {service.benefits.map((benefit) => (

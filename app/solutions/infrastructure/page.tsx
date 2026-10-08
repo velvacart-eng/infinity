@@ -15,7 +15,7 @@ const included = [
   {
     title: "Network design and setup",
     description:
-      "Plan and configure wired and wireless networks that support your users, devices and applications.",
+      "Plan and configure wired and wireless networks that serve your users, devices and applications.",
   },
   {
     title: "Server and workstation configuration",
@@ -49,7 +49,7 @@ const scenarios = [
     description: "Your current servers, switches or workstations are outdated and affecting productivity.",
   },
   {
-    title: "Supporting remote work",
+    title: "Enabling remote work",
     description: "Your team needs secure, reliable access to business systems from outside the office.",
   },
   {
@@ -62,7 +62,7 @@ const process = [
   { step: "01", title: "Discover", description: "Learn how your business uses technology and where the gaps are." },
   { step: "02", title: "Design", description: "Plan the network, hardware and cloud integration that fits your needs." },
   { step: "03", title: "Build", description: "Install, configure and test infrastructure with minimal disruption." },
-  { step: "04", title: "Support", description: "Document the environment and provide ongoing administration." },
+  { step: "04", title: "Manage", description: "Document the environment and provide ongoing administration." },
 ];
 
 const related = services.filter((s) => s.slug === "it-infrastructure" || s.slug === "cloud-services");

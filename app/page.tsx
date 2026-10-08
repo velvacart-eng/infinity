@@ -9,6 +9,7 @@ import {
   LayoutGrid,
   Mail,
   Network,
+  Server,
   Shield,
   Users,
   Zap,
@@ -74,7 +75,7 @@ const whyUs = [
 const stats = [
   { value: "8+", label: "Core Services" },
   { value: "4", label: "Solution Areas" },
-  { value: "24/7", label: "Support Ready" },
+  { value: "Fast", label: "Response Ready" },
   { value: "100%", label: "Business Focus" },
 ];
 
@@ -82,7 +83,7 @@ const faqItems = [
   {
     question: "What industries do you work with?",
     answer:
-      "We support a wide range of businesses that need reliable IT infrastructure, email, hosting, cloud and security services. Every solution is tailored to the client's specific environment.",
+      "We serve a wide range of businesses that need reliable IT infrastructure, email, hosting, cloud and security services. Every solution is tailored to the client's specific environment.",
   },
   {
     question: "Can you manage services we already have in place?",
@@ -90,9 +91,9 @@ const faqItems = [
       "Yes. We can take over administration of existing domains, email, hosting and cloud accounts, or help you migrate to a more suitable setup.",
   },
   {
-    question: "Do you offer ongoing IT support?",
+    question: "Do you offer ongoing IT management?",
     answer:
-      "We offer managed IT administration and technology management for businesses that need regular, reliable support without maintaining an internal IT department.",
+      "We offer managed IT administration and technology management for businesses that need regular, reliable service without maintaining an internal IT department.",
   },
 ];
 
@@ -196,6 +197,33 @@ export default function HomePage() {
 
       {/* Service strip */}
       <ServiceStrip />
+
+      {/* Featured landing pages */}
+      <section className="border-b border-border/40 bg-brand-muted py-10">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              { title: "Business Email", href: "/email", icon: Mail },
+              { title: "Domain & DNS", href: "/domains", icon: Globe },
+              { title: "Servers & Infrastructure", href: "/servers", icon: Server },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md hover:shadow-primary/5"
+              >
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-brand-violet text-white shadow-md shadow-primary/15">
+                  <item.icon className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-foreground">{item.title}</p>
+                  <p className="text-xs text-muted-foreground">Dedicated service page</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Core Services */}
       <section className="py-20 md:py-28" id="services">
@@ -305,7 +333,7 @@ export default function HomePage() {
               </h2>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-slate-300">
                 We focus on practical outcomes: reliable systems, clear communication, and technology
-                that supports your business goals instead of getting in the way.
+                that advances your business goals instead of getting in the way.
               </p>
             </FadeIn>
             <StaggerContainer className="grid gap-5 sm:grid-cols-2" staggerDelay={0.1}>
