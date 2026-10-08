@@ -34,7 +34,7 @@ export function Logo({ className, dark = false, iconOnly = false }: LogoProps) {
         priority
         className={cn(
           "w-auto transition-transform duration-300 group-hover:scale-[1.02]",
-          iconOnly ? "h-10" : "h-9"
+          "h-12"
         )}
       />
     </Link>
