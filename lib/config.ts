@@ -44,6 +44,7 @@ export const mainNav: NavItem[] = [
   { label: "Solutions", href: "/solutions" },
   { label: "About", href: "/about" },
   { label: "Resources", href: "/resources" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const contactNav: NavItem = { label: "Contact", href: "/contact" };
