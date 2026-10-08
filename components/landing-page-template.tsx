@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle, Globe, Mail, ShieldAlert, ShieldCheck } from "lucide-react";
+import { ArrowRight, CheckCircle, Globe, Mail, Phone, ShieldAlert, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { SectionHeading } from "@/components/section-heading";
 import { FAQ } from "@/components/faq";
@@ -222,6 +222,59 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
               </StaggerItem>
             ))}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Pricing — shared across all IT services guides */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-primary/5 via-card to-brand-violet/5 p-8 text-center shadow-sm md:p-10">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
+                Simple, Transparent Pricing
+              </p>
+              <div className="mt-4 flex items-baseline justify-center gap-2">
+                <span className="text-sm font-bold text-muted-foreground">from</span>
+                <span className="text-5xl font-extrabold tracking-tight text-foreground md:text-6xl">
+                  $49.99
+                </span>
+              </div>
+              <p className="mx-auto mt-4 max-w-xl leading-relaxed text-muted-foreground">
+                Most one-time fixes and setups start at $49.99. Larger projects like
+                multi-mailbox migrations, DNS overhauls and ongoing administration are quoted
+                per job — you always know the cost before we begin, with no hidden fees.
+              </p>
+              <ul className="mx-auto mt-6 flex max-w-2xl flex-col items-center gap-3 text-left text-sm text-muted-foreground sm:flex-row sm:justify-center sm:gap-8">
+                {[
+                  "Free initial assessment",
+                  "Fixed quote before work begins",
+                  "No hidden fees or obligations",
+                ].map((item) => (
+                  <li key={item} className="inline-flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <CTAButton
+                  href="/contact"
+                  size="lg"
+                  showArrow
+                  conversionEvent={trackingEvents.landingPageContactClick}
+                >
+                  Talk to Us for a Quote
+                </CTAButton>
+                <Link
+                  href={`tel:${businessInfo.phone.replace(/[^+\d]/g, "")}`}
+                  className="inline-flex items-center gap-2 text-sm font-bold text-muted-foreground transition-colors hover:text-primary"
+                >
+                  <Phone className="h-4 w-4" aria-hidden="true" />
+                  Call {businessInfo.phone}
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

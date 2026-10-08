@@ -17,12 +17,25 @@ import { services } from "@/lib/services-data";
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const form = event.currentTarget;
     setStatus("submitting");
-    setTimeout(() => {
-      setStatus("success");
-    }, 800);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: new FormData(form),
+      });
+      const result = (await response.json()) as { ok: boolean; error?: string };
+      if (response.ok && result.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -53,6 +66,12 @@ export function ContactForm() {
           <Label htmlFor="phone">Phone (optional)</Label>
           <Input id="phone" name="phone" type="tel" autoComplete="tel" />
         </div>
+      </div>
+
+      {/* Honeypot — hidden from humans, catches spam bots */}
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
       <div className="space-y-2">
@@ -101,8 +120,21 @@ export function ContactForm() {
       </p>
 
       {status === "success" && (
-        <p className="text-sm text-green-700" role="status">
-          Thank you. Your message has been received and we will respond shortly.
+        <div
+          className="rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-800"
+          role="status"
+        >
+          <p className="font-semibold">Thank you!</p>
+          <p className="mt-1">
+            Your message has been sent successfully. We have received your details and you
+            will get a response from us shortly.
+          </p>
+        </div>
+      )}
+      {status === "error" && (
+        <p className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700" role="alert">
+          Sorry, your message could not be sent right now. Please try again, or reach us
+          directly by phone or email.
         </p>
       )}
     </form>
