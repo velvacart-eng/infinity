@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { businessInfo } from "@/lib/config";
 import { services } from "@/lib/services-data";
 
@@ -54,27 +54,24 @@ export async function POST(request: Request) {
       ? "Other / Not sure"
       : (services.find((s) => s.slug === serviceSlug)?.title ?? "Not specified");
 
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_TO, CONTACT_FROM } = process.env;
+  const { RESEND_API_KEY, CONTACT_TO, RESEND_FROM } = process.env;
 
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
-    console.error("[api/contact] Missing SMTP_HOST, SMTP_USER or SMTP_PASS env vars.");
+  if (!RESEND_API_KEY) {
+    console.error("[api/contact] Missing RESEND_API_KEY env var.");
     return NextResponse.json(
       { ok: false, error: "The contact form is not configured yet. Please email or call us directly." },
       { status: 500 }
     );
   }
 
-  const to = CONTACT_TO || "vijay0262@gmail.com";
-  const from = CONTACT_FROM || SMTP_USER;
-  const port = Number(SMTP_PORT) || 587;
+  const to = CONTACT_TO || businessInfo.email;
+  // Resend requires a verified domain to send from your own address.
+  // onboarding@resend.dev works for testing; set RESEND_FROM once
+  // infinitytechiez.com is verified in the Resend dashboard.
+  const from = RESEND_FROM || "onboarding@resend.dev";
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port,
-      secure: port === 465,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
-    });
+    const resend = new Resend(RESEND_API_KEY);
 
     const html = `
       <h2 style="font-family:Arial,sans-serif;color:#1e293b;">New contact form submission</h2>
@@ -106,14 +103,22 @@ export async function POST(request: Request) {
       `Sent from ${businessInfo.brandName} — ${businessInfo.siteUrl}`,
     ].join("\n");
 
-    await transporter.sendMail({
-      from: `"${businessInfo.brandName} Website" <${from}>`,
+    const { error } = await resend.emails.send({
+      from: `${businessInfo.brandName} Website <${from}>`,
       to,
       replyTo: email,
       subject: `Contact form: ${name} — ${serviceTitle}`,
       text,
       html,
     });
+
+    if (error) {
+      console.error("[api/contact] Resend rejected the email:", error);
+      return NextResponse.json(
+        { ok: false, error: "Could not send your message right now. Please try again or call us." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
