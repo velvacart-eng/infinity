@@ -1,0 +1,68 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { Analytics } from "@/components/analytics";
+import { OrganizationSchema, WebsiteSchema } from "@/components/structured-data";
+import { businessInfo, siteConfig } from "@/lib/config";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: `${siteConfig.name} — Business IT Services & Technology Solutions`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  metadataBase: new URL(businessInfo.siteUrl),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: businessInfo.siteUrl,
+    siteName: siteConfig.name,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={inter.variable}>
+      <body className="min-h-screen font-sans antialiased">
+        <OrganizationSchema />
+        <WebsiteSchema />
+        <Analytics />
+        <SiteHeader />
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
+        <SiteFooter />
+      </body>
+    </html>
+  );
+}
