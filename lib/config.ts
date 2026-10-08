@@ -33,7 +33,14 @@ export const siteConfig = {
 
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
+  {
+    label: "Services",
+    href: "/services",
+    children: [
+      { label: "All Services", href: "/services" },
+      { label: "IT Services", href: "/it-services" },
+    ],
+  },
   { label: "Solutions", href: "/solutions" },
   { label: "About", href: "/about" },
   { label: "Resources", href: "/resources" },

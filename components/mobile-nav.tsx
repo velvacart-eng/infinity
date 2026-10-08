@@ -31,19 +31,42 @@ export function MobileNav() {
         </SheetHeader>
         <nav aria-label="Mobile" className="mt-8 flex flex-1 flex-col gap-1">
           {mainNav.map((item) => {
-            const active = pathname === item.href || (item.href !== "/" && pathname.startsWith(`${item.href}/`));
+            const active =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(`${item.href}/`)) ||
+              Boolean(
+                item.children?.some(
+                  (child) => pathname === child.href || pathname.startsWith(`${child.href}/`)
+                )
+              );
             return (
-              <SheetClose asChild key={item.href}>
-                <Link
-                  href={item.href}
-                  className={cn(
-                    "rounded-lg px-4 py-3 text-base font-semibold uppercase tracking-wide text-muted-foreground transition-all hover:bg-primary/5 hover:text-primary",
-                    active && "bg-primary/10 text-primary"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              </SheetClose>
+              <div key={item.href}>
+                <SheetClose asChild>
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      "block rounded-lg px-4 py-3 text-base font-semibold uppercase tracking-wide text-muted-foreground transition-all hover:bg-primary/5 hover:text-primary",
+                      active && "bg-primary/10 text-primary"
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                </SheetClose>
+                {item.children?.map((child) => (
+                  <SheetClose asChild key={child.href}>
+                    <Link
+                      href={child.href}
+                      className={cn(
+                        "ml-4 block rounded-lg border-l border-border/60 px-4 py-2 text-sm font-medium text-muted-foreground transition-all hover:bg-primary/5 hover:text-primary",
+                        (pathname === child.href || pathname.startsWith(`${child.href}/`)) &&
+                          "border-primary text-primary"
+                      )}
+                    >
+                      {child.label}
+                    </Link>
+                  </SheetClose>
+                ))}
+              </div>
             );
           })}
         </nav>

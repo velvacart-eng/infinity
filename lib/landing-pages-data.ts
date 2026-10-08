@@ -3,7 +3,7 @@ import { businessInfo } from "@/lib/config";
 
 const baseBreadcrumbs = (title: string, slug: string) => [
   { label: "Home", href: "/" },
-  { label: "Landing Pages", href: "/it-services" },
+  { label: "IT Services", href: "/it-services" },
   { label: title, href: `/it-services/${slug}` },
 ];
 

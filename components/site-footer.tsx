@@ -121,7 +121,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link href="/it-services" className="text-sm font-medium text-slate-300 transition-colors hover:text-white">
-                  All Service Guides
+                  All IT Services
                 </Link>
               </li>
             </ul>

@@ -1,4 +1,5 @@
-import { CheckCircle } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { FAQ } from "@/components/faq";
@@ -7,6 +8,7 @@ import { ServiceHeroVisual } from "@/components/service-hero-visual";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
 import { Service } from "@/types";
 import { getServiceBySlug } from "@/lib/services-data";
+import { landingPages } from "@/lib/landing-pages-data";
 
 const categoryLabels: Record<string, string> = {
   "business-email": "Communication",
@@ -29,6 +31,10 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
     .filter((s): s is Service => Boolean(s));
 
   const category = categoryLabels[service.slug] || "Business IT";
+
+  const relatedGuides = landingPages.filter((page) =>
+    page.relatedServices.includes(service.slug)
+  );
 
   return (
     <>
@@ -276,6 +282,45 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
               {relatedServices.map((related) => (
                 <StaggerItem key={related.slug}>
                   <ServiceCard service={related} />
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+          </div>
+        </section>
+      )}
+
+      {/* Service guides */}
+      {relatedGuides.length > 0 && (
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <FadeIn>
+              <SectionHeading
+                eyebrow="IT Services"
+                title="Detailed service guides"
+                description="In-depth guides for specific needs related to this service."
+              />
+            </FadeIn>
+            <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
+              {relatedGuides.map((guide) => (
+                <StaggerItem key={guide.slug}>
+                  <Link
+                    href={`/it-services/${guide.slug}`}
+                    className="group flex h-full flex-col rounded-2xl border border-border/60 bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+                  >
+                    {guide.providerName && (
+                      <span className="text-xs font-bold uppercase tracking-wider text-primary">
+                        {guide.providerName}
+                      </span>
+                    )}
+                    <h3 className="mt-3 text-h3 font-bold text-foreground">{guide.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {guide.shortDescription}
+                    </p>
+                    <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-bold text-primary transition-colors group-hover:text-brand-violet">
+                      View guide
+                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                    </span>
+                  </Link>
                 </StaggerItem>
               ))}
             </StaggerContainer>

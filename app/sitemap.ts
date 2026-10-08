@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { businessInfo } from "@/lib/config";
 import { services } from "@/lib/services-data";
-import { landingPages } from "@/lib/it-services-pages-data";
+import { landingPages } from "@/lib/landing-pages-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [

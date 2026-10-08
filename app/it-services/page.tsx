@@ -4,13 +4,13 @@ import { PageHero } from "@/components/page-hero";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { SectionHeading } from "@/components/section-heading";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
-import { landingPages } from "@/lib/it-services-pages-data";
+import { landingPages } from "@/lib/landing-pages-data";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Service Landing Pages",
+  title: "IT Services",
   description:
-    "Dedicated landing pages for specific business email, DNS and provider-related technology services from Infinity Techiez.",
+    "Focused IT service guides for specific business needs — business email setup, migration, administration, DNS, security and provider-specific configuration.",
   path: "/it-services",
 });
 
@@ -18,11 +18,11 @@ export default function LandingIndexPage() {
   return (
     <>
       <div className="container mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ label: "Landing Pages", href: "/it-services" }]} />
+        <Breadcrumbs items={[{ label: "IT Services", href: "/it-services" }]} />
       </div>
       <PageHero
-        title="Service Landing Pages"
-        description="Focused pages for specific business technology needs, from business email setup to provider-specific configuration and administration."
+        title="IT Services"
+        description="Focused service guides for specific business technology needs — from business email setup and migration to provider-specific configuration and administration."
         gradient
       />
       <section className="py-12 md:py-16">
@@ -30,8 +30,8 @@ export default function LandingIndexPage() {
           <FadeIn>
             <SectionHeading
               eyebrow="Browse"
-              title="Available landing pages"
-              description="Each page targets a specific service area with detailed information, process, FAQ and contact options."
+              title="Service guides"
+              description="Each guide covers a specific service area in detail — what it includes, how we work, and answers to common questions."
             />
           </FadeIn>
           <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
@@ -51,7 +51,7 @@ export default function LandingIndexPage() {
                     {page.shortDescription}
                   </p>
                   <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-bold text-primary transition-colors group-hover:text-brand-violet">
-                    View page
+                    View guide
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   </span>
                 </Link>

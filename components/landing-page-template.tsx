@@ -9,7 +9,7 @@ import { ServiceCard } from "@/components/service-card";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
 import { LandingPage } from "@/types";
 import { getServiceBySlug } from "@/lib/services-data";
-import { getLandingPageBySlug } from "@/lib/it-services-pages-data";
+import { getLandingPageBySlug } from "@/lib/landing-pages-data";
 import { businessInfo } from "@/lib/config";
 import { trackingEvents } from "@/lib/tracking";
 

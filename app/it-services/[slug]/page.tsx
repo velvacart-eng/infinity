@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { landingPages, getLandingPageBySlug } from "@/lib/it-services-pages-data";
-import { LandingPageTemplate } from "@/components/it-services-page-template";
+import { landingPages, getLandingPageBySlug } from "@/lib/landing-pages-data";
+import { LandingPageTemplate } from "@/components/landing-page-template";
 import { createMetadata } from "@/lib/seo";
 
 interface LandingPageProps {
