@@ -159,7 +159,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 border-t border-white/10 pt-8">
-          <p className="text-xs leading-relaxed text-slate-500">
+          <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-slate-500">
             {businessInfo.brandName} is an independent third-party IT services provider. We are not
             affiliated with, endorsed by or sponsored by Comcast, AT&T, Yahoo, AOL, Microsoft,
             Google or any other email, hosting or technology platform vendor referenced on this
