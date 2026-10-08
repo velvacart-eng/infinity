@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { businessInfo } from "@/lib/config";
 import { services } from "@/lib/services-data";
+import { landingPages } from "@/lib/landing-pages-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
@@ -24,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/email",
     "/domains",
     "/servers",
+    "/landing",
   ];
 
   const pages = routes.map((route) => ({
@@ -40,5 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...pages, ...servicePages];
+  const landingPageRoutes = landingPages.map((page) => ({
+    url: `${businessInfo.siteUrl}/landing/${page.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  return [...pages, ...servicePages, ...landingPageRoutes];
 }
