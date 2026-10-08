@@ -15,7 +15,8 @@ export function createMetadata({
   const url = path ? `${businessInfo.siteUrl}${path}` : businessInfo.siteUrl;
 
   return {
-    title: `${title} | ${siteConfig.name}`,
+    // Brand suffix is applied by the title template in app/layout.tsx ("%s | Infinity Techiez")
+    title,
     description,
     keywords: siteConfig.keywords,
     metadataBase: new URL(businessInfo.siteUrl),

@@ -10,6 +10,8 @@ interface CTAButtonProps {
   size?: "default" | "lg";
   className?: string;
   showArrow?: boolean;
+  /** Semantic conversion event name, emitted as a data attribute for GTM/GA4 wiring. */
+  conversionEvent?: string;
 }
 
 export function CTAButton({
@@ -19,6 +21,7 @@ export function CTAButton({
   size = "default",
   className,
   showArrow = false,
+  conversionEvent,
 }: CTAButtonProps) {
   return (
     <Button
@@ -37,7 +40,7 @@ export function CTAButton({
         className
       )}
     >
-      <Link href={href}>
+      <Link href={href} data-conversion={conversionEvent}>
         <span className="relative z-10">{children}</span>
         {showArrow && (
           <ArrowRight

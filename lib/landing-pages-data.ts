@@ -146,7 +146,7 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need business email set up correctly?",
     ctaDescription:
       "Tell us about your current setup and we can recommend a practical email configuration plan for your business.",
-    seoTitle: "Business Email Setup & Configuration | Infinity Techiez",
+    seoTitle: "Business Email Setup & Configuration",
     seoDescription:
       "Professional business email setup using your own domain. Mailbox creation, DNS configuration, authentication records and client setup from Infinity Techiez.",
     canonical: `${businessInfo.siteUrl}/landing/business-email-setup`,
@@ -292,7 +292,7 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Planning a business email migration?",
     ctaDescription:
       "Tell us about your current environment and where you want to move. We can outline a practical migration plan.",
-    seoTitle: "Business Email Migration Services | Infinity Techiez",
+    seoTitle: "Business Email Migration Services",
     seoDescription:
       "Planned business email migration between providers. Mailbox inventory, DNS planning, authentication and post-migration verification from Infinity Techiez.",
     canonical: `${businessInfo.siteUrl}/landing/business-email-migration`,
@@ -431,7 +431,7 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need help managing business email?",
     ctaDescription:
       "Tell us about your current setup and we can recommend an administration plan that fits your team.",
-    seoTitle: "Business Email Administration Services | Infinity Techiez",
+    seoTitle: "Business Email Administration Services",
     seoDescription:
       "Ongoing business email administration for mailboxes, users, aliases, DNS and authentication. Independent management from Infinity Techiez.",
     canonical: `${businessInfo.siteUrl}/landing/business-email-administration`,
@@ -570,7 +570,7 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need email DNS configured correctly?",
     ctaDescription:
       "Tell us about your current setup and we can review or configure the DNS records needed for reliable business email.",
-    seoTitle: "Business Email DNS Configuration | Infinity Techiez",
+    seoTitle: "Business Email DNS Configuration",
     seoDescription:
       "MX, SPF, DKIM and DMARC record setup for business email. DNS configuration, troubleshooting and authentication from Infinity Techiez.",
     canonical: `${businessInfo.siteUrl}/landing/business-email-dns`,
@@ -716,7 +716,7 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Ready to strengthen email security?",
     ctaDescription:
       "Tell us about your current setup and we can review authentication, access and configuration to reduce common risks.",
-    seoTitle: "Email Security & Authentication Services | Infinity Techiez",
+    seoTitle: "Email Security & Authentication Services",
     seoDescription:
       "SPF, DKIM, DMARC, domain authentication and access controls for business email. Practical email security from Infinity Techiez.",
     canonical: `${businessInfo.siteUrl}/landing/email-security-authentication`,
@@ -858,10 +858,11 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need help with Comcast Business email?",
     ctaDescription:
       "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
-    seoTitle: "Comcast Business Email Services | Infinity Techiez",
+    seoTitle: "Comcast Business Email Services",
     seoDescription:
       "Independent help with Comcast Business email configuration, account administration, DNS and connectivity. Not affiliated with Comcast.",
     canonical: `${businessInfo.siteUrl}/landing/comcast-business-email`,
+    noIndex: true,
     breadcrumbs: baseBreadcrumbs("Comcast Business Email", "comcast-business-email"),
   },
   {
@@ -1000,10 +1001,11 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need help with AT&T business email?",
     ctaDescription:
       "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
-    seoTitle: "AT&T Business Email Services | Infinity Techiez",
+    seoTitle: "AT&T Business Email Services",
     seoDescription:
       "Independent help with AT&T business email configuration, mailbox setup, DNS and account administration. Not affiliated with AT&T.",
     canonical: `${businessInfo.siteUrl}/landing/att-business-email`,
+    noIndex: true,
     breadcrumbs: baseBreadcrumbs("AT&T Business Email", "att-business-email"),
   },
   {
@@ -1142,10 +1144,11 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need help with Outlook business email?",
     ctaDescription:
       "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
-    seoTitle: "Outlook Business Email Configuration | Infinity Techiez",
+    seoTitle: "Outlook Business Email Configuration",
     seoDescription:
       "Independent help with Outlook business email configuration, Microsoft 365 mailboxes, synchronization and administration. Not affiliated with Microsoft.",
     canonical: `${businessInfo.siteUrl}/landing/outlook-business-email`,
+    noIndex: true,
     breadcrumbs: baseBreadcrumbs("Outlook Business Email", "outlook-business-email"),
   },
   {
@@ -1284,10 +1287,11 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need help with Gmail or Google Workspace email?",
     ctaDescription:
       "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
-    seoTitle: "Gmail & Business Email Configuration | Infinity Techiez",
+    seoTitle: "Gmail & Business Email Configuration",
     seoDescription:
       "Independent help with Gmail and Google Workspace business email configuration, DNS, authentication and migration. Not affiliated with Google.",
     canonical: `${businessInfo.siteUrl}/landing/gmail-business-email`,
+    noIndex: true,
     breadcrumbs: baseBreadcrumbs("Gmail Business Email", "gmail-business-email"),
   },
   {
@@ -1426,10 +1430,11 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need help with Yahoo business email?",
     ctaDescription:
       "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
-    seoTitle: "Yahoo Business Email Services | Infinity Techiez",
+    seoTitle: "Yahoo Business Email Services",
     seoDescription:
       "Independent help with Yahoo business email configuration, account administration and connectivity. Not affiliated with Yahoo.",
     canonical: `${businessInfo.siteUrl}/landing/yahoo-business-email`,
+    noIndex: true,
     breadcrumbs: baseBreadcrumbs("Yahoo Business Email", "yahoo-business-email"),
   },
   {
@@ -1568,10 +1573,11 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need help with AOL business email?",
     ctaDescription:
       "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
-    seoTitle: "AOL Business Email Services | Infinity Techiez",
+    seoTitle: "AOL Business Email Services",
     seoDescription:
       "Independent help with AOL email configuration, account administration and connectivity. Not affiliated with AOL.",
     canonical: `${businessInfo.siteUrl}/landing/aol-business-email`,
+    noIndex: true,
     breadcrumbs: baseBreadcrumbs("AOL Business Email", "aol-business-email"),
   },
   {
@@ -1749,7 +1755,7 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need help with domain or DNS management?",
     ctaDescription:
       "Tell us about your domains and the services that depend on them, and we can recommend a practical approach to configuration or cleanup.",
-    seoTitle: "Business Domain & DNS Management | Infinity Techiez",
+    seoTitle: "Business Domain & DNS Management",
     seoDescription:
       "Business domain and DNS management: record configuration, email dependencies, subdomains, transfers and continuity planning by Infinity Techiez.",
     canonical: `${businessInfo.siteUrl}/landing/business-domain-dns`,
@@ -1930,7 +1936,7 @@ export const landingPages: LandingPage[] = [
     ctaTitle: "Need business email configured correctly?",
     ctaDescription:
       "Tell us about your platform, domain and devices, and we can recommend a practical configuration approach for your environment.",
-    seoTitle: "Business Email Configuration Services | Infinity Techiez",
+    seoTitle: "Business Email Configuration Services",
     seoDescription:
       "Business email configuration covering mailboxes, DNS, MX, SMTP, SPF, DKIM, DMARC and client setup on desktop and mobile by Infinity Techiez.",
     canonical: `${businessInfo.siteUrl}/landing/business-email-configuration`,

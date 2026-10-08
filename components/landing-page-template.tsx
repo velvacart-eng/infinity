@@ -10,6 +10,7 @@ import { LandingPage } from "@/types";
 import { getServiceBySlug } from "@/lib/services-data";
 import { getLandingPageBySlug } from "@/lib/landing-pages-data";
 import { businessInfo } from "@/lib/config";
+import { trackingEvents } from "@/lib/tracking";
 
 interface LandingPageTemplateProps {
   page: LandingPage;
@@ -40,7 +41,10 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-border/40 bg-background py-20 md:py-28">
+      <section
+        className="relative overflow-hidden border-b border-border/40 bg-background py-20 md:py-28"
+        data-landing-page={page.slug}
+      >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.12),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.08),transparent_50%)]" />
         <div className="container relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -64,7 +68,12 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
               {page.shortDescription}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <CTAButton href="/contact" size="lg" showArrow>
+              <CTAButton
+                href="/contact"
+                size="lg"
+                showArrow
+                conversionEvent={trackingEvents.landingPageContactClick}
+              >
                 Talk to Us
               </CTAButton>
               {primaryService && (
@@ -458,19 +467,28 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
       )}
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-brand-ink py-20 md:py-28">
+      <section
+        className="relative overflow-hidden bg-brand-ink py-20 md:py-28"
+        data-landing-page={page.slug}
+      >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(37,99,235,0.2),transparent_45%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.12),transparent_45%)]" />
         <FadeIn className="container relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-h1 font-bold tracking-tight text-white">{page.ctaTitle}</h2>
           <p className="mt-5 text-lg leading-relaxed text-slate-300">{page.ctaDescription}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <CTAButton href="/contact" size="lg" showArrow>
+            <CTAButton
+              href="/contact"
+              size="lg"
+              showArrow
+              conversionEvent={trackingEvents.landingPageContactClick}
+            >
               Talk to Us
             </CTAButton>
             {primaryService ? (
               <Link
                 href={`/services/${primaryService.slug}`}
+                data-conversion={trackingEvents.contactCtaClick}
                 className="group inline-flex items-center gap-1.5 text-sm font-bold text-slate-300 transition-colors hover:text-white"
               >
                 View {primaryService.title} Services

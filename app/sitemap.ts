@@ -42,12 +42,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const landingPageRoutes = landingPages.map((page) => ({
-    url: `${businessInfo.siteUrl}/landing/${page.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
-  }));
+  const landingPageRoutes = landingPages
+    .filter((page) => !page.noIndex)
+    .map((page) => ({
+      url: `${businessInfo.siteUrl}/landing/${page.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    }));
 
   return [...pages, ...servicePages, ...landingPageRoutes];
 }
