@@ -7,90 +7,67 @@ export function SiteFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t bg-brand-muted py-10 md:py-12">
+    <footer className="border-t border-white/10 bg-brand-ink py-14 text-slate-300 md:py-16">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
-          <div className="space-y-3 lg:col-span-2">
-            <Logo />
-            <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
+          <div className="space-y-4 lg:col-span-3">
+            <Logo className="text-white" />
+            <p className="max-w-xs text-sm leading-relaxed text-slate-400">
               Business IT services and technology solutions for organizations
-              that need dependable infrastructure.
+              that need dependable, well-managed infrastructure.
             </p>
           </div>
 
-          <div>
-            <h3 className="mb-3 text-sm font-semibold text-foreground">Solutions</h3>
-            <ul className="space-y-2">
+          <div className="lg:col-span-3">
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">Solutions</h3>
+            <ul className="space-y-2.5">
               <li>
-                <Link
-                  href="/solutions/business-communication"
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
+                <Link href="/solutions/business-communication" className="text-sm text-slate-400 transition-colors hover:text-white">
                   Business Communication
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/solutions/web-cloud"
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
+                <Link href="/solutions/web-cloud" className="text-sm text-slate-400 transition-colors hover:text-white">
                   Web & Cloud
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/solutions/infrastructure"
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
+                <Link href="/solutions/infrastructure" className="text-sm text-slate-400 transition-colors hover:text-white">
                   IT Infrastructure
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/solutions/security-continuity"
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
+                <Link href="/solutions/security-continuity" className="text-sm text-slate-400 transition-colors hover:text-white">
                   Security & Continuity
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="mb-3 text-sm font-semibold text-foreground">Services</h3>
-            <ul className="space-y-2">
-              {services.slice(0, 5).map((service) => (
+          <div className="lg:col-span-3">
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">Services</h3>
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-2.5">
+              {services.slice(0, 8).map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-sm text-slate-400 transition-colors hover:text-white"
                   >
                     {service.title}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/services"
-                  className="text-sm font-medium text-brand-accent-dark transition-colors hover:text-brand-accent"
-                >
-                  All services
-                </Link>
-              </li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="mb-3 text-sm font-semibold text-foreground">Company</h3>
-            <ul className="space-y-2">
+          <div className="lg:col-span-2">
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">Company</h3>
+            <ul className="space-y-2.5">
               {mainNav
                 .filter((item) => item.href !== "/")
                 .map((item) => (
                   <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                    >
+                    <Link href={item.href} className="text-sm text-slate-400 transition-colors hover:text-white">
                       {item.label}
                     </Link>
                   </li>
@@ -98,15 +75,12 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="mb-3 text-sm font-semibold text-foreground">Legal</h3>
-            <ul className="space-y-2">
+          <div className="lg:col-span-1">
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">Legal</h3>
+            <ul className="space-y-2.5">
               {footerNav.map((item) => (
                 <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
+                  <Link href={item.href} className="text-sm text-slate-400 transition-colors hover:text-white">
                     {item.label}
                   </Link>
                 </li>
@@ -115,11 +89,12 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t pt-6 text-center sm:flex-row sm:text-left">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-center sm:flex-row sm:text-left">
+          <p className="text-sm text-slate-500">
             &copy; {currentYear} {businessInfo.brandName}. A brand operated by{" "}
             {businessInfo.legalName}.
           </p>
+          <p className="text-sm text-slate-500">Business IT services & technology solutions.</p>
         </div>
       </div>
     </footer>

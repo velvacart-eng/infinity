@@ -21,15 +21,15 @@ export function MobileNav() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu">
+        <Button variant="ghost" size="icon" className="h-9 w-9 md:hidden" aria-label="Open menu">
           <Menu className="h-5 w-5" />
         </Button>
       </SheetTrigger>
-      <SheetContent className="flex w-[280px] flex-col">
+      <SheetContent className="flex w-[300px] flex-col border-l border-border/60">
         <SheetHeader>
           <SheetTitle className="text-left">Menu</SheetTitle>
         </SheetHeader>
-        <nav aria-label="Mobile" className="mt-6 flex flex-1 flex-col gap-1">
+        <nav aria-label="Mobile" className="mt-8 flex flex-1 flex-col gap-1">
           {mainNav.map((item) => {
             const active = pathname === item.href || (item.href !== "/" && pathname.startsWith(`${item.href}/`));
             return (

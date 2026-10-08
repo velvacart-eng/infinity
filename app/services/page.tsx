@@ -78,14 +78,17 @@ export default function ServicesPage() {
       />
       <section className="py-16 md:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
+          <div className="space-y-20">
             {groups.map((group) => (
               <div key={group.title}>
-                <div className="mb-6 max-w-3xl">
-                  <h2 className="text-h2 font-semibold tracking-tight">
+                <div className="mb-8 max-w-3xl">
+                  <span className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-accent">
+                    Service Category
+                  </span>
+                  <h2 className="mt-3 text-h2 font-bold tracking-tight">
                     {group.title}
                   </h2>
-                  <p className="mt-2 text-muted-foreground">{group.description}</p>
+                  <p className="mt-3 text-lg text-muted-foreground">{group.description}</p>
                 </div>
                 <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   {group.slugs
@@ -101,19 +104,20 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="border-y bg-brand-muted py-16 md:py-24">
+      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-24">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
+            eyebrow="Integration"
             title="How these services work together"
             description="Our services are designed as building blocks that support each other across your business technology environment."
           />
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2">
             {howServicesWorkTogether.map((item) => (
-              <div key={item.title} className="flex items-start gap-3 rounded-lg border bg-card p-5">
-                <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-brand-accent-dark" aria-hidden="true" />
+              <div key={item.title} className="flex items-start gap-4 rounded-2xl border border-border/60 bg-card p-6">
+                <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-brand-accent" aria-hidden="true" />
                 <div>
-                  <h3 className="text-h3 font-semibold">{item.title}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+                  <h3 className="text-h3 font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -121,16 +125,22 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-h2 font-semibold tracking-tight">
+      <section className="relative overflow-hidden bg-brand-navy py-16 md:py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(37,99,235,0.18),transparent_40%)]" />
+        <div className="container relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="text-h2 font-bold tracking-tight text-white">
             Need help choosing the right service?
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-5 text-lg leading-relaxed text-slate-300">
             Tell us about your business and we can recommend a practical starting point.
           </p>
           <div className="mt-8">
-            <CTAButton href="/contact" size="lg" showArrow>
+            <CTAButton
+              href="/contact"
+              size="lg"
+              showArrow
+              className="rounded-full bg-brand-accent-bright text-white hover:bg-brand-accent-soft hover:text-brand-accent"
+            >
               Talk to Us
             </CTAButton>
           </div>

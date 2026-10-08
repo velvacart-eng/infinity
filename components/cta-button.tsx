@@ -26,7 +26,8 @@ export function CTAButton({
       variant={variant}
       size={size}
       className={cn(
-        "group inline-flex items-center gap-2 transition-colors",
+        "group inline-flex items-center gap-2 rounded-full px-6 transition-colors",
+        size === "lg" && "px-8",
         className
       )}
     >

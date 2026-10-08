@@ -83,7 +83,12 @@ export function ContactForm() {
         />
       </div>
 
-      <Button type="submit" disabled={status === "submitting"}>
+      <Button
+        type="submit"
+        size="lg"
+        disabled={status === "submitting"}
+        className="rounded-full bg-brand-accent px-8 text-white transition-colors hover:bg-brand-accent-bright"
+      >
         {status === "submitting" ? "Sending..." : "Send message"}
       </Button>
 

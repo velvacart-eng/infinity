@@ -20,44 +20,45 @@ export default function ContactPage() {
         title="Tell Us About Your Technology Requirement"
         description="Use the form to request information about any of our services. We will review your message and follow up with next steps."
       />
-      <section className="py-14 md:py-20">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-5 lg:gap-12">
-            <div className="lg:col-span-2">
-              <h2 className="text-h3 font-semibold tracking-tight">Contact information</h2>
-              <p className="mt-3 text-muted-foreground">
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <span className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-accent">Get in Touch</span>
+              <h2 className="mt-3 text-h2 font-bold tracking-tight">Contact information</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
                 We will use the information you provide only to respond to your
                 inquiry.
               </p>
-              <div className="mt-6 space-y-4 text-sm text-muted-foreground">
+              <div className="mt-8 space-y-5 text-sm text-muted-foreground">
                 {businessInfo.email && (
-                  <p>
-                    <strong className="block text-foreground">Email</strong>
-                    {businessInfo.email}
+                  <p className="rounded-xl border border-border/60 bg-card p-4">
+                    <strong className="block text-xs font-semibold uppercase tracking-wide text-foreground">Email</strong>
+                    <span className="mt-1 block">{businessInfo.email}</span>
                   </p>
                 )}
                 {businessInfo.phone && (
-                  <p>
-                    <strong className="block text-foreground">Phone</strong>
-                    {businessInfo.phone}
+                  <p className="rounded-xl border border-border/60 bg-card p-4">
+                    <strong className="block text-xs font-semibold uppercase tracking-wide text-foreground">Phone</strong>
+                    <span className="mt-1 block">{businessInfo.phone}</span>
                   </p>
                 )}
                 {businessInfo.address && (
-                  <p>
-                    <strong className="block text-foreground">Address</strong>
-                    {businessInfo.address}
+                  <p className="rounded-xl border border-border/60 bg-card p-4">
+                    <strong className="block text-xs font-semibold uppercase tracking-wide text-foreground">Address</strong>
+                    <span className="mt-1 block">{businessInfo.address}</span>
                   </p>
                 )}
                 {businessInfo.hours && (
-                  <p>
-                    <strong className="block text-foreground">Hours</strong>
-                    {businessInfo.hours}
+                  <p className="rounded-xl border border-border/60 bg-card p-4">
+                    <strong className="block text-xs font-semibold uppercase tracking-wide text-foreground">Hours</strong>
+                    <span className="mt-1 block">{businessInfo.hours}</span>
                   </p>
                 )}
               </div>
 
-              <div className="mt-10 space-y-6">
-                <div>
+              <div className="mt-10 grid gap-5">
+                <div className="rounded-xl border border-border/60 bg-card p-5">
                   <h3 className="text-h3 font-semibold">What happens next</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     After you submit the form, we review your requirements and follow up
@@ -65,7 +66,7 @@ export default function ContactPage() {
                     information with third parties for marketing purposes.
                   </p>
                 </div>
-                <div>
+                <div className="rounded-xl border border-border/60 bg-card p-5">
                   <h3 className="text-h3 font-semibold">What to include</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     A brief description of your business, the technology challenge or
@@ -73,7 +74,7 @@ export default function ContactPage() {
                     respond with a more useful answer.
                   </p>
                 </div>
-                <div>
+                <div className="rounded-xl border border-border/60 bg-card p-5">
                   <h3 className="text-h3 font-semibold">Response expectations</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     We aim to respond to business inquiries promptly during standard
@@ -83,7 +84,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg border bg-card p-5 sm:p-8 lg:col-span-3">
+            <div className="rounded-2xl border border-border/60 bg-card p-6 shadow-sm sm:p-10 lg:col-span-8">
               <ContactForm />
             </div>
           </div>

@@ -10,18 +10,18 @@ export function Logo({ className }: LogoProps) {
     <Link
       href="/"
       className={cn(
-        "inline-flex items-center gap-2 text-[1.05rem] font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80",
+        "inline-flex items-center gap-2.5 text-lg font-semibold tracking-tight text-foreground transition-opacity hover:opacity-85",
         className
       )}
       aria-label="Infinity Techiez home"
     >
       <span
-        className="flex h-7 w-7 items-center justify-center rounded border border-current/15 bg-brand-navy text-white"
+        className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-navy text-white shadow-sm"
         aria-hidden="true"
       >
         <svg
-          width="16"
-          height="16"
+          width="18"
+          height="18"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"

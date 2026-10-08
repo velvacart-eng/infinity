@@ -66,33 +66,33 @@ export const services: Service[] = [
     process: [
       {
         step: "01",
-        title: "Understand",
-        description: "We learn how your business uses email, how many accounts you need, what devices users prefer and whether a migration is involved.",
+        title: "Audit",
+        description: "Review existing email accounts, domains, DNS records and authentication to identify gaps, migration needs and deliverability issues.",
       },
       {
         step: "02",
-        title: "Review",
-        description: "We assess your current domain, DNS and mailbox setup to identify authentication gaps, missing records or migration risks.",
+        title: "Design",
+        description: "Plan the mailbox structure, aliases, distribution groups, security settings and migration approach that fit your team.",
       },
       {
         step: "03",
-        title: "Plan",
-        description: "We identify the right email platform, mailbox structure, DNS records, migration schedule and security settings.",
+        title: "Provision",
+        description: "Create accounts, configure DNS records and prepare the new email environment before users switch over.",
       },
       {
         step: "04",
-        title: "Configure",
-        description: "We set up mailboxes, configure DNS records, add authentication and connect mail clients and devices.",
+        title: "Migrate",
+        description: "Move messages, calendars and contacts from the previous provider with timing that minimizes disruption.",
       },
       {
         step: "05",
-        title: "Migrate",
-        description: "When needed, we move messages, calendars and contacts from the old environment and verify that nothing important is missing.",
+        title: "Authenticate",
+        description: "Configure and test SPF, DKIM and DMARC records so legitimate messages are trusted and spoofing is harder.",
       },
       {
         step: "06",
-        title: "Verify",
-        description: "We test deliverability, confirm authentication records are working and document the setup for future administration.",
+        title: "Hand over",
+        description: "Document the setup, train administrators if needed and establish a clear process for account changes.",
       },
     ],
     considerations: [
@@ -212,33 +212,33 @@ export const services: Service[] = [
     process: [
       {
         step: "01",
-        title: "Understand",
-        description: "We clarify what the domain and DNS need to support, including websites, email, applications and third-party services.",
+        title: "Discover",
+        description: "Identify every domain, registrar, DNS provider and service that depends on the domain configuration.",
       },
       {
         step: "02",
-        title: "Review",
-        description: "We examine current domain registration, DNS records, ownership details and provider access.",
+        title: "Inspect",
+        description: "Review current DNS records, ownership details, expiration dates and administrative access.",
       },
       {
         step: "03",
-        title: "Plan",
-        description: "We identify the correct records, providers, timing and rollback options before making changes.",
+        title: "Architect",
+        description: "Design the DNS structure needed to support websites, email, subdomains and third-party services.",
       },
       {
         step: "04",
-        title: "Configure",
-        description: "We add, update or migrate records and verify that they point to the intended services.",
+        title: "Update",
+        description: "Make record changes with careful timing that respects propagation windows and minimizes service interruption.",
       },
       {
         step: "05",
-        title: "Verify",
-        description: "We test websites, email and applications to confirm everything resolves correctly after changes.",
+        title: "Validate",
+        description: "Confirm that websites, email and applications resolve correctly from multiple locations and devices.",
       },
       {
         step: "06",
         title: "Document",
-        description: "We record the new configuration, provider details and renewal dates for future reference.",
+        description: "Record the final configuration, provider relationships and renewal schedule for future reference.",
       },
     ],
     considerations: [
@@ -353,33 +353,33 @@ export const services: Service[] = [
     process: [
       {
         step: "01",
-        title: "Understand",
-        description: "We review your website, traffic expectations, technical requirements and any constraints.",
+        title: "Scope",
+        description: "Clarify what the website does, expected traffic, compliance needs and any technical constraints.",
       },
       {
         step: "02",
-        title: "Review",
-        description: "We assess your current domain, DNS and any existing hosting setup for compatibility.",
+        title: "Audit platform",
+        description: "Review the current hosting, domain, DNS and content management setup for compatibility and risks.",
       },
       {
         step: "03",
-        title: "Plan",
-        description: "We identify the hosting option, migration approach and rollback plan if needed.",
+        title: "Select stack",
+        description: "Choose the hosting environment, database, caching, SSL approach and backup method that fit the site.",
       },
       {
         step: "04",
         title: "Configure",
-        description: "We set up hosting, connect DNS, configure SSL and prepare the deployment environment.",
+        description: "Set up the hosting environment, connect the domain, configure SSL and prepare the deployment pipeline.",
       },
       {
         step: "05",
         title: "Deploy",
-        description: "We publish or migrate the site and verify that pages, forms and functions work.",
+        description: "Publish the site or migrate from the existing host, then verify pages, forms, functions and performance.",
       },
       {
         step: "06",
-        title: "Verify",
-        description: "We test HTTPS, performance and backups and document the final configuration.",
+        title: "Maintain",
+        description: "Schedule updates, monitor backups and keep documentation current so the site remains secure and reliable.",
       },
     ],
     considerations: [
@@ -489,33 +489,33 @@ export const services: Service[] = [
     process: [
       {
         step: "01",
-        title: "Understand",
-        description: "We learn about your business processes, current systems and goals for moving to or improving cloud services.",
+        title: "Inventory",
+        description: "Catalog existing systems, data, users and workflows to understand what can move to the cloud and what should stay.",
       },
       {
         step: "02",
-        title: "Review",
-        description: "We assess current systems, data volumes, user needs and any constraints such as compliance or bandwidth.",
+        title: "Evaluate",
+        description: "Compare cloud platforms and services against business needs, budget, security requirements and integration constraints.",
       },
       {
         step: "03",
-        title: "Plan",
-        description: "We identify suitable cloud services, a migration sequence, training needs and a rollback approach.",
+        title: "Architect",
+        description: "Design the organizational structure, accounts, permissions, storage layout and integration points for the chosen services.",
       },
       {
         step: "04",
-        title: "Configure",
-        description: "We set up accounts, organizational structure, users and security settings in the chosen cloud services.",
+        title: "Onboard",
+        description: "Configure the cloud environment, create users, apply security settings and prepare data for migration.",
       },
       {
         step: "05",
         title: "Migrate",
-        description: "We move data, mailboxes or applications according to the plan and verify completeness.",
+        description: "Move data, mailboxes and applications in planned phases, validating functionality at each stage.",
       },
       {
         step: "06",
-        title: "Verify",
-        description: "We confirm functionality, review access and costs and document the new environment.",
+        title: "Govern",
+        description: "Establish ongoing reviews of access, usage, costs and security so the cloud environment stays aligned with the business.",
       },
     ],
     considerations: [
@@ -625,33 +625,33 @@ export const services: Service[] = [
     process: [
       {
         step: "01",
-        title: "Understand",
-        description: "We learn how your business operates, where employees work and what applications and data they rely on.",
+        title: "Survey",
+        description: "Understand where employees work, what applications they use and how data moves through the business.",
       },
       {
         step: "02",
-        title: "Review",
-        description: "We assess existing servers, networks, devices, connectivity and documentation.",
+        title: "Assess",
+        description: "Review servers, network equipment, devices, internet connectivity, remote access and existing documentation.",
       },
       {
         step: "03",
-        title: "Plan",
-        description: "We design an infrastructure approach that fits your needs, budget and growth plans.",
+        title: "Design",
+        description: "Plan an infrastructure approach that balances performance, reliability, security and budget.",
       },
       {
         step: "04",
-        title: "Implement",
-        description: "We configure, deploy and integrate the agreed infrastructure with minimal disruption.",
+        title: "Build",
+        description: "Configure servers, network equipment, devices and remote access according to the agreed design.",
       },
       {
         step: "05",
-        title: "Verify",
-        description: "We test performance, confirm access for users and document the environment.",
+        title: "Integrate",
+        description: "Connect on-site systems with cloud services, applications and any third-party providers.",
       },
       {
         step: "06",
         title: "Maintain",
-        description: "We schedule updates, review changes and help keep the infrastructure aligned with business needs.",
+        description: "Schedule updates, monitor performance, plan lifecycle refreshes and keep infrastructure documentation current.",
       },
     ],
     considerations: [
@@ -761,33 +761,33 @@ export const services: Service[] = [
     process: [
       {
         step: "01",
-        title: "Understand",
-        description: "We learn what data, systems and accounts are most important to your business and what risks worry you.",
+        title: "Identify assets",
+        description: "Determine which systems, accounts, data and third-party services are most important to the business.",
       },
       {
         step: "02",
-        title: "Review",
-        description: "We assess current access controls, authentication, email security, domain settings and device posture.",
+        title: "Assess exposure",
+        description: "Review access controls, authentication, email security, domain settings and device posture for weak points.",
       },
       {
         step: "03",
-        title: "Plan",
-        description: "We prioritize practical controls that match your risk level, budget and operational constraints.",
+        title: "Prioritize",
+        description: "Focus first on the controls that reduce the most risk for the specific environment and budget.",
       },
       {
         step: "04",
-        title: "Configure",
-        description: "We implement security settings, access controls, authentication and email protections.",
+        title: "Harden",
+        description: "Implement multi-factor authentication, access limits, email protections, device settings and other agreed controls.",
       },
       {
         step: "05",
-        title: "Verify",
-        description: "We confirm controls are working, review access and test authentication where possible.",
+        title: "Validate",
+        description: "Test that controls work as intended, review access lists and confirm configurations cannot be easily bypassed.",
       },
       {
         step: "06",
-        title: "Document",
-        description: "We record the security configuration, policies and recommended habits for ongoing reference.",
+        title: "Sustain",
+        description: "Schedule regular reviews, updates and awareness activities so security does not degrade over time.",
       },
     ],
     considerations: [
@@ -902,33 +902,33 @@ export const services: Service[] = [
     process: [
       {
         step: "01",
-        title: "Understand",
-        description: "We identify the data, applications and systems that are critical to your business operations.",
+        title: "Map critical data",
+        description: "Identify the applications, files, databases and systems the business cannot operate without.",
       },
       {
         step: "02",
-        title: "Review",
-        description: "We assess current backup tools, schedules, retention, storage locations and recovery history.",
+        title: "Evaluate coverage",
+        description: "Review existing backup tools, schedules, retention periods, storage locations and any recovery history.",
       },
       {
         step: "03",
-        title: "Plan",
-        description: "We design a backup and recovery approach that fits your risk tolerance, budget and recovery needs.",
+        title: "Design policy",
+        description: "Define backup frequency, retention rules, storage locations, access controls and recovery priorities.",
       },
       {
         step: "04",
-        title: "Configure",
-        description: "We configure backup jobs, storage, access controls and monitoring based on the agreed plan.",
+        title: "Configure jobs",
+        description: "Set up backup jobs, alerting, encryption and access restrictions according to the agreed policy.",
       },
       {
         step: "05",
-        title: "Test",
-        description: "We perform recovery tests to confirm that backups are usable and that procedures are clear.",
+        title: "Test restore",
+        description: "Periodically perform recovery tests to confirm that backups are complete, usable and restorable within acceptable timeframes.",
       },
       {
         step: "06",
-        title: "Document",
-        description: "We document the backup configuration, recovery procedures and responsibilities for ongoing reference.",
+        title: "Document runbook",
+        description: "Write clear recovery steps, contact lists and responsibilities so the business knows what to do when recovery is needed.",
       },
     ],
     considerations: [
@@ -1038,33 +1038,33 @@ export const services: Service[] = [
     process: [
       {
         step: "01",
-        title: "Understand",
-        description: "We learn about your environment, providers, users and the administration work that needs consistent ownership.",
+        title: "Orient",
+        description: "Learn the environment, providers, users and the administration work that needs consistent ownership.",
       },
       {
         step: "02",
-        title: "Review",
-        description: "We assess accounts, access, infrastructure, documentation and any outstanding risks or gaps.",
+        title: "Audit",
+        description: "Review accounts, access, infrastructure, documentation and any outstanding risks or gaps.",
       },
       {
         step: "03",
         title: "Plan",
-        description: "We define an administration plan, service scope and technology roadmap that match your business needs.",
+        description: "Define the administration scope, standard processes and a technology roadmap aligned with business priorities.",
       },
       {
         step: "04",
-        title: "Implement",
-        description: "We take on agreed administration tasks, standardize processes and coordinate changes with vendors.",
+        title: "Standardize",
+        description: "Set up consistent practices for onboarding, offboarding, change requests, security and vendor communication.",
       },
       {
         step: "05",
         title: "Operate",
-        description: "We perform routine administration, respond to requests and monitor upcoming renewals or maintenance needs.",
+        description: "Carry out routine administration, respond to requests and monitor upcoming renewals or maintenance needs.",
       },
       {
         step: "06",
-        title: "Review",
-        description: "We report on work completed, review risks, update documentation and plan next steps.",
+        title: "Report",
+        description: "Review completed work, emerging risks and upcoming priorities so business decisions stay informed.",
       },
     ],
     considerations: [

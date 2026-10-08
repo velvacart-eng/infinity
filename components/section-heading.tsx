@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 interface SectionHeadingProps {
   title: string;
   description?: string;
+  eyebrow?: string;
   align?: "left" | "center";
   className?: string;
 }
@@ -10,6 +11,7 @@ interface SectionHeadingProps {
 export function SectionHeading({
   title,
   description,
+  eyebrow,
   align = "center",
   className,
 }: SectionHeadingProps) {
@@ -21,6 +23,11 @@ export function SectionHeading({
         className
       )}
     >
+      {eyebrow && (
+        <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.12em] text-brand-accent">
+          {eyebrow}
+        </span>
+      )}
       <h2 className="text-h2 font-bold tracking-tight text-foreground">
         {title}
       </h2>

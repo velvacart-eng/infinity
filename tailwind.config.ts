@@ -12,9 +12,12 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
+          ink: "hsl(var(--brand-ink))",
           navy: "hsl(var(--brand-navy))",
           slate: "hsl(var(--brand-slate))",
           accent: "hsl(var(--brand-accent))",
+          "accent-bright": "hsl(var(--brand-accent-bright))",
+          "accent-soft": "hsl(var(--brand-accent-soft))",
           "accent-dark": "hsl(var(--brand-accent-dark))",
           muted: "hsl(var(--brand-muted))",
           surface: "hsl(var(--brand-surface))",
@@ -63,20 +66,20 @@ const config: Config = {
       },
       fontSize: {
         display: [
-          "clamp(2.25rem, 4vw + 0.5rem, 2.75rem)",
-          { lineHeight: "1.15", letterSpacing: "-0.02em" },
+          "clamp(2.75rem, 5vw + 1rem, 4rem)",
+          { lineHeight: "1.05", letterSpacing: "-0.03em" },
         ],
         h1: [
-          "clamp(1.75rem, 2.5vw + 0.5rem, 2rem)",
-          { lineHeight: "1.2", letterSpacing: "-0.01em" },
+          "clamp(2.25rem, 3.5vw + 0.5rem, 3rem)",
+          { lineHeight: "1.1", letterSpacing: "-0.02em" },
         ],
         h2: [
-          "clamp(1.5rem, 2vw + 0.25rem, 1.625rem)",
-          { lineHeight: "1.25", letterSpacing: "-0.01em" },
+          "clamp(1.75rem, 2.5vw + 0.5rem, 2.5rem)",
+          { lineHeight: "1.15", letterSpacing: "-0.02em" },
         ],
         h3: [
-          "1.125rem",
-          { lineHeight: "1.35", letterSpacing: "-0.01em" },
+          "1.25rem",
+          { lineHeight: "1.3", letterSpacing: "-0.01em" },
         ],
       },
     },

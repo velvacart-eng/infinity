@@ -4,43 +4,48 @@
 
 @layer base {
   :root {
-    /* Brand palette — restrained corporate */
-    --brand-navy: 220 18% 16%;
-    --brand-slate: 215 14% 38%;
-    --brand-accent: 205 65% 40%;
-    --brand-accent-dark: 205 70% 34%;
-    --brand-muted: 210 20% 97%;
+    /* Modern premium brand palette */
+    --brand-ink: 220 43% 8%;
+    --brand-navy: 221 38% 13%;
+    --brand-slate: 215 18% 38%;
+    --brand-accent: 221 83% 53%;
+    --brand-accent-bright: 217 91% 60%;
+    --brand-accent-soft: 213 100% 96%;
+    --brand-muted: 210 25% 97%;
     --brand-surface: 0 0% 100%;
 
-    --background: 0 0% 100%;
-    --foreground: 220 18% 16%;
+    --background: 210 25% 98%;
+    --foreground: 220 43% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 220 18% 16%;
+    --card-foreground: 220 43% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 18% 16%;
-    --primary: 205 65% 40%;
+    --popover-foreground: 220 43% 10%;
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 20% 97%;
-    --secondary-foreground: 220 18% 16%;
-    --muted: 210 20% 97%;
-    --muted-foreground: 215 14% 45%;
-    --accent: 210 20% 97%;
-    --accent-foreground: 220 18% 16%;
+    --secondary: 210 25% 96%;
+    --secondary-foreground: 220 43% 10%;
+    --muted: 210 25% 96%;
+    --muted-foreground: 215 18% 42%;
+    --accent: 213 100% 96%;
+    --accent-foreground: 221 83% 53%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 205 65% 40%;
-    --radius: 0.5rem;
+    --border: 220 18% 90%;
+    --input: 220 18% 90%;
+    --ring: 221 83% 53%;
+    --radius: 0.625rem;
 
     /* Typography scale */
-    --text-display: 2.75rem;
-    --text-h1: 2rem;
-    --text-h2: 1.625rem;
-    --text-h3: 1.125rem;
+    --text-display: 3.5rem;
+    --text-h1: 2.75rem;
+    --text-h2: 2.25rem;
+    --text-h3: 1.25rem;
     --text-body: 1rem;
     --text-lead: 1.125rem;
     --text-sm: 0.875rem;
+
+    /* Animation timing */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   * {
@@ -64,11 +69,83 @@
   h6 {
     @apply font-semibold tracking-tight text-foreground;
   }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .animate-reveal {
+    animation: reveal 0.7s var(--ease-out-expo) both;
+  }
+
+  .animate-reveal-delay-1 {
+    animation: reveal 0.7s var(--ease-out-expo) 0.1s both;
+  }
+
+  .animate-reveal-delay-2 {
+    animation: reveal 0.7s var(--ease-out-expo) 0.2s both;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out 2s infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 4s ease-in-out infinite;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ease-out-expo {
+    transition-timing-function: var(--ease-out-expo);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
