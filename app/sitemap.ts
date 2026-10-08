@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { businessInfo } from "@/lib/config";
 import { services } from "@/lib/services-data";
-import { landingPages } from "@/lib/landing-pages-data";
+import { landingPages } from "@/lib/it-services-pages-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/email",
     "/domains",
     "/servers",
-    "/landing",
+    "/it-services",
   ];
 
   const pages = routes.map((route) => ({
@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const landingPageRoutes = landingPages
     .filter((page) => !page.noIndex)
     .map((page) => ({
-      url: `${businessInfo.siteUrl}/landing/${page.slug}`,
+      url: `${businessInfo.siteUrl}/it-services/${page.slug}`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 0.6,

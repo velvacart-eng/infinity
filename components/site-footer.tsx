@@ -100,27 +100,27 @@ export function SiteFooter() {
             <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white">Service Guides</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/landing/business-email-setup" className="text-sm text-slate-400 transition-colors hover:text-white">
+                <Link href="/it-services/business-email-setup" className="text-sm text-slate-400 transition-colors hover:text-white">
                   Business Email Setup
                 </Link>
               </li>
               <li>
-                <Link href="/landing/business-email-migration" className="text-sm text-slate-400 transition-colors hover:text-white">
+                <Link href="/it-services/business-email-migration" className="text-sm text-slate-400 transition-colors hover:text-white">
                   Email Migration
                 </Link>
               </li>
               <li>
-                <Link href="/landing/business-domain-dns" className="text-sm text-slate-400 transition-colors hover:text-white">
+                <Link href="/it-services/business-domain-dns" className="text-sm text-slate-400 transition-colors hover:text-white">
                   Domain & DNS
                 </Link>
               </li>
               <li>
-                <Link href="/landing/email-security-authentication" className="text-sm text-slate-400 transition-colors hover:text-white">
+                <Link href="/it-services/email-security-authentication" className="text-sm text-slate-400 transition-colors hover:text-white">
                   Email Security
                 </Link>
               </li>
               <li>
-                <Link href="/landing" className="text-sm font-medium text-slate-300 transition-colors hover:text-white">
+                <Link href="/it-services" className="text-sm font-medium text-slate-300 transition-colors hover:text-white">
                   All Service Guides
                 </Link>
               </li>

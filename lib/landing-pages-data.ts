@@ -3,13 +3,17 @@ import { businessInfo } from "@/lib/config";
 
 const baseBreadcrumbs = (title: string, slug: string) => [
   { label: "Home", href: "/" },
-  { label: "Landing Pages", href: "/landing" },
-  { label: title, href: `/landing/${slug}` },
+  { label: "Landing Pages", href: "/it-services" },
+  { label: title, href: `/it-services/${slug}` },
 ];
 
 export const landingPages: LandingPage[] = [
   {
     slug: "business-email-setup",
+    image: {
+      src: "/images/email-work.jpg",
+      alt: "Professional configuring business email accounts on a laptop",
+    },
     title: "Business Email Setup & Configuration",
     eyebrow: "Business Email Services",
     shortDescription:
@@ -149,11 +153,15 @@ export const landingPages: LandingPage[] = [
     seoTitle: "Business Email Setup & Configuration",
     seoDescription:
       "Professional business email setup using your own domain. Mailbox creation, DNS configuration, authentication records and client setup from Infinity Techiez.",
-    canonical: `${businessInfo.siteUrl}/landing/business-email-setup`,
+    canonical: `${businessInfo.siteUrl}/it-services/business-email-setup`,
     breadcrumbs: baseBreadcrumbs("Business Email Setup", "business-email-setup"),
   },
   {
     slug: "business-email-migration",
+    image: {
+      src: "/images/handshake.jpg",
+      alt: "Consultants agreeing on a business email migration plan",
+    },
     title: "Business Email Migration Services",
     eyebrow: "Email Migration",
     shortDescription:
@@ -295,11 +303,15 @@ export const landingPages: LandingPage[] = [
     seoTitle: "Business Email Migration Services",
     seoDescription:
       "Planned business email migration between providers. Mailbox inventory, DNS planning, authentication and post-migration verification from Infinity Techiez.",
-    canonical: `${businessInfo.siteUrl}/landing/business-email-migration`,
+    canonical: `${businessInfo.siteUrl}/it-services/business-email-migration`,
     breadcrumbs: baseBreadcrumbs("Business Email Migration", "business-email-migration"),
   },
   {
     slug: "business-email-administration",
+    image: {
+      src: "/images/tech-services.jpg",
+      alt: "Technician administering business email systems",
+    },
     title: "Business Email Administration Services",
     eyebrow: "Email Management",
     shortDescription:
@@ -434,11 +446,15 @@ export const landingPages: LandingPage[] = [
     seoTitle: "Business Email Administration Services",
     seoDescription:
       "Ongoing business email administration for mailboxes, users, aliases, DNS and authentication. Independent management from Infinity Techiez.",
-    canonical: `${businessInfo.siteUrl}/landing/business-email-administration`,
+    canonical: `${businessInfo.siteUrl}/it-services/business-email-administration`,
     breadcrumbs: baseBreadcrumbs("Business Email Administration", "business-email-administration"),
   },
   {
     slug: "business-email-dns",
+    image: {
+      src: "/images/abstract-tech.jpg",
+      alt: "Abstract circuit board representing DNS and email routing",
+    },
     title: "Business Email DNS Configuration",
     eyebrow: "Email DNS",
     shortDescription:
@@ -573,11 +589,15 @@ export const landingPages: LandingPage[] = [
     seoTitle: "Business Email DNS Configuration",
     seoDescription:
       "MX, SPF, DKIM and DMARC record setup for business email. DNS configuration, troubleshooting and authentication from Infinity Techiez.",
-    canonical: `${businessInfo.siteUrl}/landing/business-email-dns`,
+    canonical: `${businessInfo.siteUrl}/it-services/business-email-dns`,
     breadcrumbs: baseBreadcrumbs("Business Email DNS", "business-email-dns"),
   },
   {
     slug: "email-security-authentication",
+    image: {
+      src: "/images/cybersecurity.jpg",
+      alt: "Cybersecurity concept for protecting business email accounts",
+    },
     title: "Email Security & Authentication",
     eyebrow: "Email Security",
     shortDescription:
@@ -719,11 +739,15 @@ export const landingPages: LandingPage[] = [
     seoTitle: "Email Security & Authentication Services",
     seoDescription:
       "SPF, DKIM, DMARC, domain authentication and access controls for business email. Practical email security from Infinity Techiez.",
-    canonical: `${businessInfo.siteUrl}/landing/email-security-authentication`,
+    canonical: `${businessInfo.siteUrl}/it-services/email-security-authentication`,
     breadcrumbs: baseBreadcrumbs("Email Security & Authentication", "email-security-authentication"),
   },
   {
     slug: "comcast-business-email",
+    image: {
+      src: "/images/server-room.jpg",
+      alt: "Server room infrastructure supporting ISP email services",
+    },
     title: "Comcast Business Email Services",
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
@@ -857,16 +881,20 @@ export const landingPages: LandingPage[] = [
     ],
     ctaTitle: "Need help with Comcast Business email?",
     ctaDescription:
-      "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
+      "Tell us about your Comcast email environment — accounts, domains and devices — and we can recommend a practical configuration or administration plan.",
     seoTitle: "Comcast Business Email Services",
     seoDescription:
       "Independent help with Comcast Business email configuration, account administration, DNS and connectivity. Not affiliated with Comcast.",
-    canonical: `${businessInfo.siteUrl}/landing/comcast-business-email`,
+    canonical: `${businessInfo.siteUrl}/it-services/comcast-business-email`,
     noIndex: true,
     breadcrumbs: baseBreadcrumbs("Comcast Business Email", "comcast-business-email"),
   },
   {
     slug: "att-business-email",
+    image: {
+      src: "/images/workspace.jpg",
+      alt: "Professional workspace with business email client open",
+    },
     title: "AT&T Business Email Services",
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
@@ -1000,16 +1028,20 @@ export const landingPages: LandingPage[] = [
     ],
     ctaTitle: "Need help with AT&T business email?",
     ctaDescription:
-      "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
+      "Share a few details about your AT&T email accounts and we can suggest a practical approach to configuration or ongoing administration.",
     seoTitle: "AT&T Business Email Services",
     seoDescription:
       "Independent help with AT&T business email configuration, mailbox setup, DNS and account administration. Not affiliated with AT&T.",
-    canonical: `${businessInfo.siteUrl}/landing/att-business-email`,
+    canonical: `${businessInfo.siteUrl}/it-services/att-business-email`,
     noIndex: true,
     breadcrumbs: baseBreadcrumbs("AT&T Business Email", "att-business-email"),
   },
   {
     slug: "outlook-business-email",
+    image: {
+      src: "/images/cloud.jpg",
+      alt: "Cloud services supporting Microsoft email environments",
+    },
     title: "Outlook Business Email Configuration",
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
@@ -1143,16 +1175,20 @@ export const landingPages: LandingPage[] = [
     ],
     ctaTitle: "Need help with Outlook business email?",
     ctaDescription:
-      "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
+      "Describe your Outlook or Microsoft 365 setup and we can outline a configuration plan that fits your environment.",
     seoTitle: "Outlook Business Email Configuration",
     seoDescription:
       "Independent help with Outlook business email configuration, Microsoft 365 mailboxes, synchronization and administration. Not affiliated with Microsoft.",
-    canonical: `${businessInfo.siteUrl}/landing/outlook-business-email`,
+    canonical: `${businessInfo.siteUrl}/it-services/outlook-business-email`,
     noIndex: true,
     breadcrumbs: baseBreadcrumbs("Outlook Business Email", "outlook-business-email"),
   },
   {
     slug: "gmail-business-email",
+    image: {
+      src: "/images/contact.jpg",
+      alt: "Laptop used for email communication and account management",
+    },
     title: "Gmail & Business Email Configuration",
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
@@ -1286,16 +1322,20 @@ export const landingPages: LandingPage[] = [
     ],
     ctaTitle: "Need help with Gmail or Google Workspace email?",
     ctaDescription:
-      "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
+      "Tell us about your Gmail or Google Workspace setup and we can recommend a practical approach to configuration, authentication or migration.",
     seoTitle: "Gmail & Business Email Configuration",
     seoDescription:
       "Independent help with Gmail and Google Workspace business email configuration, DNS, authentication and migration. Not affiliated with Google.",
-    canonical: `${businessInfo.siteUrl}/landing/gmail-business-email`,
+    canonical: `${businessInfo.siteUrl}/it-services/gmail-business-email`,
     noIndex: true,
     breadcrumbs: baseBreadcrumbs("Gmail Business Email", "gmail-business-email"),
   },
   {
     slug: "yahoo-business-email",
+    image: {
+      src: "/images/team.jpg",
+      alt: "Support team collaborating on email configuration",
+    },
     title: "Yahoo Business Email Services",
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
@@ -1429,16 +1469,20 @@ export const landingPages: LandingPage[] = [
     ],
     ctaTitle: "Need help with Yahoo business email?",
     ctaDescription:
-      "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
+      "Share the details of your Yahoo email setup and we can suggest a sensible way to configure or administer it.",
     seoTitle: "Yahoo Business Email Services",
     seoDescription:
       "Independent help with Yahoo business email configuration, account administration and connectivity. Not affiliated with Yahoo.",
-    canonical: `${businessInfo.siteUrl}/landing/yahoo-business-email`,
+    canonical: `${businessInfo.siteUrl}/it-services/yahoo-business-email`,
     noIndex: true,
     breadcrumbs: baseBreadcrumbs("Yahoo Business Email", "yahoo-business-email"),
   },
   {
     slug: "aol-business-email",
+    image: {
+      src: "/images/meeting.jpg",
+      alt: "Business consultation about email services",
+    },
     title: "AOL Business Email Services",
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
@@ -1572,16 +1616,20 @@ export const landingPages: LandingPage[] = [
     ],
     ctaTitle: "Need help with AOL business email?",
     ctaDescription:
-      "Tell us about your setup and we can recommend a practical approach to configuration, migration or administration.",
+      "Tell us about your AOL email accounts and we can recommend a practical approach to configuration and ongoing administration.",
     seoTitle: "AOL Business Email Services",
     seoDescription:
       "Independent help with AOL email configuration, account administration and connectivity. Not affiliated with AOL.",
-    canonical: `${businessInfo.siteUrl}/landing/aol-business-email`,
+    canonical: `${businessInfo.siteUrl}/it-services/aol-business-email`,
     noIndex: true,
     breadcrumbs: baseBreadcrumbs("AOL Business Email", "aol-business-email"),
   },
   {
     slug: "business-domain-dns",
+    image: {
+      src: "/images/hero.jpg",
+      alt: "Global network representing domains and DNS infrastructure",
+    },
     title: "Business Domain & DNS Management",
     eyebrow: "Domain & DNS Services",
     shortDescription:
@@ -1758,11 +1806,15 @@ export const landingPages: LandingPage[] = [
     seoTitle: "Business Domain & DNS Management",
     seoDescription:
       "Business domain and DNS management: record configuration, email dependencies, subdomains, transfers and continuity planning by Infinity Techiez.",
-    canonical: `${businessInfo.siteUrl}/landing/business-domain-dns`,
+    canonical: `${businessInfo.siteUrl}/it-services/business-domain-dns`,
     breadcrumbs: baseBreadcrumbs("Business Domain & DNS Management", "business-domain-dns"),
   },
   {
     slug: "business-email-configuration",
+    image: {
+      src: "/images/email-work.jpg",
+      alt: "Workspace where business email clients are configured",
+    },
     title: "Business Email Configuration Services",
     eyebrow: "Business Email Services",
     shortDescription:
@@ -1939,7 +1991,7 @@ export const landingPages: LandingPage[] = [
     seoTitle: "Business Email Configuration Services",
     seoDescription:
       "Business email configuration covering mailboxes, DNS, MX, SMTP, SPF, DKIM, DMARC and client setup on desktop and mobile by Infinity Techiez.",
-    canonical: `${businessInfo.siteUrl}/landing/business-email-configuration`,
+    canonical: `${businessInfo.siteUrl}/it-services/business-email-configuration`,
     breadcrumbs: baseBreadcrumbs("Business Email Configuration", "business-email-configuration"),
   },
 ];

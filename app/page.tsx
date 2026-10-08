@@ -115,7 +115,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(37,99,235,0.25),transparent_50%)]" />
         </div>
 
-        <div className="container relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 md:py-20">
+        <div className="container relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 md:py-16">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <FadeIn direction="up" className="max-w-3xl">
               <span className="mb-5 inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-white">
@@ -195,7 +195,7 @@ export default function HomePage() {
       <ServiceStrip />
 
       {/* Featured service guides */}
-      <section className="border-b border-border/40 bg-brand-muted py-16 md:py-20">
+      <section className="border-b border-border/40 bg-brand-muted py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <FadeIn className="max-w-xl">
@@ -208,7 +208,7 @@ export default function HomePage() {
             </FadeIn>
             <FadeIn>
               <Link
-                href="/landing"
+                href="/it-services"
                 className="group inline-flex items-center gap-1.5 text-sm font-bold text-primary transition-colors hover:text-brand-violet"
               >
                 View all service guides
@@ -218,10 +218,10 @@ export default function HomePage() {
           </div>
           <StaggerContainer className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" staggerDelay={0.08}>
             {[
-              { title: "Business Email Setup", href: "/landing/business-email-setup", icon: Mail },
-              { title: "Email Migration", href: "/landing/business-email-migration", icon: ArrowRight },
-              { title: "Domain & DNS Management", href: "/landing/business-domain-dns", icon: Globe },
-              { title: "Email Security", href: "/landing/email-security-authentication", icon: Shield },
+              { title: "Business Email Setup", href: "/it-services/business-email-setup", icon: Mail },
+              { title: "Email Migration", href: "/it-services/business-email-migration", icon: ArrowRight },
+              { title: "Domain & DNS Management", href: "/it-services/business-domain-dns", icon: Globe },
+              { title: "Email Security", href: "/it-services/email-security-authentication", icon: Shield },
             ].map((item) => (
               <StaggerItem key={item.href}>
                 <Link
@@ -243,7 +243,7 @@ export default function HomePage() {
       </section>
 
       {/* Core Services */}
-      <section className="py-16 md:py-20" id="services">
+      <section className="py-12 md:py-16" id="services">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -268,7 +268,7 @@ export default function HomePage() {
       </section>
 
       {/* Solutions */}
-      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20" id="solutions">
+      <section className="border-y border-border/40 bg-brand-muted py-12 md:py-16" id="solutions">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -317,7 +317,7 @@ export default function HomePage() {
       </section>
 
       {/* How We Work */}
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -333,7 +333,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Infinity Techiez */}
-      <section className="relative overflow-hidden border-y border-border/40 bg-brand-ink py-16 md:py-20">
+      <section className="relative overflow-hidden border-y border-border/40 bg-brand-ink py-12 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(37,99,235,0.18),transparent_45%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.12),transparent_45%)]" />
         <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -366,7 +366,7 @@ export default function HomePage() {
       </section>
 
       {/* About preview */}
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <FadeIn direction="right" className="order-2 lg:order-1">
@@ -420,7 +420,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
+      <section className="border-y border-border/40 bg-brand-muted py-12 md:py-16">
         <FAQPageSchema items={faqItems} />
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn className="mx-auto max-w-2xl">
@@ -437,7 +437,7 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative overflow-hidden bg-brand-ink py-16 md:py-20">
+      <section className="relative overflow-hidden bg-brand-ink py-12 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(37,99,235,0.2),transparent_45%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.15),transparent_45%)]" />
         <div className="container relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">

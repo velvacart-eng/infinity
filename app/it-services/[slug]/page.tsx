@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { landingPages, getLandingPageBySlug } from "@/lib/landing-pages-data";
-import { LandingPageTemplate } from "@/components/landing-page-template";
+import { landingPages, getLandingPageBySlug } from "@/lib/it-services-pages-data";
+import { LandingPageTemplate } from "@/components/it-services-page-template";
 import { createMetadata } from "@/lib/seo";
 
 interface LandingPageProps {
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: LandingPageProps): Promise<Me
   return createMetadata({
     title: page.seoTitle,
     description: page.seoDescription,
-    path: `/landing/${slug}`,
+    path: `/it-services/${slug}`,
     noIndex: page.noIndex,
   });
 }

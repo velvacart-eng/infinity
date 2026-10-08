@@ -4,9 +4,11 @@ export const businessInfo: BusinessInfo = {
   brandName: process.env.NEXT_PUBLIC_BRAND_NAME || "Infinity Techiez",
   legalName: process.env.NEXT_PUBLIC_LEGAL_NAME || "Advanced Vision Software LLC",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://infinitytechiez.com",
-  address: process.env.NEXT_PUBLIC_BUSINESS_ADDRESS || "",
+  address:
+    process.env.NEXT_PUBLIC_BUSINESS_ADDRESS ||
+    "30 N Gould St, Ste 4000, Sheridan, WY 82801",
   email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "info@infinitytechiez.com",
-  phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "",
+  phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "+1 (844) 966-7866",
   hours: process.env.NEXT_PUBLIC_BUSINESS_HOURS || "",
 };
 

@@ -4,28 +4,28 @@ import { PageHero } from "@/components/page-hero";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { SectionHeading } from "@/components/section-heading";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
-import { landingPages } from "@/lib/landing-pages-data";
+import { landingPages } from "@/lib/it-services-pages-data";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Service Landing Pages",
   description:
     "Dedicated landing pages for specific business email, DNS and provider-related technology services from Infinity Techiez.",
-  path: "/landing",
+  path: "/it-services",
 });
 
 export default function LandingIndexPage() {
   return (
     <>
       <div className="container mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ label: "Landing Pages", href: "/landing" }]} />
+        <Breadcrumbs items={[{ label: "Landing Pages", href: "/it-services" }]} />
       </div>
       <PageHero
         title="Service Landing Pages"
         description="Focused pages for specific business technology needs, from business email setup to provider-specific configuration and administration."
         gradient
       />
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -38,7 +38,7 @@ export default function LandingIndexPage() {
             {landingPages.map((page) => (
               <StaggerItem key={page.slug}>
                 <Link
-                  href={`/landing/${page.slug}`}
+                  href={`/it-services/${page.slug}`}
                   className="group flex h-full flex-col rounded-2xl border border-border/60 bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
                 >
                   {page.providerName && (

@@ -20,7 +20,7 @@ export default function ServiceDeliveryPage() {
         description="How we scope, deliver and manage business technology services."
         gradient
       />
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="leading-relaxed text-muted-foreground">
             {businessInfo.brandName} follows a structured approach to service

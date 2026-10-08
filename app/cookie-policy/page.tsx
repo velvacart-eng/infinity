@@ -20,7 +20,7 @@ export default function CookiePolicyPage() {
         description="How we use cookies and similar technologies on our website."
         gradient
       />
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="leading-relaxed text-muted-foreground">
             {businessInfo.brandName}, a brand operated by {businessInfo.legalName}, uses cookies and

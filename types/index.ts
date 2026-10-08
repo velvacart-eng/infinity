@@ -58,6 +58,7 @@ export interface LandingPage {
   eyebrow?: string;
   shortDescription: string;
   intro: string[];
+  image?: { src: string; alt: string };
   providerName?: string;
   independentDisclosure?: string;
   serviceCategory?: string;

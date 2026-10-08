@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle, Globe, Mail, ShieldAlert, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { SectionHeading } from "@/components/section-heading";
@@ -8,7 +9,7 @@ import { ServiceCard } from "@/components/service-card";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
 import { LandingPage } from "@/types";
 import { getServiceBySlug } from "@/lib/services-data";
-import { getLandingPageBySlug } from "@/lib/landing-pages-data";
+import { getLandingPageBySlug } from "@/lib/it-services-pages-data";
 import { businessInfo } from "@/lib/config";
 import { trackingEvents } from "@/lib/tracking";
 
@@ -42,7 +43,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Hero */}
       <section
-        className="relative overflow-hidden border-b border-border/40 bg-background py-16 md:py-20"
+        className="relative overflow-hidden border-b border-border/40 bg-background py-10 md:py-14"
         data-landing-page={page.slug}
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.12),transparent_55%)]" />
@@ -95,15 +96,15 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Independent provider disclosure */}
       {page.independentDisclosure && (
-        <section className="border-b border-border/40 bg-brand-muted py-8">
+        <section className="border-b border-border/40 py-6">
           <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="flex items-start gap-4 rounded-2xl border border-primary/30 bg-card p-6 shadow-sm">
-              <ShieldAlert className="mt-1 h-6 w-6 shrink-0 text-primary" aria-hidden="true" />
+            <div className="flex items-start gap-3 rounded-xl border border-border/50 bg-muted/40 p-4">
+              <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
+                <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
                   Independent service provider
                 </p>
-                <p className="mt-2 text-base leading-relaxed text-foreground">
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
                   {page.independentDisclosure}
                 </p>
               </div>
@@ -113,20 +114,38 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
       )}
 
       {/* Quick service summary */}
-      <section className="py-16 md:py-20">
-        <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <FadeIn direction="up">
-            <span className="text-xs font-bold uppercase tracking-[0.12em] text-primary">
-              Service Overview
-            </span>
-            <h2 className="mt-3 text-h2 font-bold tracking-tight">
-              What this service covers
-            </h2>
-          </FadeIn>
-          <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted-foreground">
-            {page.intro.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-14">
+            <div className="lg:col-span-7">
+              <FadeIn direction="up">
+                <span className="text-xs font-bold uppercase tracking-[0.12em] text-primary">
+                  Service Overview
+                </span>
+                <h2 className="mt-3 text-h2 font-bold tracking-tight">
+                  What this service covers
+                </h2>
+              </FadeIn>
+              <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted-foreground">
+                {page.intro.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+            {page.image && (
+              <FadeIn direction="left" className="lg:col-span-5">
+                <div className="relative overflow-hidden rounded-3xl border border-border/60 shadow-lg shadow-primary/5">
+                  <Image
+                    src={page.image.src}
+                    alt={page.image.alt}
+                    width={800}
+                    height={600}
+                    className="aspect-[4/3] w-full object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
+                </div>
+              </FadeIn>
+            )}
           </div>
           <FadeIn direction="up">
             <dl className="mt-10 grid gap-6 rounded-2xl border border-border/60 bg-card p-6 sm:grid-cols-2">
@@ -183,7 +202,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
       </section>
 
       {/* What we help with */}
-      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
+      <section className="border-y border-border/40 bg-brand-muted py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -208,7 +227,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <FadeIn direction="up" className="lg:col-span-4">
@@ -234,7 +253,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Detailed sections */}
       {page.detailedSections && page.detailedSections.length > 0 && (
-        <section className="py-16 md:py-20">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-12">
               {page.detailedSections.map((section) => (
@@ -256,7 +275,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Scenarios */}
       {page.scenarios && page.scenarios.length > 0 && (
-        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
+        <section className="border-y border-border/40 bg-brand-muted py-12 md:py-16">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <FadeIn>
               <SectionHeading
@@ -283,7 +302,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Technical considerations */}
       {page.technicalConsiderations && page.technicalConsiderations.length > 0 && (
-        <section className="py-16 md:py-20">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
               <FadeIn direction="up" className="lg:col-span-4">
@@ -315,7 +334,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Security considerations */}
       {page.securityConsiderations && page.securityConsiderations.length > 0 && (
-        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
+        <section className="border-y border-border/40 bg-brand-muted py-12 md:py-16">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
               <FadeIn direction="up" className="lg:col-span-4">
@@ -347,7 +366,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Process */}
       {page.process && page.process.length > 0 && (
-        <section className="py-16 md:py-20">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <FadeIn>
               <SectionHeading
@@ -380,7 +399,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Who it is for */}
       {page.whoItIsFor && page.whoItIsFor.length > 0 && (
-        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
+        <section className="border-y border-border/40 bg-brand-muted py-12 md:py-16">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
               <FadeIn direction="up" className="lg:col-span-4">
@@ -395,7 +414,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
                   <StaggerItem key={item}>
                     <div className="flex h-full items-start gap-3 rounded-2xl border border-border/60 bg-card p-5 transition-colors hover:border-primary/20">
                       <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-                      <span className="text-foreground">{item}</span>
+                      <span className="font-medium text-foreground">{item}</span>
                     </div>
                   </StaggerItem>
                 ))}
@@ -407,7 +426,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Related services */}
       {(relatedServices.length > 0 || relatedLandingPages.length > 0) && (
-        <section className="py-16 md:py-20">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <FadeIn>
               <SectionHeading
@@ -425,7 +444,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
               {relatedLandingPages.map((lp) => (
                 <StaggerItem key={lp.slug}>
                   <Link
-                    href={`/landing/${lp.slug}`}
+                    href={`/it-services/${lp.slug}`}
                     className="group flex h-full flex-col rounded-2xl border border-border/60 bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
                   >
                     <span className="text-xs font-bold uppercase tracking-wider text-primary">
@@ -449,7 +468,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* FAQ */}
       {page.faqs.length > 0 && (
-        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
+        <section className="border-y border-border/40 bg-brand-muted py-12 md:py-16">
           <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <FadeIn>
               <SectionHeading
@@ -468,7 +487,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* CTA */}
       <section
-        className="relative overflow-hidden bg-brand-ink py-16 md:py-20"
+        className="relative overflow-hidden bg-brand-ink py-12 md:py-16"
         data-landing-page={page.slug}
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(37,99,235,0.2),transparent_45%)]" />

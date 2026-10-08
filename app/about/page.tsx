@@ -42,7 +42,7 @@ export default function AboutPage() {
         gradient
       />
 
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
             <FadeIn direction="right">
@@ -76,7 +76,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
+      <section className="border-y border-border/40 bg-brand-muted py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
             <FadeIn direction="up">
@@ -112,7 +112,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
             <FadeIn direction="up">
@@ -137,7 +137,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
+      <section className="border-y border-border/40 bg-brand-muted py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
             <FadeIn direction="up">
@@ -169,7 +169,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-brand-ink py-16 md:py-20">
+      <section className="relative overflow-hidden bg-brand-ink py-12 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(37,99,235,0.18),transparent_45%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.12),transparent_45%)]" />
         <FadeIn className="container relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">

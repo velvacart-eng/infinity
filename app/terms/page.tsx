@@ -20,7 +20,7 @@ export default function TermsPage() {
         description="The terms that apply to the use of our website and services."
         gradient
       />
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="leading-relaxed text-muted-foreground">
             These Terms of Service govern your use of the website and services
