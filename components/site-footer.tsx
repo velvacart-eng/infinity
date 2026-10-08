@@ -12,7 +12,7 @@ export function SiteFooter() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
           {/* Brand & contact */}
           <div className="space-y-6 sm:col-span-2 lg:col-span-2">
-            <Logo className="text-white" />
+            <Logo dark />
             <p className="max-w-md text-sm leading-relaxed text-slate-400">
               Business IT services and technology solutions for organizations
               that need secure, scalable and well-managed infrastructure.
