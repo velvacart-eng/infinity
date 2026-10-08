@@ -97,7 +97,7 @@ export const services: Service[] = [
     ],
     considerations: [
       { title: "Authentication records", description: "SPF, DKIM and DMARC records should be configured correctly to improve deliverability and reduce spoofing risk." },
-      { title: "Account security", description: "Strong passwords and multi-factor authentication significantly reduce the chance of account compromise." },
+      { title: "Account security", description: "Strong credentials and multi-factor authentication significantly reduce the chance of account compromise." },
       { title: "Access management", description: "User accounts, shared mailboxes and distribution lists should be reviewed when employees join, change roles or leave." },
       { title: "Backup and recovery", description: "Business email should be backed up or retention policies should be understood so important correspondence can be recovered." },
     ],
@@ -714,7 +714,7 @@ export const services: Service[] = [
       "Practical cybersecurity services for small and growing businesses. Access control, email security, endpoint protection and security planning from Infinity Techiez.",
     overview: [
       "Cybersecurity for business is about reducing the chance that sensitive data, accounts and systems are compromised. It is not a single product, a one-time fix or a guarantee of safety. Effective security comes from a combination of configuration, access controls, authentication, monitoring and user habits.",
-      "Many security incidents affecting small and medium businesses are not sophisticated. They happen because passwords are reused, multi-factor authentication is not enabled, access is not removed when employees leave, email authentication records are missing or software is not kept up to date. Addressing these basics can significantly reduce risk.",
+      "Many security incidents affecting small and medium businesses are not sophisticated. They happen because credentials are reused, multi-factor authentication is not enabled, access is not removed when employees leave, email authentication records are missing or software is not kept up to date. Addressing these basics can significantly reduce risk.",
       "We help businesses take practical steps such as controlling access, strengthening authentication, securing email and domains, reviewing endpoints and building habits that reduce common risks. Our focus is on sensible, proportionate security rather than fear-based selling.",
     ],
     includedServices: [
@@ -724,7 +724,7 @@ export const services: Service[] = [
       { title: "Email security configuration", description: "Configure authentication records, filtering and policies that reduce phishing and spoofing risk." },
       { title: "Domain security review", description: "Review domain registration, DNS and authentication records for unauthorized change risk." },
       { title: "Endpoint security considerations", description: "Assess device settings, encryption, patching and policies that protect laptops, phones and desktops." },
-      { title: "Security policy guidance", description: "Help document simple, usable security policies for passwords, access and acceptable use." },
+      { title: "Security policy guidance", description: "Help document simple, usable security policies for credentials, access and acceptable use." },
       { title: "Security awareness guidance", description: "Provide guidance and materials that help employees recognize phishing and handle data safely." },
       { title: "Backup and recovery coordination", description: "Ensure backups are in place so the business can recover from ransomware, deletion or failure." },
     ],
@@ -792,7 +792,7 @@ export const services: Service[] = [
     ],
     considerations: [
       { title: "No absolute protection", description: "No security measure can guarantee complete protection. Security is about reducing risk, not eliminating it." },
-      { title: "Multi-factor authentication", description: "MFA is one of the most effective controls because it makes stolen passwords far less useful." },
+      { title: "Multi-factor authentication", description: "MFA is one of the most effective controls because it makes stolen credentials far less useful." },
       { title: "Access reviews", description: "Regular access reviews help remove unnecessary permissions and old accounts that could be exploited." },
       { title: "Backups and recovery", description: "Backups are a critical part of recovering from ransomware, deletion and other security incidents." },
     ],
@@ -812,12 +812,12 @@ export const services: Service[] = [
       {
         question: "What is MFA?",
         answer:
-          "Multi-factor authentication, or MFA, requires a second form of verification in addition to a password. It makes it much harder for attackers to access accounts even if a password is stolen.",
+          "Multi-factor authentication, or MFA, requires a second form of verification in addition to a credential. It makes it much harder for attackers to access accounts even if a credential is stolen.",
       },
       {
         question: "How can businesses protect email accounts?",
         answer:
-          "Businesses can protect email with strong passwords, multi-factor authentication, email security records such as SPF, DKIM and DMARC, and user awareness of phishing.",
+          "Businesses can protect email with strong credentials, multi-factor authentication, email security records such as SPF, DKIM and DMARC, and user awareness of phishing.",
       },
       {
         question: "What is endpoint security?",
@@ -991,7 +991,7 @@ export const services: Service[] = [
       "Ongoing IT management and technology administration for businesses. Account, domain, email and infrastructure management from Infinity Techiez.",
     overview: [
       "IT management is the ongoing work of keeping business technology organized, secure and aligned with operations. It covers the administration of accounts, domains, email, cloud services and infrastructure, as well as the coordination of vendors, the planning of changes and the documentation of systems.",
-      "For many small and medium businesses, this work accumulates over time without a clear owner. A founder or office manager ends up managing passwords, tracking domain renewals, troubleshooting email and chasing vendors. As the business grows, this informal approach becomes risky and inefficient. Mistakes such as missed renewals, stale accounts, unpatched systems or undocumented settings can lead to real disruption.",
+      "For many small and medium businesses, this work accumulates over time without a clear owner. A founder or office manager ends up managing accounts, tracking domain renewals, resolving email issues and chasing vendors. As the business grows, this informal approach becomes risky and inefficient. Mistakes such as missed renewals, stale accounts, unpatched systems or undocumented settings can lead to real disruption.",
       "We act as a practical technology partner for businesses that need reliable oversight without building a large internal IT department. We can take on agreed administration tasks, coordinate with providers, document systems and help plan technology changes so your business can focus on its work rather than wrestling with configuration menus.",
     ],
     includedServices: [
@@ -1109,7 +1109,7 @@ export const services: Service[] = [
       {
         question: "Is this a call center for computer problems?",
         answer:
-          "No. This is ongoing business technology administration and coordination, not a consumer help desk or one-off repair service.",
+          "No. This is ongoing business technology administration and coordination, not a personal help desk or one-off repair service.",
       },
     ],
     relatedServices: ["cloud-services", "cybersecurity", "it-infrastructure", "business-email"],

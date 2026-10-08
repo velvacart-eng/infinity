@@ -51,7 +51,7 @@ export default function TermsPage() {
                 title: "3. Independent third-party status",
                 paragraphs: [
                   "All trademarks, service marks and brand names referenced on this website are the property of their respective owners and are used for identification purposes only. Where we assist with third-party platforms, we do so as an independent contractor; we do not represent, act on behalf of, or have access to the internal systems of those vendors.",
-                  "For account recovery, password resets and provider-controlled account actions, customers may be required to follow the relevant provider's official processes directly.",
+                  "For sign-in verification, credential changes and provider-controlled account actions, customers may be required to follow the relevant provider's official processes directly.",
                 ],
               },
               {

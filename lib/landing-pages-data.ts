@@ -15,7 +15,7 @@ export const commonEmailTasks = [
   {
     title: "Email migration between providers",
     description:
-      "Move mailboxes between providers — for example comcast.net to Yahoo Mail, or ISP email to a business platform — keeping messages, folders and contacts intact.",
+      "Move mailboxes between providers — for example from ISP-hosted email to a dedicated business platform — keeping messages, folders and contacts intact.",
   },
   {
     title: "Bulk email deletion & cleanup",
@@ -58,7 +58,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-email-setup",
     image: {
-      src: "/images/lp-email-setup.svg",
+      src: "/images/lp-email-setup.png",
       alt: "Illustration of business email setup — envelope, settings and account configuration",
     },
     title: "Business Email Setup & Configuration",
@@ -67,7 +67,7 @@ export const landingPages: LandingPage[] = [
       "Professional business email setup and configuration using your own domain, with mailbox creation, DNS records and email client setup.",
     intro: [
       "Business email is often the first technology a new company needs and one of the last ones to be set up correctly. A professional address such as name@yourcompany.com reinforces your brand every time you send a message, but the setup behind it involves more than creating an inbox. It requires the right platform, correct DNS records, authentication settings and a clear account structure that will scale as your team grows.",
-      "Infinity Techiez provides independent business technology services that help organizations establish, configure and administer business email environments. We are not an email provider, a domain registrar or a reseller of consumer email accounts. Our role is to assess your needs, connect the technical pieces and document the setup so your team can use it reliably.",
+      "Infinity Techiez provides independent business technology services that help organizations establish, configure and administer business email environments. We are not an email provider, a domain registrar or a reseller of email accounts. Our role is to assess your needs, connect the technical pieces and document the setup so your team can use it reliably.",
     ],
     serviceCategory: "Business Email",
     searchIntent: "business email setup, configure business email, domain email setup",
@@ -206,7 +206,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-email-migration",
     image: {
-      src: "/images/lp-email-migration.svg",
+      src: "/images/lp-email-migration.png",
       alt: "Illustration of mailboxes moving from an old provider to a new platform",
     },
     title: "Business Email Migration Services",
@@ -356,7 +356,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-email-administration",
     image: {
-      src: "/images/lp-email-admin.svg",
+      src: "/images/lp-email-admin.png",
       alt: "Illustration of a mail admin console managing mailboxes, aliases and forwarding",
     },
     title: "Business Email Administration Services",
@@ -499,7 +499,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-email-dns",
     image: {
-      src: "/images/lp-dns-mx.svg",
+      src: "/images/lp-dns-mx.png",
       alt: "Illustration of MX, SPF, DKIM and DMARC DNS records for a business domain",
     },
     title: "Business Email DNS Configuration",
@@ -642,7 +642,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "email-security-authentication",
     image: {
-      src: "/images/lp-email-security.svg",
+      src: "/images/lp-email-security.png",
       alt: "Illustration of a protected mailbox with SPF, DKIM and DMARC authentication",
     },
     title: "Email Security & Authentication",
@@ -792,7 +792,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "comcast-business-email",
     image: {
-      src: "/images/lp-email-migration.svg",
+      src: "/images/lp-email-migration.png",
       alt: "Illustration of a business mailbox migration to a modern email platform",
     },
     title: "Comcast Business Email Services",
@@ -971,7 +971,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "att-business-email",
     image: {
-      src: "/images/lp-email-client.svg",
+      src: "/images/lp-email-client.png",
       alt: "Illustration of AT&T email configured across desktop and mobile clients",
     },
     title: "AT&T Business Email Services",
@@ -980,7 +980,7 @@ export const landingPages: LandingPage[] = [
       "Independent assistance with AT&T business email configuration, mailbox setup, DNS/domain considerations and account administration.",
     intro: [
       "AT&T offers business email services through various plans and bundles. For businesses that rely on these accounts, proper configuration and administration are important for reliable communication and deliverability.",
-      "Infinity Techiez provides independent technology services for businesses that need help with AT&T business email. We are not AT&T, we are not affiliated with AT&T, and we are not an official AT&T service channel. Our role is to help you configure, administer and troubleshoot your email environment so it works reliably for your business.",
+      "Infinity Techiez provides independent technology services for businesses that need help with AT&T business email. We are not AT&T, we are not affiliated with AT&T, and we are not an official AT&T service channel. Our role is to help you configure, administer and manage your email environment so it works reliably for your business.",
     ],
     providerName: "AT&T",
     independentDisclosure:
@@ -1118,7 +1118,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "outlook-business-email",
     image: {
-      src: "/images/lp-email-client.svg",
+      src: "/images/lp-email-client.png",
       alt: "Illustration of Outlook email setup on desktop and phone clients",
     },
     title: "Outlook Business Email Configuration",
@@ -1126,8 +1126,8 @@ export const landingPages: LandingPage[] = [
     shortDescription:
       "Independent help with Outlook business email configuration, Microsoft 365 mailboxes, synchronization and account administration.",
     intro: [
-      "Outlook is one of the most widely used business email clients, and Microsoft 365 is a common platform for business email. Whether you are setting up Outlook for the first time, connecting it to a domain, or troubleshooting synchronization problems, the underlying configuration matters.",
-      "Infinity Techiez provides independent technology services for businesses that need help with Outlook business email. We are not Microsoft, we are not affiliated with Microsoft, and we are not an official Microsoft service channel. Our role is to help you configure, administer and troubleshoot the email environment you already have.",
+      "Outlook is one of the most widely used business email clients, and Microsoft 365 is a common platform for business email. Whether you are setting up Outlook for the first time, connecting it to a domain, or resolving synchronization problems, the underlying configuration matters.",
+      "Infinity Techiez provides independent technology services for businesses that need help with Outlook business email. We are not Microsoft, we are not affiliated with Microsoft, and we are not an official Microsoft service channel. Our role is to help you configure, administer and manage the email environment you already have.",
     ],
     providerName: "Microsoft",
     independentDisclosure:
@@ -1265,7 +1265,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "gmail-business-email",
     image: {
-      src: "/images/lp-email-client.svg",
+      src: "/images/lp-email-client.png",
       alt: "Illustration of Gmail and business email configured on multiple devices",
     },
     title: "Gmail & Business Email Configuration",
@@ -1273,8 +1273,8 @@ export const landingPages: LandingPage[] = [
     shortDescription:
       "Independent help with Gmail and Google Workspace business email configuration, DNS, authentication and migration.",
     intro: [
-      "Gmail is familiar to many users, but there is an important distinction between consumer Gmail accounts and Google Workspace business email. For business use, a domain-based address with admin controls, security settings and centralized management is usually more appropriate.",
-      "Infinity Techiez provides independent technology services for businesses that need help with Gmail or Google Workspace email. We are not Google, we are not affiliated with Google, and we are not an official Google service channel. Our role is to help you configure, administer and troubleshoot the email environment you already have or are considering.",
+      "Gmail is familiar to many users, but there is an important distinction between personal Gmail accounts and Google Workspace business email. For business use, a domain-based address with admin controls, security settings and centralized management is usually more appropriate.",
+      "Infinity Techiez provides independent technology services for businesses that need help with Gmail or Google Workspace email. We are not Google, we are not affiliated with Google, and we are not an official Google service channel. Our role is to help you configure, administer and manage the email environment you already have or are considering.",
     ],
     providerName: "Google",
     independentDisclosure:
@@ -1317,7 +1317,7 @@ export const landingPages: LandingPage[] = [
     ],
     scenarios: [
       {
-        title: "Using consumer Gmail for business",
+        title: "Using personal Gmail for business",
         description: "A business is using personal Gmail accounts and wants a more professional domain-based email setup.",
       },
       {
@@ -1333,7 +1333,7 @@ export const landingPages: LandingPage[] = [
       {
         title: "Gmail vs Google Workspace for business",
         paragraphs: [
-          "Consumer Gmail accounts are free and easy to use, but they lack the admin controls, domain-based addresses and centralized management that most businesses need. Google Workspace provides business email with your own domain, shared calendars, drive storage and administrative tools.",
+          "Personal Gmail accounts are free and easy to use, but they lack the admin controls, domain-based addresses and centralized management that most businesses need. Google Workspace provides business email with your own domain, shared calendars, drive storage and administrative tools.",
           "We help you understand the difference, choose the right approach and configure the environment so your business email is professional, secure and manageable.",
         ],
       },
@@ -1365,7 +1365,7 @@ export const landingPages: LandingPage[] = [
       { title: "Sharing settings", description: "Control external sharing and file access in Google Workspace to match your business policies." },
     ],
     whoItIsFor: [
-      "Businesses using consumer Gmail for work",
+      "Businesses using personal Gmail for work",
       "Companies moving to Google Workspace",
       "Organizations managing multiple Gmail or Workspace accounts",
       "Businesses experiencing Gmail or Workspace configuration issues",
@@ -1381,7 +1381,7 @@ export const landingPages: LandingPage[] = [
       {
         question: "What is the difference between Gmail and Google Workspace?",
         answer:
-          "Gmail is a consumer email service. Google Workspace is a business platform that provides domain-based email, admin controls, shared calendars and other collaboration tools.",
+          "Gmail is a personal email service. Google Workspace is a business platform that provides domain-based email, admin controls, shared calendars and other collaboration tools.",
       },
       {
         question: "Can you help migrate to Google Workspace?",
@@ -1412,16 +1412,16 @@ export const landingPages: LandingPage[] = [
   {
     slug: "yahoo-business-email",
     image: {
-      src: "/images/lp-comcast-yahoo.svg",
-      alt: "Illustration of a comcast.net mailbox moved onto the Yahoo Mail platform",
+      src: "/images/lp-email-migration.png",
+      alt: "Illustration of business mailboxes migrating between email platforms",
     },
     title: "Yahoo Business Email Services",
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
-      "Independent help with Yahoo business email, comcast.net accounts migrated to Yahoo Mail, configuration, administration and connectivity.",
+      "Independent help with Yahoo business email, provider platform transitions, configuration, administration and connectivity.",
     intro: [
-      "Yahoo Mail is primarily known as a consumer email service, but some businesses use it for specific purposes or have legacy accounts that need to be managed. Yahoo also offers business email options through certain plans or partnerships. When a business relies on Yahoo email, proper configuration and access control are important.",
-      "Infinity Techiez provides independent technology services for businesses that need help with Yahoo email in legitimate business contexts. We are not Yahoo, we are not affiliated with Yahoo, and we are not an official Yahoo service channel. Our role is to help you configure, administer and troubleshoot the email environment you already have.",
+      "Yahoo Mail is primarily known as a personal email service, but some businesses use it for specific purposes or have legacy accounts that need to be managed. Yahoo also offers business email options through certain plans or partnerships. When a business relies on Yahoo email, proper configuration and access control are important.",
+      "Infinity Techiez provides independent technology services for businesses that need help with Yahoo email in legitimate business contexts. We are not Yahoo, we are not affiliated with Yahoo, and we are not an official Yahoo service channel. Our role is to help you configure, administer and manage the email environment you already have.",
     ],
     providerName: "Yahoo",
     independentDisclosure:
@@ -1446,7 +1446,7 @@ export const landingPages: LandingPage[] = [
         description: "Manage users, aliases, forwarding and mailbox settings as your team changes.",
       },
       {
-        title: "Comcast.net accounts on Yahoo Mail",
+        title: "Provider platform transitions",
         description: "Assistance for ISP-hosted mailboxes that have moved — or are moving — to a new provider platform, including sign-in, settings and client updates.",
       },
       {
@@ -1472,8 +1472,8 @@ export const landingPages: LandingPage[] = [
         description: "A business has legacy Yahoo email accounts or uses Yahoo email for specific purposes and needs proper configuration.",
       },
       {
-        title: "Moved from comcast.net to Yahoo",
-        description: "A comcast.net mailbox has migrated to Yahoo Mail and the user needs help signing in, updating email clients or recreating forwarding.",
+        title: "Provider moved our mailbox to a new platform",
+        description: "An ISP-hosted mailbox has been migrated to a new provider platform and the business needs help signing in, updating email clients or recreating forwarding.",
       },
       {
         title: "Moving to or from Yahoo email",
@@ -1488,21 +1488,21 @@ export const landingPages: LandingPage[] = [
       {
         title: "Yahoo email in a business context",
         paragraphs: [
-          "Yahoo Mail is primarily a consumer service, but some businesses use it for specific workflows or have legacy accounts that need administration. Yahoo also offers business email options through certain plans, though these are less common than dedicated business platforms.",
+          "Yahoo Mail is primarily a personal service, but some businesses use it for specific workflows or have legacy accounts that need administration. Yahoo also offers business email options through certain plans, though these are less common than dedicated business platforms.",
           "We help you configure Yahoo email correctly for legitimate business use, including client setup, access controls and migration planning when a more suitable platform is needed.",
         ],
       },
       {
-        title: "Comcast.net mailboxes now run on Yahoo Mail",
+        title: "Provider platform transitions",
         paragraphs: [
-          "Comcast is transitioning comcast.net email accounts to the Yahoo Mail platform in phases through 2025 and 2026. After the move, you sign in at login.yahoo.com with your full comcast.net address, and your email clients must use Yahoo's IMAP or SMTP server settings instead of the old Comcast ones.",
-          "We help users settle into the new platform — configuring Outlook, Apple Mail and mobile apps with the correct Yahoo settings, restoring forwarding rules that did not carry over, locating consolidated folders, and confirming that messages, contacts and calendars arrived as expected.",
+          "Internet and email providers periodically move hosted mailboxes to new platforms. When a transition applies to your account, your address, messages, folders and contacts typically carry over — but sign-in pages, server settings and forwarding rules can change.",
+          "We help businesses settle into the new platform — configuring Outlook, Apple Mail and mobile apps with the correct settings, recreating forwarding rules that did not carry over, locating moved folders, and confirming that messages, contacts and calendars arrived as expected.",
         ],
       },
       {
         title: "Limitations and considerations",
         paragraphs: [
-          "Consumer-grade Yahoo email may lack the admin controls, security features and centralized management that larger businesses require. If your needs exceed what Yahoo email provides, we can help you evaluate alternatives and plan a migration.",
+          "Yahoo email may lack the admin controls, security features and centralized management that larger businesses require. If your needs exceed what Yahoo email provides, we can help you evaluate alternatives and plan a migration.",
           "We do not make unsupported claims about Yahoo's systems or capabilities. Our focus is on helping you use the service you have reliably, or moving to a platform that better fits your business requirements.",
         ],
       },
@@ -1546,9 +1546,9 @@ export const landingPages: LandingPage[] = [
           "Yes. We can help configure desktops, laptops, phones and tablets to access Yahoo email using standard protocols and current settings.",
       },
       {
-        question: "My comcast.net email moved to Yahoo Mail — can you help?",
+        question: "Our provider moved our email to a new platform — can you help?",
         answer:
-          "Yes. Once a comcast.net mailbox moves to Yahoo Mail, you sign in with your full comcast.net address and your email clients need Yahoo's server settings. We can update Outlook, phones and tablets, recreate forwarding rules that stopped, and sort out folders or contacts that did not move cleanly.",
+          "Yes. When a provider migrates hosted mailboxes to a new platform, your email clients need updated server settings. We can update Outlook, phones and tablets, recreate forwarding rules that stopped, and sort out folders or contacts that did not move cleanly.",
       },
       {
         question: "Can you help migrate away from Yahoo email?",
@@ -1579,7 +1579,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "aol-business-email",
     image: {
-      src: "/images/lp-email-migration.svg",
+      src: "/images/lp-email-migration.png",
       alt: "Illustration of legacy AOL mailboxes migrating to a modern email platform",
     },
     title: "AOL Business Email Services",
@@ -1587,8 +1587,8 @@ export const landingPages: LandingPage[] = [
     shortDescription:
       "Independent help with AOL email configuration, account administration and connectivity for legitimate business scenarios.",
     intro: [
-      "AOL Mail is primarily a consumer email service, but some businesses maintain legacy AOL accounts or use AOL email for specific purposes. When a business relies on AOL email, correct configuration and access control help ensure reliable communication.",
-      "Infinity Techiez provides independent technology services for businesses that need help with AOL email in legitimate business contexts. We are not AOL, we are not affiliated with AOL, and we are not an official AOL service channel. Our role is to help you configure, administer and troubleshoot the email environment you already have.",
+      "AOL Mail is primarily a personal email service, but some businesses maintain legacy AOL accounts or use AOL email for specific purposes. When a business relies on AOL email, correct configuration and access control help ensure reliable communication.",
+      "Infinity Techiez provides independent technology services for businesses that need help with AOL email in legitimate business contexts. We are not AOL, we are not affiliated with AOL, and we are not an official AOL service channel. Our role is to help you configure, administer and manage the email environment you already have.",
     ],
     providerName: "AOL",
     independentDisclosure:
@@ -1647,14 +1647,14 @@ export const landingPages: LandingPage[] = [
       {
         title: "AOL email in a business context",
         paragraphs: [
-          "AOL Mail is primarily a consumer service, but some businesses maintain legacy accounts or use it for specific purposes. It can be accessed via webmail or configured on standard email clients using IMAP, POP or SMTP.",
+          "AOL Mail is primarily a personal service, but some businesses maintain legacy accounts or use it for specific purposes. It can be accessed via webmail or configured on standard email clients using IMAP, POP or SMTP.",
           "We help you configure AOL email correctly for legitimate business use, review security settings, and plan migrations when a more suitable business email platform is needed.",
         ],
       },
       {
         title: "When to consider a different platform",
         paragraphs: [
-          "Consumer AOL email may lack the admin controls, security features and centralized management that most businesses need. If your business is growing or requires domain-based email, a dedicated business email platform is usually a better fit.",
+          "AOL email may lack the admin controls, security features and centralized management that most businesses need. If your business is growing or requires domain-based email, a dedicated business email platform is usually a better fit.",
           "We can help you evaluate whether staying with AOL email or moving to a business-focused platform makes sense for your requirements, and we can plan the migration if you decide to move.",
         ],
       },
@@ -1671,7 +1671,7 @@ export const landingPages: LandingPage[] = [
       { title: "Service limitations", description: "AOL email features and admin options are limited compared to business platforms; confirm what your setup supports." },
       { title: "Client compatibility", description: "Some older email clients may need updated settings or app-level credentials depending on AOL's current requirements." },
       { title: "Data export options", description: "If migrating away, confirm what mailbox data can be exported and in what format before starting." },
-      { title: "Security features", description: "Consumer AOL email may lack advanced security options; enable what is available and consider a different platform for higher security needs." },
+      { title: "Security features", description: "AOL email may lack advanced security options; enable what is available and consider a different platform for higher security needs." },
     ],
     securityConsiderations: [
       { title: "Account access", description: "Review who has access to AOL email settings and enable MFA where available." },
@@ -1726,7 +1726,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-domain-dns",
     image: {
-      src: "/images/lp-domain-dns.svg",
+      src: "/images/lp-domain-dns.png",
       alt: "Illustration of a domain name connected to MX, A, CNAME and TXT DNS records",
     },
     title: "Business Domain & DNS Management",
@@ -1911,7 +1911,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "business-email-configuration",
     image: {
-      src: "/images/lp-email-setup.svg",
+      src: "/images/lp-email-setup.png",
       alt: "Illustration of email client configuration with server and security settings",
     },
     title: "Business Email Configuration Services",

@@ -68,7 +68,7 @@ export default function DataProcessingPage() {
               {
                 title: "6. Sub-processors and third parties",
                 paragraphs: [
-                  "Some services require coordination with third parties such as domain registrars, hosting platforms, email providers (including Yahoo Mail for migrated comcast.net accounts), cloud providers and payment processors. Data is shared with them only as needed to deliver the service and is subject to those providers' own terms and privacy policies.",
+                  "Some services require coordination with third parties such as domain registrars, hosting platforms, email providers, cloud providers and payment processors. Data is shared with them only as needed to deliver the service and is subject to those providers' own terms and privacy policies.",
                 ],
               },
               {

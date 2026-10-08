@@ -38,7 +38,7 @@ export default function RefundPolicyPage() {
                 title: "1. Scope",
                 paragraphs: [
                   "This policy covers services provided directly by us — such as email setup and configuration, email migration, DNS and domain management, issue resolution and ongoing administration. If a service agreement, quote or invoice contains specific refund or guarantee terms, those terms take precedence for that engagement.",
-                  "Nothing in this policy limits any rights you may have under applicable consumer-protection law.",
+                  "Nothing in this policy limits any rights you may have under applicable law.",
                 ],
               },
               {

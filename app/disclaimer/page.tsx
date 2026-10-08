@@ -47,7 +47,7 @@ export default function DisclaimerPage() {
               {
                 title: "3. Provider-controlled account actions",
                 paragraphs: [
-                  "For account recovery, password resets, or provider-controlled account actions, customers may be directed to the relevant provider's official process. Only the account provider can verify ownership, restore access or reverse provider-side restrictions, and those steps are outside our control.",
+                  "For sign-in verification, credential changes or other provider-controlled account actions, customers may be directed to the relevant provider's official process. Only the account provider can verify ownership, restore access or reverse provider-side restrictions, and those steps are outside our control.",
                   "We will always tell you when a request falls into this category and guide you to the correct official channel rather than attempting unsupported workarounds.",
                 ],
               },
@@ -60,7 +60,7 @@ export default function DisclaimerPage() {
               {
                 title: "5. Third-party platforms and settings",
                 paragraphs: [
-                  "Platform features, configuration steps, pricing and policies of third-party providers (such as email and hosting vendors) are controlled by those providers and may change without notice — including active transitions such as the comcast.net migration to Yahoo Mail. Always confirm critical settings directly with your platform or service provider where required.",
+                  "Platform features, configuration steps, pricing and policies of third-party providers (such as email and hosting vendors) are controlled by those providers and may change without notice — including provider-initiated platform transitions. Always confirm critical settings directly with your platform or service provider where required.",
                 ],
               },
               {
