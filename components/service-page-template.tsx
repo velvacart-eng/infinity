@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, ShieldAlert } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { FAQ } from "@/components/faq";
@@ -7,6 +7,7 @@ import { CTAButton } from "@/components/cta-button";
 import { ServiceHeroVisual } from "@/components/service-hero-visual";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
 import { Service } from "@/types";
+import { businessInfo } from "@/lib/config";
 import { getServiceBySlug } from "@/lib/services-data";
 import { landingPages } from "@/lib/landing-pages-data";
 
@@ -67,9 +68,29 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         </div>
       </section>
 
+      {/* Independent provider disclosure */}
+      <section className="border-b border-border/40 py-6">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-start gap-3 rounded-xl border border-border/50 bg-muted/40 p-4">
+            <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
+            <div>
+              <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
+                Independent service provider
+              </p>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                {businessInfo.brandName} is an independent IT services provider and is not
+                affiliated with, endorsed by or sponsored by any email, hosting or technology
+                platform vendor referenced on this page. All trademarks and brand names are the
+                property of their respective owners.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Overview */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
               align="left"

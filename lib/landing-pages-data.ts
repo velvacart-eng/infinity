@@ -40,7 +40,7 @@ export const commonEmailTasks = [
   {
     title: "Email not sending",
     description:
-      "Fix outgoing mail failures — SMTP settings, authentication errors, port blocks, sending limits and reputation problems.",
+      "Resolve outgoing mail failures — SMTP settings, authentication errors, port blocks, sending limits and reputation problems.",
   },
   {
     title: "Domain MX record setup",
@@ -250,7 +250,7 @@ export const landingPages: LandingPage[] = [
       "Reduced risk of lost messages or missing data",
       "Proper authentication and deliverability after the move",
       "Clear documentation of the new environment",
-      "Support for staff during and after the transition",
+      "Assistance for staff during and after the transition",
       "Rollback options considered before changes are made",
     ],
     scenarios: [
@@ -336,7 +336,7 @@ export const landingPages: LandingPage[] = [
       {
         question: "Can you migrate calendars and contacts too?",
         answer:
-          "Yes. Depending on the platforms involved, we can migrate calendars, contacts and other mailbox data where the destination system supports it.",
+          "Yes. Depending on the platforms involved, we can migrate calendars, contacts and other mailbox data where the destination system allows it.",
       },
       {
         question: "What happens to old email after migration?",
@@ -384,11 +384,11 @@ export const landingPages: LandingPage[] = [
       },
       {
         title: "Email client configuration",
-        description: "Set up and troubleshoot desktop, web and mobile email access for users.",
+        description: "Set up and configure desktop, web and mobile email access for users.",
       },
       {
         title: "Security settings review",
-        description: "Check MFA, password policies, external sharing and admin access to reduce risk.",
+        description: "Check MFA, credential policies, external sharing and admin access to reduce risk.",
       },
       {
         title: "Ongoing monitoring",
@@ -401,7 +401,7 @@ export const landingPages: LandingPage[] = [
       "Reduced risk of misconfigured DNS or stale authentication records",
       "Better control over who can access mailboxes and admin settings",
       "Documented processes for common changes",
-      "Proactive review instead of reactive troubleshooting",
+      "Proactive review instead of reactive problem-solving",
     ],
     scenarios: [
       {
@@ -445,7 +445,7 @@ export const landingPages: LandingPage[] = [
       { title: "Admin access control", description: "Limit admin privileges to only those who need them and enable MFA on admin accounts." },
       { title: "Alias and group hygiene", description: "Review aliases and distribution groups regularly so messages reach the right people." },
       { title: "Authentication drift", description: "SPF, DKIM and DMARC records can become outdated when services change; review them periodically." },
-      { title: "Client consistency", description: "Standardize how users access email on different devices to reduce confusion and support requests." },
+      { title: "Client consistency", description: "Standardize how users access email on different devices to reduce confusion and service requests." },
     ],
     securityConsiderations: [
       { title: "Account offboarding", description: "Disable or convert mailboxes promptly when employees leave and preserve necessary records." },
@@ -530,7 +530,7 @@ export const landingPages: LandingPage[] = [
         description: "Configure records for webmail portals, autodiscover and other email-related services.",
       },
       {
-        title: "DNS troubleshooting",
+        title: "DNS diagnostics",
         description: "Diagnose why email is not delivering, bouncing or failing authentication checks.",
       },
       {
@@ -543,7 +543,7 @@ export const landingPages: LandingPage[] = [
       "Improved deliverability through proper authentication",
       "Reduced risk of domain spoofing and phishing",
       "Clear documentation of DNS configuration",
-      "Faster troubleshooting when email problems occur",
+      "Faster diagnosis when email problems occur",
       "Coordinated DNS changes that avoid service interruption",
     ],
     scenarios: [
@@ -615,7 +615,7 @@ export const landingPages: LandingPage[] = [
           "DNS changes can take minutes to hours depending on TTL settings and provider caching. We do not guarantee specific propagation times, but we plan changes to minimize disruption.",
       },
       {
-        question: "Can you fix email deliverability problems?",
+        question: "Can you help with email deliverability problems?",
         answer:
           "Often, yes. Many deliverability issues are caused by missing or incorrect SPF, DKIM or DMARC records. We can review your DNS setup and correct what is wrong.",
       },
@@ -635,7 +635,7 @@ export const landingPages: LandingPage[] = [
       "Tell us about your current setup and we can review or configure the DNS records needed for reliable business email.",
     seoTitle: "Business Email DNS Configuration",
     seoDescription:
-      "MX, SPF, DKIM and DMARC record setup for business email. DNS configuration, troubleshooting and authentication from Infinity Techiez.",
+      "MX, SPF, DKIM and DMARC record setup for business email. DNS configuration, diagnostics and authentication from Infinity Techiez.",
     canonical: `${businessInfo.siteUrl}/it-services/business-email-dns`,
     breadcrumbs: baseBreadcrumbs("Business Email DNS", "business-email-dns"),
   },
@@ -666,7 +666,7 @@ export const landingPages: LandingPage[] = [
       },
       {
         title: "Access control setup",
-        description: "Review who can access mailboxes, admin consoles and account recovery options.",
+        description: "Review who can access mailboxes, admin consoles and provider access options.",
       },
       {
         title: "Multi-factor authentication",
@@ -792,16 +792,16 @@ export const landingPages: LandingPage[] = [
   {
     slug: "comcast-business-email",
     image: {
-      src: "/images/lp-comcast-yahoo.svg",
-      alt: "Illustration of a comcast.net mailbox moving to Yahoo Mail",
+      src: "/images/lp-email-migration.svg",
+      alt: "Illustration of a business mailbox migration to a modern email platform",
     },
     title: "Comcast Business Email Services",
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
-      "Independent assistance with Comcast email configuration, the comcast.net move to Yahoo Mail, account administration, DNS settings and email connectivity.",
+      "Independent assistance with Comcast business email configuration, migration assistance, account administration, DNS settings and email connectivity.",
     intro: [
       "Many businesses receive email services bundled with their Comcast Business internet or voice packages. These email accounts work like other business email, but the configuration details, DNS settings and account management options can be unfamiliar to teams that did not set them up originally.",
-      "Infinity Techiez provides independent technology services for businesses that need help with Comcast Business email. We are not Comcast, we are not affiliated with Comcast, and we are not an official Comcast service channel. Our role is to help you configure, administer and troubleshoot the email environment you already have so it works reliably for your business.",
+      "Infinity Techiez provides independent technology services for businesses that need help with Comcast Business email. We are not Comcast, we are not affiliated with Comcast, and we are not an official Comcast service channel. Our role is to help you configure, administer and manage the email environment you already have so it works reliably for your business.",
     ],
     providerName: "Comcast",
     independentDisclosure:
@@ -826,12 +826,12 @@ export const landingPages: LandingPage[] = [
         description: "Coordinate domain records, MX settings and authentication when using custom domains with Comcast email.",
       },
       {
-        title: "Comcast.net to Yahoo Mail migration",
-        description: "Help with the comcast.net email move to Yahoo Mail — preparing your mailbox, accepting the transition and reconfiguring devices.",
+        title: "Email migration assistance",
+        description: "Guidance when a provider transitions accounts to a new platform — preparing mailboxes, completing the move and reconfiguring devices.",
       },
       {
         title: "Migration planning",
-        description: "Plan moves from Comcast email to Yahoo Mail or another platform, or move existing mailboxes into Comcast email.",
+        description: "Plan moves from bundled ISP email to a dedicated business platform, or consolidate existing mailboxes.",
       },
       {
         title: "Ongoing administration",
@@ -852,12 +852,12 @@ export const landingPages: LandingPage[] = [
         description: "A business has Comcast services and wants business email configured correctly with the right settings and devices.",
       },
       {
-        title: "Email not syncing or sending",
-        description: "Users are having trouble sending, receiving or syncing Comcast email on their devices.",
+        title: "Email delivery or sync concerns",
+        description: "Users are experiencing sending, receiving or synchronization inconsistencies with Comcast email on their devices.",
       },
       {
-        title: "Comcast.net account moved to Yahoo Mail",
-        description: "A comcast.net mailbox has been invited to move — or has already moved — to Yahoo Mail and needs preparation, verification or client re-setup.",
+        title: "Provider transition to a new platform",
+        description: "An ISP-hosted mailbox is being moved to a new provider platform and needs preparation, verification and client reconfiguration.",
       },
       {
         title: "Moving to or from Comcast email",
@@ -873,17 +873,17 @@ export const landingPages: LandingPage[] = [
         ],
       },
       {
-        title: "Comcast.net email is moving to Yahoo Mail",
+        title: "Provider platform transitions",
         paragraphs: [
-          "Comcast is migrating comcast.net email accounts to Yahoo Mail in phases through 2025 and 2026. When your mailbox is invited, you keep your comcast.net address, and your messages, folders and contacts carry over — but the move changes how you sign in and how your email clients connect.",
-          "There are practical limits worth preparing for: mailboxes with more than 4,100 folders are consolidated, only the first 10,000 contacts move, and messages larger than 25 MB are not migrated automatically — they must be downloaded first. Any comcast.net forwarding rules stop once the account moves, so they need to be recreated inside Yahoo Mail.",
+          "Internet providers periodically move hosted email accounts to new platforms. When a transition applies to your mailbox, your address, messages, folders and contacts typically carry over — but the move changes how you sign in and how your email clients connect.",
+          "Provider transitions often have practical limits — folder, contact and attachment-size caps, plus forwarding rules that may need to be recreated on the destination platform. We help you prepare so nothing important is lost in the move.",
         ],
       },
       {
-        title: "Preparing for and recovering after the move",
+        title: "Preparing for a provider transition",
         paragraphs: [
-          "Before your comcast.net account moves, it pays to clean up large attachments, shorten folder names over 240 characters, trim excess folders and contacts, and note any forwarding rules. After accepting Yahoo's terms at sign-in, desktop and mobile email clients must be updated to Yahoo's IMAP or SMTP settings to keep working.",
-          "Because the transition has attracted phishing scams, we also help verify that notices are genuine — official invitations only appear after signing in at connect.xfinity.com or login.yahoo.com, never through links demanding urgent action. We walk you through the legitimate path and get your devices working on the new platform.",
+          "Before a mailbox move, it pays to clean up large attachments, trim excess folders and contacts, and note any forwarding rules. After the transition, desktop and mobile email clients generally need to be updated to the new platform's settings to keep working.",
+          "Because provider transitions can attract phishing scams, we also help verify that notices are genuine — legitimate invitations only appear inside the provider's official sign-in pages, never through links demanding urgent action. We walk you through the legitimate path and get your devices working on the new platform.",
         ],
       },
       {
@@ -905,7 +905,7 @@ export const landingPages: LandingPage[] = [
     technicalConsiderations: [
       { title: "Account type differences", description: "Comcast offers different account types with different features; confirm what your plan includes before planning changes." },
       { title: "Custom domain use", description: "If you use a custom domain with Comcast email, DNS records must be configured correctly for delivery and authentication." },
-      { title: "Client compatibility", description: "Some older email clients may need updated settings or app passwords depending on Comcast's current requirements." },
+      { title: "Client compatibility", description: "Some older email clients may need updated settings or app-level credentials depending on Comcast's current requirements." },
       { title: "Data export options", description: "If migrating away, confirm what mailbox data can be exported and in what format before starting." },
     ],
     securityConsiderations: [
@@ -933,14 +933,14 @@ export const landingPages: LandingPage[] = [
           "Yes. We can help configure desktops, laptops, phones and tablets to access Comcast Business email using standard protocols and current settings.",
       },
       {
-        question: "My comcast.net email is moving to Yahoo Mail — can you help?",
+        question: "Our provider is moving our email to a new platform — can you help?",
         answer:
-          "Yes. Comcast is moving comcast.net accounts to Yahoo Mail in phases through 2025–2026. We can help you prepare the mailbox (folder, contact and large-message limits), complete the transition correctly, and reconfigure Outlook, phones and other email clients to use Yahoo's servers afterward.",
+          "Yes. When a provider transitions hosted email to a new platform, we can help you prepare the mailbox (folder, contact and large-message limits), complete the transition correctly, and reconfigure Outlook, phones and other email clients afterward.",
       },
       {
-        question: "Will I keep my comcast.net email address after the move?",
+        question: "Will we keep our existing email address after a provider transition?",
         answer:
-          "Yes — your comcast.net address, messages, folders and contacts move to Yahoo Mail. Note that forwarding rules do not carry over and must be set up again, and mailboxes above 4,100 folders or 10,000 contacts are consolidated during the move.",
+          "In most cases, yes — your address, messages, folders and contacts carry over. Note that forwarding rules often do not carry over and must be recreated, and very large mailboxes may be consolidated during the move.",
       },
       {
         question: "Can you help migrate away from Comcast email?",
@@ -953,7 +953,7 @@ export const landingPages: LandingPage[] = [
           "Yes. We can help coordinate domain records, MX settings and authentication for businesses using custom domains with Comcast email services.",
       },
       {
-        question: "Can you fix Comcast email sending or receiving problems?",
+        question: "Can you help with Comcast email sending or receiving issues?",
         answer:
           "We can review account settings, client configuration, DNS records and authentication to identify common causes of email delivery or sync issues.",
       },
@@ -963,7 +963,7 @@ export const landingPages: LandingPage[] = [
       "Tell us about your Comcast email environment — accounts, domains and devices — and we can recommend a practical configuration or administration plan.",
     seoTitle: "Comcast Business Email Services",
     seoDescription:
-      "Independent help with Comcast email configuration, comcast.net to Yahoo Mail migration, account administration and connectivity. Not affiliated with Comcast.",
+      "Independent help with Comcast business email configuration, migration assistance, account administration and connectivity. Not affiliated with Comcast.",
     canonical: `${businessInfo.siteUrl}/it-services/comcast-business-email`,
     noIndex: true,
     breadcrumbs: baseBreadcrumbs("Comcast Business Email", "comcast-business-email"),
@@ -1027,7 +1027,7 @@ export const landingPages: LandingPage[] = [
         description: "A business has AT&T services and wants business email configured correctly with the right devices and settings.",
       },
       {
-        title: "Troubleshooting delivery issues",
+        title: "Diagnosing delivery issues",
         description: "Email is not arriving, bouncing or being flagged as spam because of configuration or authentication problems.",
       },
       {
@@ -1100,7 +1100,7 @@ export const landingPages: LandingPage[] = [
           "Yes. We can help coordinate domain records, MX settings and authentication for businesses using custom domains with AT&T email services.",
       },
       {
-        question: "Can you fix AT&T email sending or receiving problems?",
+        question: "Can you help with AT&T email sending or receiving issues?",
         answer:
           "We can review account settings, client configuration, DNS records and authentication to identify common causes of email delivery or sync issues.",
       },
@@ -1200,7 +1200,7 @@ export const landingPages: LandingPage[] = [
     ],
     process: [
       { step: "01", title: "Assess", description: "Review your current Outlook setup, account types, devices and issues." },
-      { step: "02", title: "Plan", description: "Decide on configuration approach, migration timing or troubleshooting priorities." },
+      { step: "02", title: "Plan", description: "Decide on configuration approach, migration timing or issue-resolution priorities." },
       { step: "03", title: "Configure", description: "Set up accounts, profiles, devices, DNS records and authentication." },
       { step: "04", title: "Test", description: "Verify send, receive, sync and authentication across devices and users." },
       { step: "05", title: "Document", description: "Record settings, admin contacts and procedures for future reference." },
@@ -1210,10 +1210,10 @@ export const landingPages: LandingPage[] = [
       { title: "Connection method", description: "Choose the right protocol (Exchange, IMAP, POP, ActiveSync) based on your platform and device requirements." },
       { title: "Profile management", description: "Large mailboxes and multiple profiles can affect Outlook performance; plan accordingly." },
       { title: "Mobile access", description: "Mobile Outlook setup requires correct server settings and may need app-specific configuration." },
-      { title: "Authentication requirements", description: "Modern authentication methods may require specific settings or app passwords on older clients." },
+      { title: "Authentication requirements", description: "Modern authentication methods may require specific settings or app-level credentials on older clients." },
     ],
     securityConsiderations: [
-      { title: "MFA for admin accounts", description: "Enable multi-factor authentication on Microsoft 365 admin and user accounts where supported." },
+      { title: "MFA for admin accounts", description: "Enable multi-factor authentication on Microsoft 365 admin and user accounts where available." },
       { title: "Access reviews", description: "Review who has access to mailboxes, admin roles and sharing settings regularly." },
       { title: "Client security", description: "Ensure Outlook clients are updated and devices meet basic security requirements." },
     ],
@@ -1394,7 +1394,7 @@ export const landingPages: LandingPage[] = [
           "Yes. Google Workspace allows you to use Gmail with your own domain. We can help configure the domain, DNS records and accounts needed.",
       },
       {
-        question: "Can you fix Gmail sync or delivery problems?",
+        question: "Can you help with Gmail sync or delivery issues?",
         answer:
           "We can review account settings, client configuration, DNS records and authentication to identify common causes of email delivery or sync issues.",
       },
@@ -1447,14 +1447,14 @@ export const landingPages: LandingPage[] = [
       },
       {
         title: "Comcast.net accounts on Yahoo Mail",
-        description: "Help for comcast.net mailboxes that have moved — or are moving — to Yahoo Mail, including sign-in, settings and client updates.",
+        description: "Assistance for ISP-hosted mailboxes that have moved — or are moving — to a new provider platform, including sign-in, settings and client updates.",
       },
       {
         title: "Migration planning",
-        description: "Plan moves to Yahoo email — such as the comcast.net transition — or from Yahoo to another platform with minimal disruption.",
+        description: "Plan moves to or from Yahoo email — including provider-initiated platform transitions — with minimal disruption.",
       },
       {
-        title: "Connectivity troubleshooting",
+        title: "Connectivity diagnostics",
         description: "Diagnose why email is not sending, receiving or syncing correctly on user devices.",
       },
     ],
@@ -1561,7 +1561,7 @@ export const landingPages: LandingPage[] = [
           "Yes. We can help coordinate domain records, MX settings and authentication for businesses using custom domains with Yahoo email services.",
       },
       {
-        question: "Can you fix Yahoo email sending or receiving problems?",
+        question: "Can you help with Yahoo email sending or receiving issues?",
         answer:
           "We can review account settings, client configuration, DNS records and authentication to identify common causes of email delivery or sync issues.",
       },
@@ -1571,7 +1571,7 @@ export const landingPages: LandingPage[] = [
       "Share the details of your Yahoo email setup and we can suggest a sensible way to configure or administer it.",
     seoTitle: "Yahoo Business Email Services",
     seoDescription:
-      "Independent help with Yahoo business email, comcast.net accounts moved to Yahoo Mail, configuration and connectivity. Not affiliated with Yahoo.",
+      "Independent help with Yahoo business email, provider platform transitions, configuration and connectivity. Not affiliated with Yahoo.",
     canonical: `${businessInfo.siteUrl}/it-services/yahoo-business-email`,
     noIndex: true,
     breadcrumbs: baseBreadcrumbs("Yahoo Business Email", "yahoo-business-email"),
@@ -1606,10 +1606,10 @@ export const landingPages: LandingPage[] = [
       },
       {
         title: "Account administration",
-        description: "Manage user access, passwords, forwarding and mailbox settings as your team changes.",
+        description: "Manage user access, credentials, forwarding and mailbox settings as your team changes.",
       },
       {
-        title: "Connectivity troubleshooting",
+        title: "Connectivity diagnostics",
         description: "Diagnose why email is not sending, receiving or syncing correctly on user devices.",
       },
       {
@@ -1618,7 +1618,7 @@ export const landingPages: LandingPage[] = [
       },
       {
         title: "Security review",
-        description: "Check account security settings, recovery options and access controls for business email.",
+        description: "Check account security settings, provider access options and access controls for business email.",
       },
     ],
     benefits: [
@@ -1669,13 +1669,13 @@ export const landingPages: LandingPage[] = [
     ],
     technicalConsiderations: [
       { title: "Service limitations", description: "AOL email features and admin options are limited compared to business platforms; confirm what your setup supports." },
-      { title: "Client compatibility", description: "Some older email clients may need updated settings or app passwords depending on AOL's current requirements." },
+      { title: "Client compatibility", description: "Some older email clients may need updated settings or app-level credentials depending on AOL's current requirements." },
       { title: "Data export options", description: "If migrating away, confirm what mailbox data can be exported and in what format before starting." },
       { title: "Security features", description: "Consumer AOL email may lack advanced security options; enable what is available and consider a different platform for higher security needs." },
     ],
     securityConsiderations: [
       { title: "Account access", description: "Review who has access to AOL email settings and enable MFA where available." },
-      { title: "Password and recovery", description: "Use strong, unique passwords and ensure recovery options are controlled by authorized people." },
+      { title: "Credentials and access", description: "Use strong, unique credentials and ensure account access options are controlled by authorized people." },
       { title: "Forwarding rules", description: "Check automatic forwarding so messages are not unintentionally exposed." },
     ],
     whoItIsFor: [
@@ -1708,7 +1708,7 @@ export const landingPages: LandingPage[] = [
           "AOL email can work for basic business communication, but it lacks the admin controls, security features and centralized management that most businesses need. We can help you evaluate whether it fits your requirements or recommend alternatives.",
       },
       {
-        question: "Can you fix AOL email sending or receiving problems?",
+        question: "Can you help with AOL email sending or receiving issues?",
         answer:
           "We can review account settings, client configuration and access options to identify common causes of email delivery or sync issues.",
       },
@@ -1769,7 +1769,7 @@ export const landingPages: LandingPage[] = [
         description: "Track renewals, registrant details and access across multiple domains so nothing lapses unexpectedly.",
       },
       {
-        title: "DNS troubleshooting",
+        title: "DNS diagnostics",
         description: "Diagnose resolution failures, propagation delays and conflicting records that disrupt email or site access.",
       },
     ],
@@ -1951,10 +1951,10 @@ export const landingPages: LandingPage[] = [
       },
       {
         title: "Account administration",
-        description: "Manage users, passwords, quotas, retention and access as staff join, change roles or leave.",
+        description: "Manage users, credentials, quotas, retention and access as staff join, change roles or leave.",
       },
       {
-        title: "Delivery troubleshooting",
+        title: "Delivery diagnostics",
         description: "Diagnose messages stuck in queues, rejected by recipients or routed to spam because of configuration issues.",
       },
     ],
@@ -1963,8 +1963,8 @@ export const landingPages: LandingPage[] = [
       "Authentication records aligned to reduce spoofing risk",
       "Consistent client configuration across every device",
       "Clear account structure that scales with the team",
-      "Documented settings for troubleshooting and audits",
-      "Fewer support calls caused by misconfigured devices",
+      "Documented settings for issue resolution and audits",
+      "Fewer help requests caused by misconfigured devices",
     ],
     scenarios: [
       {
@@ -2011,7 +2011,7 @@ export const landingPages: LandingPage[] = [
         title: "Client and device configuration",
         paragraphs: [
           "Modern email clients connect using IMAP or provider-specific protocols for incoming mail and authenticated SMTP for sending. Correct configuration covers server names, ports, encryption methods and authentication type — details that differ between providers and change when providers deprecate legacy options.",
-          "Consistency matters at scale. When every desktop, laptop and phone is configured to the same documented standard, onboarding new staff is quick and troubleshooting is straightforward. We configure devices to a defined baseline and record the settings so the baseline survives staff and device turnover.",
+          "Consistency matters at scale. When every desktop, laptop and phone is configured to the same documented standard, onboarding new staff is quick and issue resolution is straightforward. We configure devices to a defined baseline and record the settings so the baseline survives staff and device turnover.",
         ],
       },
       {
@@ -2081,7 +2081,7 @@ export const landingPages: LandingPage[] = [
       {
         question: "Can you manage email accounts on an ongoing basis?",
         answer:
-          "Yes. We provide ongoing administration covering user adds and removals, password resets, alias and shared mailbox changes, and periodic review of DNS and authentication records.",
+          "Yes. We provide ongoing administration covering user adds and removals, credential updates, alias and shared mailbox changes, and periodic review of DNS and authentication records.",
       },
     ],
     ctaTitle: "Need business email configured correctly?",

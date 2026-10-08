@@ -26,7 +26,7 @@ export default function ServiceDeliveryPage() {
             {businessInfo.brandName}, a brand operated by {businessInfo.legalName}, follows a
             structured delivery process so clients know what to expect — from the first
             conversation through ongoing service. This page explains how engagements are
-            scoped, delivered, verified and supported.
+            scoped, delivered, verified and managed.
           </p>
           <p className="mt-4 text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground/70">
             Last updated: October 2026

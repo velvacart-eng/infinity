@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/service-delivery",
     "/data-processing",
     "/disclaimer",
+    "/accessibility",
     "/email",
     "/domains",
     "/servers",

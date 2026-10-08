@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ServicePageTemplate } from "@/components/service-page-template";
-import { ServiceSchema, FAQPageSchema } from "@/components/structured-data";
+import { ServiceSchema, FAQPageSchema, BreadcrumbSchema } from "@/components/structured-data";
 import { services, getServiceBySlug } from "@/lib/services-data";
 import { createMetadata } from "@/lib/seo";
 
@@ -50,6 +50,13 @@ export default async function ServicePage({
         path={`/services/${service.slug}`}
       />
       <FAQPageSchema items={service.faqs} />
+      <BreadcrumbSchema
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: service.title, href: `/services/${service.slug}` },
+        ]}
+      />
       <div className="container mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
         <Breadcrumbs
           items={[

@@ -162,11 +162,11 @@ export const services: Service[] = [
     icon: "Globe",
     seoTitle: "Domains & DNS Services",
     seoDescription:
-      "Business domain management and DNS configuration services from Infinity Techiez. Services for records, transfers, email routing and troubleshooting.",
+      "Business domain management and DNS configuration services from Infinity Techiez. Services for records, transfers, email routing and diagnostics.",
     overview: [
       "A domain name is your business address on the internet. It is what customers type to reach your website and what appears after the @ symbol in your business email. DNS, the Domain Name System, is the invisible infrastructure that tells the internet where to send traffic for that domain, whether it is a website visitor, an email message or an application request.",
       "When DNS is configured correctly, services work smoothly. When it is wrong, websites become unreachable, email stops delivering and business applications can break. Despite how small individual DNS records look, they have an outsized impact on daily operations.",
-      "We help businesses register, manage, transfer and troubleshoot domains and DNS. We do not operate as a domain registry, but we act as an administrator and advisor for your domain assets, making sure records are correct, ownership is properly controlled and changes are planned to avoid unnecessary downtime.",
+      "We help businesses register, manage, transfer and correct domains and DNS. We do not operate as a domain registry, but we act as an administrator and advisor for your domain assets, making sure records are correct, ownership is properly controlled and changes are planned to avoid unnecessary downtime.",
     ],
     includedServices: [
       { title: "Domain registration services", description: "Assist with selecting, registering and renewing domain names through reputable registrars." },
@@ -176,13 +176,13 @@ export const services: Service[] = [
       { title: "SPF, DKIM and DMARC records", description: "Add email authentication records that protect your domain and improve deliverability." },
       { title: "Domain transfer assistance", description: "Guide transfers between registrars with proper preparation, codes and verification." },
       { title: "Subdomain configuration", description: "Create subdomains for separate services, applications, teams or marketing pages." },
-      { title: "DNS troubleshooting", description: "Diagnose why services are not reachable and correct record or propagation issues." },
-      { title: "Domain ownership and access review", description: "Review who controls the domain, registrar access and recovery settings." },
+      { title: "DNS diagnostics", description: "Diagnose why services are not reachable and correct record or propagation issues." },
+      { title: "Domain ownership and access review", description: "Review who controls the domain, registrar access and account access settings." },
     ],
     benefits: [
       "Centralized management of business domain names and DNS records",
       "Reliable configuration that keeps websites, email and applications connected",
-      "Easier troubleshooting when services are not reachable",
+      "Easier diagnosis when services are not reachable",
       "Better control over email authentication and service verification records",
       "Reduced risk of accidental expiration or loss of domain control",
       "Clear documentation of record changes and provider relationships",
@@ -242,7 +242,7 @@ export const services: Service[] = [
       },
     ],
     considerations: [
-      { title: "Domain ownership", description: "Registrar accounts and recovery options should be controlled by authorized people in your organization." },
+      { title: "Domain ownership", description: "Registrar accounts and access options should be controlled by authorized people in your organization." },
       { title: "Authentication records", description: "SPF, DKIM and DMARC records should be kept accurate as email services and providers change." },
       { title: "Change planning", description: "DNS changes should be scheduled to avoid service interruption, with time-to-live values considered in advance." },
       { title: "Renewal management", description: "Domains should be monitored and renewed before expiration to prevent loss or service disruption." },
@@ -318,7 +318,7 @@ export const services: Service[] = [
       { title: "Hosting migrations", description: "Plan and carry out moves between hosting providers with minimal downtime." },
       { title: "Hosting administration", description: "Provide ongoing oversight of hosting settings, updates and environment changes." },
       { title: "Performance and backup considerations", description: "Review caching, speed and backup practices that affect site reliability." },
-      { title: "Basic troubleshooting", description: "Diagnose and resolve common connectivity, DNS and configuration issues." },
+      { title: "Basic issue resolution", description: "Diagnose and resolve common connectivity, DNS and configuration issues." },
     ],
     benefits: [
       "A hosting setup aligned with your website and business requirements",
@@ -584,7 +584,7 @@ export const services: Service[] = [
     includedServices: [
       { title: "Infrastructure planning and assessment", description: "Review current systems and business requirements to identify what infrastructure is needed." },
       { title: "Server configuration and administration", description: "Set up, configure and maintain physical or virtual servers appropriate for your workloads." },
-      { title: "Network design and troubleshooting", description: "Plan and diagnose wired and wireless networks, including routers, switches and access points." },
+      { title: "Network design and diagnostics", description: "Plan and diagnose wired and wireless networks, including routers, switches and access points." },
       { title: "Business device setup and management", description: "Configure computers, laptops and other devices with consistent settings and security controls." },
       { title: "Connectivity review and coordination", description: "Evaluate internet, VPN and remote access needs and coordinate with connectivity providers." },
       { title: "Remote and hybrid infrastructure planning", description: "Design secure access to business systems for employees working outside the office." },
@@ -596,7 +596,7 @@ export const services: Service[] = [
       "Infrastructure designed around actual business workflows",
       "Clear documentation of systems, access and vendors",
       "Options for remote, hybrid and distributed teams",
-      "Easier troubleshooting and faster problem isolation",
+      "Easier diagnosis and faster problem isolation",
       "A scalable foundation that can grow with the business",
       "Better coordination between internal systems and cloud services",
     ],
@@ -1008,7 +1008,7 @@ export const services: Service[] = [
     benefits: [
       "A single point of contact for technology administration and questions",
       "Consistent management of accounts, access and vendors",
-      "Proactive planning instead of only reactive troubleshooting",
+      "Proactive planning instead of only reactive problem-solving",
       "Better coordination between multiple technology providers",
       "Clear documentation that helps during audits, transitions or emergencies",
       "A practical alternative to building a full internal IT department",
@@ -1109,7 +1109,7 @@ export const services: Service[] = [
       {
         question: "Is this a call center for computer problems?",
         answer:
-          "No. This is ongoing business technology administration and coordination, not a consumer help desk or break-fix call center.",
+          "No. This is ongoing business technology administration and coordination, not a consumer help desk or one-off repair service.",
       },
     ],
     relatedServices: ["cloud-services", "cybersecurity", "it-infrastructure", "business-email"],

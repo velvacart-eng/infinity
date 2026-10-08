@@ -6,11 +6,13 @@ export function createMetadata({
   description,
   path,
   noIndex = false,
+  keywords,
 }: {
   title: string;
   description: string;
   path?: string;
   noIndex?: boolean;
+  keywords?: string[];
 }): Metadata {
   const url = path ? `${businessInfo.siteUrl}${path}` : businessInfo.siteUrl;
 
@@ -18,7 +20,7 @@ export function createMetadata({
     // Brand suffix is applied by the title template in app/layout.tsx ("%s | Infinity Techiez")
     title,
     description,
-    keywords: siteConfig.keywords,
+    keywords: [...siteConfig.keywords, ...(keywords ?? [])],
     metadataBase: new URL(businessInfo.siteUrl),
     alternates: {
       canonical: url,

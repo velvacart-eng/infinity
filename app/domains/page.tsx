@@ -13,7 +13,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Domain & DNS Services",
   description:
-    "Business domain management, DNS configuration and record setup from Infinity Techiez. Domain registration services, transfers and troubleshooting.",
+    "Business domain management, DNS configuration and record setup from Infinity Techiez. Domain registration services, transfers and diagnostics.",
   path: "/domains",
 });
 
@@ -38,7 +38,7 @@ const features = [
   },
   {
     icon: CheckCircle,
-    title: "Domain troubleshooting",
+    title: "Domain diagnostics",
     description:
       "Diagnose why websites or email are not reachable and correct record or propagation issues.",
   },
@@ -85,7 +85,7 @@ export default function DomainsLandingPage() {
 
       <PageHero
         title="Domain & DNS Services"
-        description="Business domain management and DNS configuration. We help you own, manage and troubleshoot domain names so websites, email and applications work reliably."
+        description="Business domain management and DNS configuration. We help you own, manage and correct domain names so websites, email and applications work reliably."
         icon={Globe}
         gradient
       />
@@ -117,7 +117,7 @@ export default function DomainsLandingPage() {
                 where to send that traffic.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                We help businesses register, manage, transfer and troubleshoot domains and DNS. We act as an
+                We help businesses register, manage, transfer and correct domains and DNS. We act as an
                 administrator and advisor for your domain assets so records stay correct, ownership is
                 controlled and changes are planned to avoid unnecessary downtime.
               </p>
@@ -217,7 +217,7 @@ export default function DomainsLandingPage() {
         <FadeIn className="container relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-h1 font-bold tracking-tight text-white">Need help with your domain or DNS?</h2>
           <p className="mt-5 text-lg leading-relaxed text-slate-300">
-            Tell us about your current setup and we can review, fix or improve your domain configuration.
+            Tell us about your current setup and we can review, correct or improve your domain configuration.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <CTAButton href="/contact" size="lg" showArrow>

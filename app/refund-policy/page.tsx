@@ -37,7 +37,7 @@ export default function RefundPolicyPage() {
               {
                 title: "1. Scope",
                 paragraphs: [
-                  "This policy covers services provided directly by us — such as email setup and configuration, email migration, DNS and domain management, troubleshooting and ongoing administration. If a service agreement, quote or invoice contains specific refund or guarantee terms, those terms take precedence for that engagement.",
+                  "This policy covers services provided directly by us — such as email setup and configuration, email migration, DNS and domain management, issue resolution and ongoing administration. If a service agreement, quote or invoice contains specific refund or guarantee terms, those terms take precedence for that engagement.",
                   "Nothing in this policy limits any rights you may have under applicable consumer-protection law.",
                 ],
               },
@@ -104,7 +104,7 @@ export default function RefundPolicyPage() {
               {
                 title: "11. Contact us",
                 paragraphs: [
-                  `To discuss a refund, re-fix or billing concern, contact us at ${businessInfo.email || "our Contact page"} or call ${businessInfo.phone || "our listed phone number"}. Our mailing address is ${businessInfo.legalName}, ${businessInfo.address}.`,
+                  `To discuss a refund, repeat-service or billing concern, contact us at ${businessInfo.email || "our Contact page"} or call ${businessInfo.phone || "our listed phone number"}. Our mailing address is ${businessInfo.legalName}, ${businessInfo.address}.`,
                 ],
               },
             ].map((item) => (

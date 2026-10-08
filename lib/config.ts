@@ -57,4 +57,5 @@ export const footerNav: NavItem[] = [
   { label: "Service Delivery", href: "/service-delivery" },
   { label: "Data Processing", href: "/data-processing" },
   { label: "Disclaimer", href: "/disclaimer" },
+  { label: "Accessibility", href: "/accessibility" },
 ];
