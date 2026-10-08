@@ -5,8 +5,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Terms of Service",
-  description:
-    "Terms of service for Infinity Techiez, a brand operated by Advanced Vision Software LLC.",
+  description: `Terms of service for ${businessInfo.brandName}, a brand operated by ${businessInfo.legalName}.`,
   path: "/terms",
 });
 

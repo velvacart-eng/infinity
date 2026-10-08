@@ -24,9 +24,11 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
       <section className="py-14 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-h2 font-semibold tracking-tight">Service overview</h2>
-          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            {service.overview}
-          </p>
+          <div className="mt-4 space-y-4 text-lg leading-relaxed text-muted-foreground">
+            {service.overview.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -40,11 +42,14 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                 We tailor the scope to your business. Typical areas we help with include:
               </p>
             </div>
-            <ul className="space-y-3 lg:col-span-2">
+            <ul className="space-y-5 lg:col-span-2">
               {service.includedServices.map((item) => (
-                <li key={item} className="flex items-start gap-3 border-b border-border pb-3 last:border-0">
-                  <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-accent-dark" aria-hidden="true" />
-                  <span className="text-foreground">{item}</span>
+                <li key={item.title} className="flex items-start gap-3 border-b border-border pb-5 last:border-0">
+                  <CheckCircle className="mt-1 h-4 w-4 shrink-0 text-brand-accent-dark" aria-hidden="true" />
+                  <div>
+                    <span className="font-medium text-foreground">{item.title}</span>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -113,9 +118,33 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         </div>
       </section>
 
-      {/* Security / reliability considerations */}
-      {service.securityConsiderations && service.securityConsiderations.length > 0 && (
+      {/* Who this service is for */}
+      {service.whoFor && service.whoFor.length > 0 && (
         <section className="border-y bg-brand-muted py-14 md:py-20">
+          <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-3 lg:gap-12">
+              <div className="lg:col-span-1">
+                <h2 className="text-h2 font-semibold tracking-tight">Who this service is for</h2>
+                <p className="mt-3 text-muted-foreground">
+                  Organizations and situations where this service is most useful.
+                </p>
+              </div>
+              <ul className="space-y-3 lg:col-span-2">
+                {service.whoFor.map((item) => (
+                  <li key={item} className="flex items-start gap-3 border-b border-border pb-3 last:border-0">
+                    <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-accent-dark" aria-hidden="true" />
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Security / reliability considerations */}
+      {service.considerations && service.considerations.length > 0 && (
+        <section className="py-14 md:py-20">
           <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-3 lg:gap-12">
               <div className="lg:col-span-1">
@@ -126,11 +155,14 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                   Practical measures that should be part of a responsible approach to this service.
                 </p>
               </div>
-              <ul className="space-y-3 lg:col-span-2">
-                {service.securityConsiderations.map((item) => (
-                  <li key={item} className="flex items-start gap-3 border-b border-border pb-3 last:border-0">
-                    <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-accent-dark" aria-hidden="true" />
-                    <span className="text-foreground">{item}</span>
+              <ul className="space-y-5 lg:col-span-2">
+                {service.considerations.map((item) => (
+                  <li key={item.title} className="flex items-start gap-3 border-b border-border pb-5 last:border-0">
+                    <CheckCircle className="mt-1 h-4 w-4 shrink-0 text-brand-accent-dark" aria-hidden="true" />
+                    <div>
+                      <span className="font-medium text-foreground">{item.title}</span>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+                    </div>
                   </li>
                 ))}
               </ul>

@@ -6,8 +6,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Contact Infinity Techiez",
-  description:
-    "Get in touch with Infinity Techiez to discuss your business IT and technology requirements.",
+  description: `Get in touch with ${businessInfo.brandName} to discuss your business IT and technology requirements.`,
   path: "/contact",
 });
 
@@ -55,6 +54,33 @@ export default function ContactPage() {
                     {businessInfo.hours}
                   </p>
                 )}
+              </div>
+
+              <div className="mt-10 space-y-6">
+                <div>
+                  <h3 className="text-h3 font-semibold">What happens next</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    After you submit the form, we review your requirements and follow up
+                    with questions or a recommended next step. We do not share your
+                    information with third parties for marketing purposes.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-h3 font-semibold">What to include</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    A brief description of your business, the technology challenge or
+                    service you are interested in, and any relevant timelines help us
+                    respond with a more useful answer.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-h3 font-semibold">Response expectations</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    We aim to respond to business inquiries promptly during standard
+                    business hours. Response times and availability for ongoing clients
+                    are defined in each service agreement.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="rounded-lg border bg-card p-5 sm:p-8 lg:col-span-3">

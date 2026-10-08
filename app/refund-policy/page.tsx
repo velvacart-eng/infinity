@@ -5,8 +5,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Refund Policy",
-  description:
-    "Refund policy for services provided by Infinity Techiez, a brand operated by Advanced Vision Software LLC.",
+  description: `Refund policy for services provided by ${businessInfo.brandName}, a brand operated by ${businessInfo.legalName}.`,
   path: "/refund-policy",
 });
 

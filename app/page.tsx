@@ -21,6 +21,7 @@ import { CTAButton } from "@/components/cta-button";
 import { HeroVisual } from "@/components/hero-visual";
 import { FAQPageSchema } from "@/components/structured-data";
 import { services } from "@/lib/services-data";
+import { businessInfo } from "@/lib/config";
 
 const businessAreas = [
   {
@@ -57,34 +58,35 @@ const solutionCategories = [
     title: "Business Communication",
     description: "Email, domains and collaboration tools that keep teams connected.",
     icon: Mail,
-    href: "/services/business-email",
+    href: "/solutions/business-communication",
   },
   {
     title: "Web & Cloud",
     description: "Hosting, cloud services and online infrastructure.",
     icon: Cloud,
-    href: "/services/web-hosting",
+    href: "/solutions/web-cloud",
   },
   {
     title: "IT Infrastructure",
     description: "Networks, servers, systems and connectivity.",
     icon: Network,
-    href: "/services/it-infrastructure",
+    href: "/solutions/infrastructure",
   },
   {
     title: "Security & Continuity",
     description: "Cybersecurity, backup and recovery.",
     icon: Shield,
-    href: "/services/cybersecurity",
+    href: "/solutions/security-continuity",
   },
 ];
 
 const whyUs = [
-  "Business-focused technology services",
-  "Clear service scope and practical implementation",
-  "Security-conscious approach",
-  "Organized technology management",
-  "Straightforward communication",
+  "Business-focused technology services designed around real operational needs",
+  "Clear service scope and practical implementation without unnecessary complexity",
+  "Security-conscious approach that addresses common risks without overpromising",
+  "Organized technology management that keeps systems documented and manageable",
+  "Straightforward communication so business decisions stay informed",
+  "Modular services that can be added, removed or scaled as your business changes",
 ];
 
 const faqItems = [
@@ -206,6 +208,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Business Technology Outcomes */}
+      <section className="bg-brand-muted py-16 md:py-24">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            title="Technology outcomes for your business"
+            description="We focus on practical results that help businesses operate with confidence."
+          />
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Stay connected",
+                description: "Reliable email, domains and DNS keep your business reachable by customers and partners.",
+              },
+              {
+                title: "Operate efficiently",
+                description: "Hosting, cloud and infrastructure services support the applications your team depends on.",
+              },
+              {
+                title: "Reduce risk",
+                description: "Security and backup planning helps protect data and reduce disruption from common threats.",
+              },
+              {
+                title: "Plan for growth",
+                description: "Scalable, modular services let you add capacity and capability as your business expands.",
+              },
+            ].map((outcome) => (
+              <div
+                key={outcome.title}
+                className="rounded-lg border bg-card p-5 transition-colors hover:border-primary/30"
+              >
+                <h3 className="text-h3 font-semibold">{outcome.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{outcome.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Business Solutions */}
       <section className="border-y bg-brand-muted py-16 md:py-24" id="solutions">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -278,9 +318,9 @@ export default function HomePage() {
                 About Infinity Techiez
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                Infinity Techiez is a brand operated by Advanced Vision Software
-                LLC. We help businesses organize, secure and manage the technology
-                they depend on every day.
+                {businessInfo.brandName} is a brand operated by {businessInfo.legalName}.
+                We help businesses organize, secure and manage the technology they
+                depend on every day.
               </p>
               <p className="mt-4 text-muted-foreground">
                 From business email and domains to cloud services, infrastructure

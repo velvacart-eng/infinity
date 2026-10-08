@@ -23,6 +23,16 @@ export interface Scenario {
   description: string;
 }
 
+export interface IncludedService {
+  title: string;
+  description: string;
+}
+
+export interface Consideration {
+  title: string;
+  description: string;
+}
+
 export interface Service {
   slug: string;
   title: string;
@@ -31,12 +41,13 @@ export interface Service {
   icon: string;
   seoTitle: string;
   seoDescription: string;
-  overview: string;
-  includedServices: string[];
+  overview: string[];
+  includedServices: IncludedService[];
   benefits: string[];
   scenarios: Scenario[];
   process: { step: string; title: string; description: string }[];
-  securityConsiderations?: string[];
+  considerations?: Consideration[];
+  whoFor: string[];
   faqs: FaqItem[];
   relatedServices: string[];
 }

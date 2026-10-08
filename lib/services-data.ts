@@ -12,85 +12,101 @@ export const services: Service[] = [
     seoTitle: "Business Email Services",
     seoDescription:
       "Professional business email setup, migration and administration using your own domain. SPF, DKIM and DMARC configuration from Infinity Techiez.",
-    overview:
-      "Business email is email that uses your company's domain name instead of a generic personal email service. It gives customers, partners and suppliers a clear, professional way to reach you, and it puts your business in control of accounts, addresses and security settings. We help businesses set up, migrate, configure and manage business email in a way that fits their operations.",
+    overview: [
+      "Business email is email that uses your company's domain name rather than a generic personal address. An address such as name@yourcompany.com reinforces your brand every time you send a message and gives customers, partners and suppliers a clear, professional way to reach you.",
+      "For most businesses, email is also a critical operational system. It stores conversations, invoices, contracts and customer records. If email stops working, is compromised or is misconfigured, the impact can extend well beyond inconvenience. A properly set up business email environment gives you control over accounts, addresses, security settings and how users connect from different devices.",
+      "We help businesses set up, migrate, configure and manage business email in a way that fits their operations. That includes choosing the right email platform, connecting it to your domain, configuring DNS records correctly, migrating mailboxes when needed and putting in place authentication and access controls that reduce common risks.",
+    ],
     includedServices: [
-      "Business email setup",
-      "Domain-based email addresses",
-      "Mailbox configuration",
-      "Email migration planning",
-      "DNS and MX record configuration",
-      "SPF, DKIM and DMARC configuration",
-      "Account administration",
-      "Email security settings",
-      "Mail client and device configuration",
+      { title: "Business email setup", description: "Configure a professional email environment tied to your domain, including platform selection and account structure." },
+      { title: "Domain-based email addresses", description: "Create addresses that match your business domain, with distribution groups and aliases as needed." },
+      { title: "Mailbox configuration", description: "Set up mailbox sizes, retention, signatures and client settings to match business needs." },
+      { title: "Email migration planning", description: "Plan and carry out migrations from existing providers while minimizing disruption and data loss." },
+      { title: "DNS and MX record configuration", description: "Connect your domain to the correct email servers so messages are delivered reliably." },
+      { title: "SPF, DKIM and DMARC configuration", description: "Add authentication records that improve deliverability and reduce spoofing and phishing risk." },
+      { title: "Account administration", description: "Manage user accounts, aliases, groups and permissions as your team changes." },
+      { title: "Email security settings", description: "Apply access controls, authentication requirements and sharing policies appropriate for your business." },
+      { title: "Mail client and device configuration", description: "Configure desktops, phones and tablets to access business email securely and consistently." },
     ],
     benefits: [
-      "Professional business identity in every message",
-      "Centralized control over employee email accounts",
-      "Improved email authentication and deliverability",
-      "Easier onboarding and offboarding of staff",
-      "Consistent configuration across devices",
+      "Professional business identity in every message you send",
+      "Centralized control over employee email accounts and aliases",
+      "Improved email authentication that helps messages reach their destination",
+      "Easier onboarding and offboarding when staff join or leave",
+      "Consistent configuration across computers, phones and tablets",
+      "Clearer separation between business and personal communication",
     ],
     scenarios: [
       {
         title: "Starting a new business",
         description:
-          "A new company needs professional email addresses that match its domain before launch.",
+          "A new company needs professional email addresses that match its domain before it begins communicating with customers, partners and suppliers.",
       },
       {
         title: "Moving from personal email",
         description:
-          "A growing business is still using personal email accounts and wants addresses that look professional.",
+          "A growing business is still using personal addresses such as gmail.com or yahoo.com and wants a more professional appearance and centralized control.",
       },
       {
         title: "Changing email providers",
         description:
-          "A business needs to move mailboxes to a different provider without losing messages or disrupting operations.",
+          "A business needs to move mailboxes, calendars and contacts to a different provider without losing messages or disrupting day-to-day operations.",
       },
       {
         title: "Improving email authentication",
         description:
-          "Messages are going to spam or authentication records need to be corrected with SPF, DKIM and DMARC.",
+          "Messages are being flagged as spam or the business wants to reduce the risk of attackers sending messages that appear to come from its domain.",
       },
       {
         title: "Employee onboarding and offboarding",
         description:
-          "A company needs a repeatable way to create, configure and remove employee mailboxes.",
+          "A company needs a repeatable process to create mailboxes for new hires, transfer data from departing employees and manage shared addresses.",
       },
     ],
     process: [
       {
         step: "01",
-        title: "Discuss",
-        description: "We learn how your business uses email and what needs to change.",
+        title: "Understand",
+        description: "We learn how your business uses email, how many accounts you need, what devices users prefer and whether a migration is involved.",
       },
       {
         step: "02",
         title: "Review",
-        description: "We assess your current domain, DNS and mailbox setup.",
+        description: "We assess your current domain, DNS and mailbox setup to identify authentication gaps, missing records or migration risks.",
       },
       {
         step: "03",
         title: "Plan",
-        description: "We identify the right email configuration and migration approach.",
+        description: "We identify the right email platform, mailbox structure, DNS records, migration schedule and security settings.",
       },
       {
         step: "04",
-        title: "Implement",
-        description: "We configure mailboxes, DNS records and security settings.",
+        title: "Configure",
+        description: "We set up mailboxes, configure DNS records, add authentication and connect mail clients and devices.",
       },
       {
         step: "05",
-        title: "Review",
-        description: "We confirm deliverability, client setup and next steps.",
+        title: "Migrate",
+        description: "When needed, we move messages, calendars and contacts from the old environment and verify that nothing important is missing.",
+      },
+      {
+        step: "06",
+        title: "Verify",
+        description: "We test deliverability, confirm authentication records are working and document the setup for future administration.",
       },
     ],
-    securityConsiderations: [
-      "Strong authentication settings help protect accounts",
-      "Email security records reduce spoofing and phishing risk",
-      "Access controls support employee onboarding and offboarding",
-      "Backup and recovery planning protect business correspondence",
+    considerations: [
+      { title: "Authentication records", description: "SPF, DKIM and DMARC records should be configured correctly to improve deliverability and reduce spoofing risk." },
+      { title: "Account security", description: "Strong passwords and multi-factor authentication significantly reduce the chance of account compromise." },
+      { title: "Access management", description: "User accounts, shared mailboxes and distribution lists should be reviewed when employees join, change roles or leave." },
+      { title: "Backup and recovery", description: "Business email should be backed up or retention policies should be understood so important correspondence can be recovered." },
+    ],
+    whoFor: [
+      "Small businesses establishing their first professional email environment",
+      "Growing companies moving away from personal email addresses",
+      "Organizations changing email providers or consolidating platforms",
+      "Businesses experiencing deliverability or spam issues",
+      "Companies that need centralized control over employee accounts",
     ],
     faqs: [
       {
@@ -123,6 +139,16 @@ export const services: Service[] = [
         answer:
           "We plan the migration around your schedule, configure the new environment, move messages and settings where possible, update DNS records and test the result before cutover.",
       },
+      {
+        question: "What happens when an employee leaves?",
+        answer:
+          "We help you disable or convert the mailbox, forward messages to the appropriate person and preserve any records that need to be kept according to your policies.",
+      },
+      {
+        question: "Will business email stop spam?",
+        answer:
+          "No email system can stop all spam, but proper authentication, security settings and user awareness can significantly reduce unwanted and malicious messages.",
+      },
     ],
     relatedServices: ["domains-dns", "cybersecurity", "cloud-services", "it-management"],
   },
@@ -137,80 +163,96 @@ export const services: Service[] = [
     seoTitle: "Domains & DNS Services",
     seoDescription:
       "Business domain management and DNS configuration services from Infinity Techiez. Support for records, transfers, email routing and troubleshooting.",
-    overview:
-      "A domain name is your business address on the internet. DNS is the system that tells the internet where to send traffic for that domain. If DNS is wrong, your website, email and business applications can stop working. We help businesses register, manage, transfer and troubleshoot domains and DNS so their services stay connected.",
+    overview: [
+      "A domain name is your business address on the internet. It is what customers type to reach your website and what appears after the @ symbol in your business email. DNS, the Domain Name System, is the invisible infrastructure that tells the internet where to send traffic for that domain, whether it is a website visitor, an email message or an application request.",
+      "When DNS is configured correctly, services work smoothly. When it is wrong, websites become unreachable, email stops delivering and business applications can break. Despite how small individual DNS records look, they have an outsized impact on daily operations.",
+      "We help businesses register, manage, transfer and troubleshoot domains and DNS. We do not operate as a domain registry, but we act as an administrator and advisor for your domain assets, making sure records are correct, ownership is properly controlled and changes are planned to avoid unnecessary downtime.",
+    ],
     includedServices: [
-      "Domain registration support",
-      "Domain management and renewal tracking",
-      "DNS configuration",
-      "A, CNAME, TXT and MX record setup",
-      "SPF, DKIM and DMARC records",
-      "Domain transfer assistance",
-      "Subdomain configuration",
-      "DNS troubleshooting",
-      "Domain ownership and access review",
+      { title: "Domain registration support", description: "Assist with selecting, registering and renewing domain names through reputable registrars." },
+      { title: "Domain management and renewal tracking", description: "Keep track of registration dates, renewal windows and ownership settings so domains do not expire unexpectedly." },
+      { title: "DNS configuration", description: "Set up and manage DNS records that direct traffic to the right services." },
+      { title: "A, AAAA, CNAME, TXT and MX record setup", description: "Configure the core record types that control websites, subdomains, verification and email routing." },
+      { title: "SPF, DKIM and DMARC records", description: "Add email authentication records that protect your domain and improve deliverability." },
+      { title: "Domain transfer assistance", description: "Guide transfers between registrars with proper preparation, codes and verification." },
+      { title: "Subdomain configuration", description: "Create subdomains for separate services, applications, teams or marketing pages." },
+      { title: "DNS troubleshooting", description: "Diagnose why services are not reachable and correct record or propagation issues." },
+      { title: "Domain ownership and access review", description: "Review who controls the domain, registrar access and recovery settings." },
     ],
     benefits: [
-      "Centralized management of business domain names",
-      "Reliable DNS configuration for websites and email",
+      "Centralized management of business domain names and DNS records",
+      "Reliable configuration that keeps websites, email and applications connected",
       "Easier troubleshooting when services are not reachable",
-      "Better control over authentication records",
-      "Reduced risk of accidental domain expiration",
+      "Better control over email authentication and service verification records",
+      "Reduced risk of accidental expiration or loss of domain control",
+      "Clear documentation of record changes and provider relationships",
     ],
     scenarios: [
       {
         title: "Registering a new domain",
         description:
-          "A new business needs a domain name that matches its brand and is configured for email and web services.",
+          "A new business needs a domain name that matches its brand and is configured correctly for email and web services from the start.",
       },
       {
         title: "Fixing email delivery problems",
         description:
-          "A company's email is failing because MX, SPF or DKIM records are incorrect or missing.",
+          "A company's email is failing because MX, SPF, DKIM or DMARC records are incorrect, missing or pointing to the wrong destination.",
       },
       {
         title: "Moving to a new DNS provider",
         description:
-          "A business wants better DNS management or needs to move records to a different provider.",
+          "A business wants better DNS management, faster propagation or redundancy and needs records moved carefully to a different provider.",
       },
       {
         title: "Adding subdomains",
         description:
-          "A business needs subdomains for separate services, applications or marketing pages.",
+          "A business needs subdomains for separate services, applications, marketing pages or geographic versions of its site.",
       },
     ],
     process: [
       {
         step: "01",
-        title: "Discuss",
-        description: "We clarify what you need the domain and DNS to support.",
+        title: "Understand",
+        description: "We clarify what the domain and DNS need to support, including websites, email, applications and third-party services.",
       },
       {
         step: "02",
         title: "Review",
-        description: "We examine current domain registration, DNS records and access.",
+        description: "We examine current domain registration, DNS records, ownership details and provider access.",
       },
       {
         step: "03",
         title: "Plan",
-        description: "We identify the correct records, providers and timing.",
+        description: "We identify the correct records, providers, timing and rollback options before making changes.",
       },
       {
         step: "04",
-        title: "Implement",
-        description: "We configure or update records and verify propagation.",
+        title: "Configure",
+        description: "We add, update or migrate records and verify that they point to the intended services.",
       },
       {
         step: "05",
-        title: "Review",
-        description: "We confirm services are reachable and document the setup.",
+        title: "Verify",
+        description: "We test websites, email and applications to confirm everything resolves correctly after changes.",
+      },
+      {
+        step: "06",
+        title: "Document",
+        description: "We record the new configuration, provider details and renewal dates for future reference.",
       },
     ],
-    securityConsiderations: [
-      "Domain ownership and registrar access should be properly controlled",
-      "Authentication records help protect email and services",
-      "DNS changes should be planned to avoid service interruption",
-      "Domain renewals should be monitored to prevent expiration",
+    considerations: [
+      { title: "Domain ownership", description: "Registrar accounts and recovery options should be controlled by authorized people in your organization." },
+      { title: "Authentication records", description: "SPF, DKIM and DMARC records should be kept accurate as email services and providers change." },
+      { title: "Change planning", description: "DNS changes should be scheduled to avoid service interruption, with time-to-live values considered in advance." },
+      { title: "Renewal management", description: "Domains should be monitored and renewed before expiration to prevent loss or service disruption." },
+    ],
+    whoFor: [
+      "New businesses choosing their first domain name",
+      "Companies experiencing email or website connectivity issues",
+      "Businesses moving between registrars or DNS providers",
+      "Organizations adding subdomains or new services",
+      "Companies that want better control and documentation of their domain assets",
     ],
     faqs: [
       {
@@ -238,6 +280,16 @@ export const services: Service[] = [
         answer:
           "DNS changes can take minutes to hours depending on record time-to-live settings and provider caching. We do not guarantee specific propagation times.",
       },
+      {
+        question: "Are you a domain registrar?",
+        answer:
+          "No. We do not register domains directly. We help you choose and work with reputable registrars and manage the configuration that makes your domain useful.",
+      },
+      {
+        question: "What records do I need for business email?",
+        answer:
+          "Business email typically requires MX records to direct mail, plus SPF, DKIM and DMARC records for authentication and deliverability.",
+      },
     ],
     relatedServices: ["business-email", "web-hosting", "cybersecurity"],
   },
@@ -252,80 +304,96 @@ export const services: Service[] = [
     seoTitle: "Business Web Hosting Services",
     seoDescription:
       "Business web hosting setup, domain connection, SSL configuration and migration services from Infinity Techiez.",
-    overview:
-      "Web hosting is the infrastructure that makes your website or web application available on the internet. For a business site to work, the domain, DNS and hosting must be connected correctly. We help businesses choose, configure, deploy and administer hosting that fits their website and operational needs.",
+    overview: [
+      "Web hosting is the infrastructure that stores your website files, applications and databases and makes them available to visitors on the internet. For a business website to work reliably, the domain, DNS and hosting environment must be connected and configured correctly.",
+      "Choosing the right hosting depends on what your site does. A simple marketing site has very different requirements from an e-commerce store, a customer portal or a business application. Factors such as traffic, storage, security, backups, update frequency and compliance all influence which hosting approach makes sense.",
+      "We help businesses choose, configure, deploy and administer hosting that fits their website and operational needs. We do not claim to own data centers or infrastructure. Instead, we act as a configuration and administration partner, making sure your domain, DNS, SSL and hosting work together and that the environment is documented and maintainable.",
+    ],
     includedServices: [
-      "Business website hosting setup",
-      "Hosting environment configuration",
-      "Domain and DNS connection",
-      "SSL/TLS certificate configuration",
-      "Website deployment assistance",
-      "Hosting migrations",
-      "Hosting administration",
-      "Performance and backup considerations",
-      "Basic troubleshooting",
+      { title: "Business website hosting setup", description: "Select and configure a hosting environment appropriate for your website and traffic." },
+      { title: "Hosting environment configuration", description: "Set up server settings, databases, caching and security headers as needed." },
+      { title: "Domain and DNS connection", description: "Link your domain to the hosting environment so visitors can reach your site." },
+      { title: "SSL/TLS certificate configuration", description: "Configure HTTPS so browsers do not show security warnings and traffic is encrypted." },
+      { title: "Website deployment assistance", description: "Help deploy or publish your site, application or content management system." },
+      { title: "Hosting migrations", description: "Plan and carry out moves between hosting providers with minimal downtime." },
+      { title: "Hosting administration", description: "Provide ongoing oversight of hosting settings, updates and environment changes." },
+      { title: "Performance and backup considerations", description: "Review caching, speed and backup practices that affect site reliability." },
+      { title: "Basic troubleshooting", description: "Diagnose and resolve common connectivity, DNS and configuration issues." },
     ],
     benefits: [
-      "A hosting setup aligned with your business website needs",
-      "Proper domain, DNS and SSL coordination",
-      "Easier administration and updates",
-      "Support for migrations and changes",
-      "Clear documentation of the hosting environment",
+      "A hosting setup aligned with your website and business requirements",
+      "Proper coordination between domain, DNS and SSL",
+      "Clearer administration and easier future updates",
+      "Support for migrations, changes and growth",
+      "Documentation of the hosting environment and access details",
+      "Reduced risk of misconfiguration causing downtime",
     ],
     scenarios: [
       {
         title: "Launching a new business website",
         description:
-          "A company needs a hosting environment connected to its domain so the site is publicly accessible.",
+          "A company needs a hosting environment connected to its domain so the site is publicly accessible, secure and maintainable.",
       },
       {
         title: "Moving an existing website",
         description:
-          "A business wants to move its website to a new host without long downtime or broken services.",
+          "A business wants to move its site to a new host without long downtime, broken services or lost data.",
       },
       {
         title: "Securing the site with SSL",
         description:
-          "A website needs HTTPS configured so browsers do not show security warnings.",
+          "A website is showing browser security warnings and needs HTTPS configured properly.",
       },
       {
         title: "Connecting a domain to hosting",
         description:
-          "The domain and hosting were purchased separately and need to be linked through DNS.",
+          "The domain and hosting were purchased separately and need to be linked correctly through DNS.",
       },
     ],
     process: [
       {
         step: "01",
-        title: "Discuss",
-        description: "We review your website, traffic and hosting requirements.",
+        title: "Understand",
+        description: "We review your website, traffic expectations, technical requirements and any constraints.",
       },
       {
         step: "02",
         title: "Review",
-        description: "We assess your current domain, DNS and any existing hosting.",
+        description: "We assess your current domain, DNS and any existing hosting setup for compatibility.",
       },
       {
         step: "03",
         title: "Plan",
-        description: "We identify the hosting option and migration approach.",
+        description: "We identify the hosting option, migration approach and rollback plan if needed.",
       },
       {
         step: "04",
-        title: "Implement",
-        description: "We set up hosting, connect DNS and configure SSL.",
+        title: "Configure",
+        description: "We set up hosting, connect DNS, configure SSL and prepare the deployment environment.",
       },
       {
         step: "05",
-        title: "Review",
-        description: "We test the site, verify HTTPS and document the setup.",
+        title: "Deploy",
+        description: "We publish or migrate the site and verify that pages, forms and functions work.",
+      },
+      {
+        step: "06",
+        title: "Verify",
+        description: "We test HTTPS, performance and backups and document the final configuration.",
       },
     ],
-    securityConsiderations: [
-      "SSL/TLS should be configured so traffic is encrypted",
-      "Hosting access should be controlled and documented",
-      "Backups should be part of the hosting plan",
-      "Software updates and patching need regular attention",
+    considerations: [
+      { title: "SSL/TLS", description: "HTTPS should be configured and enforced so visitor data is encrypted and browsers do not warn users." },
+      { title: "Access control", description: "Hosting accounts, control panels and deployment credentials should be controlled and stored securely." },
+      { title: "Backups", description: "Website files and databases should be backed up regularly with a tested recovery process." },
+      { title: "Updates and patching", description: "Content management systems, plugins and server software need regular updates to reduce security risk." },
+    ],
+    whoFor: [
+      "Businesses launching a new website or web application",
+      "Companies moving from one hosting provider to another",
+      "Organizations that need help connecting a domain to hosting",
+      "Businesses that want HTTPS configured correctly",
+      "Companies without internal staff to manage hosting administration",
     ],
     faqs: [
       {
@@ -353,6 +421,11 @@ export const services: Service[] = [
         answer:
           "Yes. We help with server settings, domain connection, SSL, email routing and other configuration tasks that keep your site running.",
       },
+      {
+        question: "Do you guarantee uptime?",
+        answer:
+          "We do not guarantee uptime. Uptime depends on the hosting provider, site architecture and ongoing maintenance. We help you choose reliable hosting and configure it well.",
+      },
     ],
     relatedServices: ["domains-dns", "backup-recovery", "cybersecurity"],
   },
@@ -367,80 +440,96 @@ export const services: Service[] = [
     seoTitle: "Business Cloud Services",
     seoDescription:
       "Cloud consulting, migration and management for business applications and infrastructure. Practical cloud guidance from Infinity Techiez.",
-    overview:
-      "Cloud services cover a wide range of business technology, from online productivity applications and file storage to cloud infrastructure. For many businesses, the cloud removes the need to own and maintain physical servers, but it also requires careful configuration, access control and cost management. We help businesses evaluate, plan, migrate and manage cloud services that fit their workflows.",
+    overview: [
+      "Cloud services cover a wide range of business technology, from online productivity applications and file storage to cloud infrastructure and databases. For many businesses, the cloud reduces the need to own and maintain physical servers, but it also introduces new responsibilities around configuration, access control, cost management and data protection.",
+      "Moving to the cloud is not automatically better than keeping systems on-site. The right choice depends on how your business works, what applications you use, how sensitive your data is, what internet connectivity you have and how much control you need. A poorly planned cloud migration can create access problems, unexpected costs and security gaps.",
+      "We help businesses evaluate, plan, migrate and manage cloud services that fit their workflows. We do not claim to be an official partner of any specific cloud provider. Our role is to advise, configure, administer and coordinate cloud services so they work reliably alongside your existing technology.",
+    ],
     includedServices: [
-      "Cloud service evaluation",
-      "Cloud migration planning",
-      "Cloud application configuration",
-      "User and account administration",
-      "Cloud storage setup",
-      "Access management",
-      "Security and sharing settings",
-      "Cloud-to-cloud coordination",
-      "Ongoing cloud administration",
+      { title: "Cloud service evaluation", description: "Review existing systems and identify cloud options that match your business requirements and budget." },
+      { title: "Cloud migration planning", description: "Plan the move of data, applications or infrastructure to cloud services with minimal disruption." },
+      { title: "Cloud application configuration", description: "Set up productivity, collaboration, storage or line-of-business cloud applications." },
+      { title: "User and account administration", description: "Create, configure and manage user accounts, licenses and organizational settings." },
+      { title: "Cloud storage setup", description: "Configure file storage, sharing and sync services that fit team workflows." },
+      { title: "Access management", description: "Set up permissions, groups and policies so users can reach what they need without unnecessary exposure." },
+      { title: "Security and sharing settings", description: "Apply sharing controls, external access limits and security settings appropriate for your data." },
+      { title: "Cloud-to-cloud coordination", description: "Integrate multiple cloud services so they work together consistently." },
+      { title: "Ongoing cloud administration", description: "Provide regular oversight of accounts, usage, costs and configuration changes." },
     ],
     benefits: [
-      "Cloud services matched to business workflows",
-      "Reduced reliance on on-site hardware",
-      "Centralized user and access management",
-      "Easier collaboration and file access",
-      "Scalable options as the business grows",
+      "Cloud services matched to actual business workflows",
+      "Reduced reliance on on-site hardware where appropriate",
+      "Centralized user and access management across services",
+      "Easier collaboration and file access for distributed teams",
+      "Scalable options as the business changes",
+      "Clearer visibility into cloud configuration and responsibilities",
     ],
     scenarios: [
       {
         title: "Moving files to cloud storage",
         description:
-          "A business wants team files accessible from anywhere without maintaining an on-site server.",
+          "A business wants team files accessible from anywhere without maintaining an on-site server or relying on personal file-sharing accounts.",
       },
       {
         title: "Adopting cloud business applications",
         description:
-          "A company is moving email, documents or collaboration tools to cloud-based productivity services.",
+          "A company is moving email, documents, collaboration tools or business applications to cloud-based productivity services.",
       },
       {
         title: "Managing cloud accounts",
         description:
-          "A business needs help creating, configuring and administering user accounts across cloud services.",
+          "A business needs help creating, configuring and administering user accounts, licenses and groups across cloud services.",
       },
       {
         title: "Planning a cloud migration",
         description:
-          "An organization is considering moving workloads to the cloud and needs a practical plan.",
+          "An organization is considering moving workloads to the cloud and needs a practical plan that covers data, access and training.",
       },
     ],
     process: [
       {
         step: "01",
-        title: "Discuss",
-        description: "We understand your business processes and cloud goals.",
+        title: "Understand",
+        description: "We learn about your business processes, current systems and goals for moving to or improving cloud services.",
       },
       {
         step: "02",
         title: "Review",
-        description: "We assess current systems, data and user needs.",
+        description: "We assess current systems, data volumes, user needs and any constraints such as compliance or bandwidth.",
       },
       {
         step: "03",
         title: "Plan",
-        description: "We identify suitable cloud services and a migration timeline.",
+        description: "We identify suitable cloud services, a migration sequence, training needs and a rollback approach.",
       },
       {
         step: "04",
-        title: "Implement",
-        description: "We configure accounts, migrate data and set access controls.",
+        title: "Configure",
+        description: "We set up accounts, organizational structure, users and security settings in the chosen cloud services.",
       },
       {
         step: "05",
-        title: "Review",
-        description: "We confirm functionality, train users and document the setup.",
+        title: "Migrate",
+        description: "We move data, mailboxes or applications according to the plan and verify completeness.",
+      },
+      {
+        step: "06",
+        title: "Verify",
+        description: "We confirm functionality, review access and costs and document the new environment.",
       },
     ],
-    securityConsiderations: [
-      "Access controls should be reviewed regularly",
-      "Sharing and permissions should match business policies",
-      "Multi-factor authentication should be used where available",
-      "Data should be backed up according to business requirements",
+    considerations: [
+      { title: "Access controls", description: "User roles and permissions should be reviewed regularly as staff and responsibilities change." },
+      { title: "Sharing policies", description: "External sharing, link expiration and default permissions should match your business data policies." },
+      { title: "Multi-factor authentication", description: "MFA should be enabled for administrator accounts and ideally for all users where supported." },
+      { title: "Backup and retention", description: "Cloud data should still be backed up or retention policies understood; cloud providers are not always responsible for restoring deleted data." },
+    ],
+    whoFor: [
+      "Businesses considering moving systems or data to the cloud",
+      "Companies using cloud applications that need better administration",
+      "Organizations with distributed or remote teams needing file access",
+      "Businesses wanting to reduce on-site hardware",
+      "Companies that need help coordinating multiple cloud services",
     ],
     faqs: [
       {
@@ -468,6 +557,11 @@ export const services: Service[] = [
         answer:
           "Consider which data and applications need to move, internet and bandwidth requirements, security and compliance needs, user training and ongoing costs.",
       },
+      {
+        question: "Are you a Microsoft, Google or AWS partner?",
+        answer:
+          "We do not claim official partnerships with specific cloud providers unless verified. We provide configuration and administration services across common cloud platforms.",
+      },
     ],
     relatedServices: ["it-infrastructure", "backup-recovery", "it-management"],
   },
@@ -482,80 +576,96 @@ export const services: Service[] = [
     seoTitle: "Business IT Infrastructure Services",
     seoDescription:
       "IT infrastructure planning, deployment and administration for businesses. Servers, networks, devices and connectivity from Infinity Techiez.",
-    overview:
-      "IT infrastructure is the combination of servers, networks, devices and connectivity that keeps a business running. Good infrastructure supports applications, communication, data access and security. We help businesses plan, deploy and manage infrastructure that fits their size, workflows and budget without treating technology as a one-size-fits-all solution.",
+    overview: [
+      "IT infrastructure is the combination of servers, networks, devices and connectivity that keeps a business running. It supports applications, communication, data access and security. When infrastructure is well planned, employees can work productively, customers can reach your services and data moves reliably between systems.",
+      "Infrastructure needs vary widely between businesses. A small professional services firm may need little more than reliable internet, business email, cloud storage and secure laptops. A growing organization may need multiple locations, virtual servers, VPN access, structured network equipment and integration between on-site and cloud systems. There is no universal correct answer.",
+      "We help businesses plan, deploy and manage infrastructure that fits their size, workflows and budget. We do not sell hardware or internet service. Our role is to assess requirements, design an approach, configure and document systems and coordinate with vendors so the environment remains manageable.",
+    ],
     includedServices: [
-      "Infrastructure planning and assessment",
-      "Server configuration and administration",
-      "Network design and troubleshooting",
-      "Business device setup and management",
-      "Connectivity review and coordination",
-      "Remote and hybrid infrastructure support",
-      "System integration",
-      "Infrastructure documentation",
-      "Routine maintenance and updates",
+      { title: "Infrastructure planning and assessment", description: "Review current systems and business requirements to identify what infrastructure is needed." },
+      { title: "Server configuration and administration", description: "Set up, configure and maintain physical or virtual servers appropriate for your workloads." },
+      { title: "Network design and troubleshooting", description: "Plan and diagnose wired and wireless networks, including routers, switches and access points." },
+      { title: "Business device setup and management", description: "Configure computers, laptops and other devices with consistent settings and security controls." },
+      { title: "Connectivity review and coordination", description: "Evaluate internet, VPN and remote access needs and coordinate with connectivity providers." },
+      { title: "Remote and hybrid infrastructure planning", description: "Design secure access to business systems for employees working outside the office." },
+      { title: "System integration", description: "Connect on-site systems, cloud services and applications so they work together." },
+      { title: "Infrastructure documentation", description: "Create clear records of systems, access, vendors and configuration for future reference." },
+      { title: "Routine maintenance and updates", description: "Schedule and coordinate updates, patches and lifecycle refresh activities." },
     ],
     benefits: [
-      "Infrastructure designed around business workflows",
-      "Clear documentation of systems and access",
-      "Support for remote and distributed teams",
-      "Easier troubleshooting and maintenance",
-      "Scalable foundation as the business grows",
+      "Infrastructure designed around actual business workflows",
+      "Clear documentation of systems, access and vendors",
+      "Support for remote, hybrid and distributed teams",
+      "Easier troubleshooting and faster problem isolation",
+      "A scalable foundation that can grow with the business",
+      "Better coordination between internal systems and cloud services",
     ],
     scenarios: [
       {
         title: "Setting up a new office",
         description:
-          "A business needs network, servers and devices configured before employees can work productively.",
+          "A business needs network equipment, internet connectivity, servers and devices configured before employees can work productively.",
       },
       {
         title: "Supporting remote workers",
         description:
-          "A company needs secure access to business systems for employees working outside the office.",
+          "A company needs secure access to business systems for employees working from home or on the road.",
       },
       {
         title: "Replacing aging servers",
         description:
-          "An organization needs to update its infrastructure without unnecessary disruption.",
+          "An organization needs to update its infrastructure without unnecessary disruption to daily operations.",
       },
       {
         title: "Improving network reliability",
         description:
-          "A business experiences connectivity problems and needs a structured review and fix.",
+          "A business experiences connectivity problems and needs a structured review of its network and internet setup.",
       },
     ],
     process: [
       {
         step: "01",
-        title: "Discuss",
-        description: "We learn how your business operates and what infrastructure supports it.",
+        title: "Understand",
+        description: "We learn how your business operates, where employees work and what applications and data they rely on.",
       },
       {
         step: "02",
         title: "Review",
-        description: "We assess existing servers, networks, devices and connectivity.",
+        description: "We assess existing servers, networks, devices, connectivity and documentation.",
       },
       {
         step: "03",
         title: "Plan",
-        description: "We design an infrastructure approach that fits your needs and budget.",
+        description: "We design an infrastructure approach that fits your needs, budget and growth plans.",
       },
       {
         step: "04",
         title: "Implement",
-        description: "We configure, deploy and integrate the agreed infrastructure.",
+        description: "We configure, deploy and integrate the agreed infrastructure with minimal disruption.",
       },
       {
         step: "05",
-        title: "Review",
-        description: "We test performance, confirm access and document the environment.",
+        title: "Verify",
+        description: "We test performance, confirm access for users and document the environment.",
+      },
+      {
+        step: "06",
+        title: "Maintain",
+        description: "We schedule updates, review changes and help keep the infrastructure aligned with business needs.",
       },
     ],
-    securityConsiderations: [
-      "Network segmentation and access controls reduce exposure",
-      "Device management helps enforce consistent security settings",
-      "Patching and updates should be planned regularly",
-      "Infrastructure changes should be tested before production use",
+    considerations: [
+      { title: "Network segmentation", description: "Separating networks and limiting access helps reduce exposure if one system is compromised." },
+      { title: "Device management", description: "Consistent settings, patching and encryption on devices reduce security gaps." },
+      { title: "Patching and updates", description: "Servers, network equipment and devices need regular updates to address vulnerabilities." },
+      { title: "Change testing", description: "Infrastructure changes should be tested or planned with rollback options to avoid unexpected downtime." },
+    ],
+    whoFor: [
+      "Businesses setting up a new office or location",
+      "Companies with aging infrastructure that needs modernization",
+      "Organizations supporting remote or hybrid employees",
+      "Businesses experiencing network or connectivity issues",
+      "Companies that need structured infrastructure documentation and management",
     ],
     faqs: [
       {
@@ -583,6 +693,11 @@ export const services: Service[] = [
         answer:
           "Yes. We design and support infrastructure that lets remote teams access business systems securely and reliably.",
       },
+      {
+        question: "Do you sell hardware or internet service?",
+        answer:
+          "No. We do not sell hardware or act as an internet service provider. We assess requirements, design solutions, configure systems and coordinate with vendors.",
+      },
     ],
     relatedServices: ["cloud-services", "cybersecurity", "backup-recovery", "it-management"],
   },
@@ -597,80 +712,96 @@ export const services: Service[] = [
     seoTitle: "Business Cybersecurity Services",
     seoDescription:
       "Practical cybersecurity services for small and growing businesses. Access control, email security, endpoint protection and security planning from Infinity Techiez.",
-    overview:
-      "Cybersecurity for business is about reducing the chance that sensitive data, accounts and systems are compromised. It is not a single product or a guarantee. We help businesses take practical steps such as controlling access, strengthening authentication, securing email and building habits that reduce common risks.",
+    overview: [
+      "Cybersecurity for business is about reducing the chance that sensitive data, accounts and systems are compromised. It is not a single product, a one-time fix or a guarantee of safety. Effective security comes from a combination of configuration, access controls, authentication, monitoring and user habits.",
+      "Many security incidents affecting small and medium businesses are not sophisticated. They happen because passwords are reused, multi-factor authentication is not enabled, access is not removed when employees leave, email authentication records are missing or software is not kept up to date. Addressing these basics can significantly reduce risk.",
+      "We help businesses take practical steps such as controlling access, strengthening authentication, securing email and domains, reviewing endpoints and building habits that reduce common risks. Our focus is on sensible, proportionate security rather than fear-based selling.",
+    ],
     includedServices: [
-      "Security review and risk assessment",
-      "Access control configuration",
-      "Multi-factor authentication setup",
-      "Email security configuration",
-      "Domain security review",
-      "Endpoint security considerations",
-      "Security policy guidance",
-      "Security awareness support",
-      "Backup and recovery coordination",
+      { title: "Security review and risk assessment", description: "Review current security settings, access and risks to identify practical improvements." },
+      { title: "Access control configuration", description: "Set up permissions, groups and policies so users have only the access they need." },
+      { title: "Multi-factor authentication setup", description: "Enable and enforce MFA on critical business accounts and systems." },
+      { title: "Email security configuration", description: "Configure authentication records, filtering and policies that reduce phishing and spoofing risk." },
+      { title: "Domain security review", description: "Review domain registration, DNS and authentication records for unauthorized change risk." },
+      { title: "Endpoint security considerations", description: "Assess device settings, encryption, patching and policies that protect laptops, phones and desktops." },
+      { title: "Security policy guidance", description: "Help document simple, usable security policies for passwords, access and acceptable use." },
+      { title: "Security awareness support", description: "Provide guidance and materials that help employees recognize phishing and handle data safely." },
+      { title: "Backup and recovery coordination", description: "Ensure backups are in place so the business can recover from ransomware, deletion or failure." },
     ],
     benefits: [
-      "Reduced exposure to common cyber threats",
-      "Better control over who can access business systems",
-      "Stronger authentication for critical accounts",
+      "Reduced exposure to common cyber threats through practical controls",
+      "Better control over who can access business systems and data",
+      "Stronger authentication that makes account takeover much harder",
       "Improved email and domain security posture",
-      "Clearer security practices for employees",
+      "Clearer security practices that employees can follow",
+      "Coordination between security, backup and recovery plans",
     ],
     scenarios: [
       {
         title: "Strengthening account security",
         description:
-          "A business wants to add multi-factor authentication and review access to critical accounts.",
+          "A business wants to add multi-factor authentication and review who has access to critical accounts and systems.",
       },
       {
         title: "Securing business email",
         description:
-          "A company is concerned about phishing and wants email security and authentication records configured.",
+          "A company is concerned about phishing and spoofing and wants email authentication and filtering configured correctly.",
       },
       {
         title: "Reviewing domain security",
         description:
-          "A business wants to protect its domain registration and DNS from unauthorized changes.",
+          "A business wants to protect its domain registration, DNS and email authentication records from unauthorized changes.",
       },
       {
         title: "Employee security awareness",
         description:
-          "A company needs practical guidance to help staff recognize phishing and handle sensitive information.",
+          "A company needs practical guidance to help staff recognize phishing, report suspicious messages and handle sensitive information.",
       },
     ],
     process: [
       {
         step: "01",
-        title: "Discuss",
-        description: "We learn what data, systems and accounts are most important to your business.",
+        title: "Understand",
+        description: "We learn what data, systems and accounts are most important to your business and what risks worry you.",
       },
       {
         step: "02",
         title: "Review",
-        description: "We assess current access controls, authentication and security settings.",
+        description: "We assess current access controls, authentication, email security, domain settings and device posture.",
       },
       {
         step: "03",
         title: "Plan",
-        description: "We prioritize practical controls that match your risk and budget.",
+        description: "We prioritize practical controls that match your risk level, budget and operational constraints.",
       },
       {
         step: "04",
-        title: "Implement",
-        description: "We configure security settings, access controls and authentication.",
+        title: "Configure",
+        description: "We implement security settings, access controls, authentication and email protections.",
       },
       {
         step: "05",
-        title: "Review",
-        description: "We confirm controls are working and discuss ongoing security habits.",
+        title: "Verify",
+        description: "We confirm controls are working, review access and test authentication where possible.",
+      },
+      {
+        step: "06",
+        title: "Document",
+        description: "We record the security configuration, policies and recommended habits for ongoing reference.",
       },
     ],
-    securityConsiderations: [
-      "No security measure can guarantee complete protection",
-      "Multi-factor authentication significantly reduces account takeover risk",
-      "Regular access reviews help remove unnecessary permissions",
-      "Backups are a critical part of recovery from security incidents",
+    considerations: [
+      { title: "No absolute protection", description: "No security measure can guarantee complete protection. Security is about reducing risk, not eliminating it." },
+      { title: "Multi-factor authentication", description: "MFA is one of the most effective controls because it makes stolen passwords far less useful." },
+      { title: "Access reviews", description: "Regular access reviews help remove unnecessary permissions and old accounts that could be exploited." },
+      { title: "Backups and recovery", description: "Backups are a critical part of recovering from ransomware, deletion and other security incidents." },
+    ],
+    whoFor: [
+      "Small and growing businesses without a dedicated security team",
+      "Companies concerned about phishing, account compromise or data loss",
+      "Businesses that need help enabling multi-factor authentication",
+      "Organizations wanting to improve email and domain security",
+      "Companies that want practical, proportionate security guidance",
     ],
     faqs: [
       {
@@ -703,6 +834,11 @@ export const services: Service[] = [
         answer:
           "Employees should receive only the access they need, permissions should be reviewed when roles change, and accounts should be disabled promptly when staff leave.",
       },
+      {
+        question: "Can you guarantee our business will not be hacked?",
+        answer:
+          "No. No provider can guarantee that. We help you implement practical controls that reduce the likelihood and impact of common incidents.",
+      },
     ],
     relatedServices: ["business-email", "backup-recovery", "it-management", "domains-dns"],
   },
@@ -717,80 +853,96 @@ export const services: Service[] = [
     seoTitle: "Business Backup & Recovery Services",
     seoDescription:
       "Backup planning, recovery testing and data protection services from Infinity Techiez. Build a resilient business continuity strategy.",
-    overview:
-      "A backup is a copy of your business data that can be used to restore systems after data loss, hardware failure or a security incident. Recovery is the process of actually returning that data to a usable state. We help businesses design backup strategies, test recovery procedures and protect data so that recovery is possible when it matters.",
+    overview: [
+      "A backup is a copy of your business data that can be used to restore systems after data loss, hardware failure or a security incident. Recovery is the process of actually returning that data to a usable state. The two are related, but they are not the same thing. Having backups does not automatically mean you can recover quickly or completely.",
+      "Many businesses discover this distinction too late. They assume their cloud provider or IT person is handling backups, only to find that restoration is slow, incomplete or impossible when something goes wrong. Common problems include backups that were never tested, data that was not included in the backup scope, storage that is also affected by the incident or recovery procedures that no one has documented.",
+      "We help businesses design backup strategies, test recovery procedures and protect data so that recovery is possible when it matters. Our focus is on building a practical, documented approach that matches your business priorities rather than selling backup software or promising outcomes that cannot be guaranteed.",
+    ],
     includedServices: [
-      "Backup strategy and planning",
-      "Backup system configuration",
-      "Recovery procedure documentation",
-      "Recovery testing",
-      "Data protection review",
-      "Cloud and off-site backup options",
-      "Backup monitoring",
-      "Business continuity considerations",
-      "Restore assistance",
+      { title: "Backup strategy and planning", description: "Identify what data and systems need protection, how often they should be backed up and where copies should be stored." },
+      { title: "Backup system configuration", description: "Set up backup jobs, schedules, retention policies and storage locations that match the strategy." },
+      { title: "Recovery procedure documentation", description: "Write clear steps for how to restore data, who is responsible and what order systems should be recovered." },
+      { title: "Recovery testing", description: "Periodically verify that backups can be restored and that restored data is usable and complete." },
+      { title: "Data protection review", description: "Review what data exists, where it is stored and what risks it faces from deletion, malware or hardware failure." },
+      { title: "Cloud and off-site backup options", description: "Design backup copies stored separately from primary systems to protect against local incidents." },
+      { title: "Backup monitoring", description: "Set up alerts and regular checks so backup failures are noticed and addressed quickly." },
+      { title: "Business continuity considerations", description: "Connect backup and recovery plans to broader business continuity priorities." },
+      { title: "Restore assistance", description: "Provide help when data needs to be recovered, following documented procedures." },
     ],
     benefits: [
-      "A backup plan tailored to business needs",
-      "Confidence that recovery steps are documented",
-      "Protection against data loss from multiple causes",
-      "Reduced downtime when recovery is needed",
-      "Clear roles and responsibilities for restores",
+      "A backup plan tailored to actual business priorities and risk tolerance",
+      "Confidence that recovery steps are documented and understood",
+      "Protection against data loss from multiple causes including malware and human error",
+      "Reduced uncertainty about what can be recovered and how long it takes",
+      "Clear roles and responsibilities when restores are needed",
+      "Better coordination between backup, security and infrastructure planning",
     ],
     scenarios: [
       {
         title: "Building a backup plan from scratch",
         description:
-          "A business has no formal backup process and needs to protect critical files, email and systems.",
+          "A business has no formal backup process and needs to protect critical files, email and systems before an incident occurs.",
       },
       {
         title: "Testing recovery procedures",
         description:
-          "A company has backups but has never verified that they can actually be restored.",
+          "A company has backups but has never verified that they can actually be restored within an acceptable timeframe.",
       },
       {
         title: "Moving backups off-site",
         description:
-          "A business wants copies stored separately from the main office to protect against local disasters.",
+          "A business wants copies stored separately from the main office or primary cloud environment to protect against local disasters or ransomware.",
       },
       {
         title: "Recovering from an incident",
         description:
-          "A business needs help restoring data and getting systems back online after a failure or security event.",
+          "A business needs help restoring data and getting systems back online after a failure, deletion or security event.",
       },
     ],
     process: [
       {
         step: "01",
-        title: "Discuss",
-        description: "We identify the data and systems that are critical to your business.",
+        title: "Understand",
+        description: "We identify the data, applications and systems that are critical to your business operations.",
       },
       {
         step: "02",
         title: "Review",
-        description: "We assess current backup tools, schedules and recovery capabilities.",
+        description: "We assess current backup tools, schedules, retention, storage locations and recovery history.",
       },
       {
         step: "03",
         title: "Plan",
-        description: "We design a backup and recovery approach that fits your risk tolerance.",
+        description: "We design a backup and recovery approach that fits your risk tolerance, budget and recovery needs.",
       },
       {
         step: "04",
-        title: "Implement",
-        description: "We configure backup jobs, storage locations and access controls.",
+        title: "Configure",
+        description: "We configure backup jobs, storage, access controls and monitoring based on the agreed plan.",
       },
       {
         step: "05",
-        title: "Review",
-        description: "We test recovery, document procedures and schedule ongoing checks.",
+        title: "Test",
+        description: "We perform recovery tests to confirm that backups are usable and that procedures are clear.",
+      },
+      {
+        step: "06",
+        title: "Document",
+        description: "We document the backup configuration, recovery procedures and responsibilities for ongoing reference.",
       },
     ],
-    securityConsiderations: [
-      "Backups should be stored separately from production systems",
-      "Backup access should be restricted to authorized users",
-      "Recovery testing should be performed regularly",
-      "Encryption should be considered for sensitive backup data",
+    considerations: [
+      { title: "Backup is not recovery", description: "Having backups is only useful if you can restore them. Recovery testing is essential." },
+      { title: "Off-site and isolated copies", description: "Backups should be stored separately from production systems to protect against ransomware and local disasters." },
+      { title: "Access control", description: "Backup access should be restricted to authorized users so backups cannot be deleted or encrypted by attackers." },
+      { title: "Retention and compliance", description: "Retention policies should match business and legal requirements without keeping data longer than necessary." },
+    ],
+    whoFor: [
+      "Businesses without a formal backup strategy",
+      "Companies that have never tested their ability to restore data",
+      "Organizations wanting to protect against ransomware and deletion",
+      "Businesses that need off-site or cloud backup options",
+      "Companies that need documented recovery procedures",
     ],
     faqs: [
       {
@@ -818,6 +970,11 @@ export const services: Service[] = [
         answer:
           "Yes. Storing backups separately helps protect them from the same events that affect production systems, such as ransomware or local hardware failures.",
       },
+      {
+        question: "Can you guarantee 100% data recovery?",
+        answer:
+          "No. Recovery depends on what was backed up, how recently, whether backups are intact and the nature of the incident. We help you improve your chances through planning and testing.",
+      },
     ],
     relatedServices: ["cybersecurity", "it-infrastructure", "cloud-services"],
   },
@@ -832,80 +989,96 @@ export const services: Service[] = [
     seoTitle: "Business IT Management Services",
     seoDescription:
       "Ongoing IT management and technology administration for businesses. Account, domain, email and infrastructure management from Infinity Techiez.",
-    overview:
-      "IT management is the ongoing work of keeping business technology organized, secure and aligned with operations. It includes administering accounts, domains, email and infrastructure, coordinating with vendors, planning changes and documenting systems. We act as a practical technology partner for businesses that need reliable oversight without building a large internal IT department.",
+    overview: [
+      "IT management is the ongoing work of keeping business technology organized, secure and aligned with operations. It covers the administration of accounts, domains, email, cloud services and infrastructure, as well as the coordination of vendors, the planning of changes and the documentation of systems.",
+      "For many small and medium businesses, this work accumulates over time without a clear owner. A founder or office manager ends up managing passwords, tracking domain renewals, troubleshooting email and chasing vendors. As the business grows, this informal approach becomes risky and inefficient. Mistakes such as missed renewals, stale accounts, unpatched systems or undocumented settings can lead to real disruption.",
+      "We act as a practical technology partner for businesses that need reliable oversight without building a large internal IT department. We can take on agreed administration tasks, coordinate with providers, document systems and help plan technology changes so your business can focus on its work rather than wrestling with configuration menus.",
+    ],
     includedServices: [
-      "Technology administration and oversight",
-      "Domain, DNS and registrar management",
-      "Email account administration",
-      "User and access management",
-      "Infrastructure administration",
-      "Vendor coordination",
-      "Technology planning and budgeting support",
-      "Routine maintenance scheduling",
-      "System documentation",
+      { title: "Technology administration and oversight", description: "Provide ongoing management of business technology systems, settings and user requests." },
+      { title: "Domain, DNS and registrar management", description: "Track renewals, manage records and coordinate domain-related changes." },
+      { title: "Email account administration", description: "Create, modify and remove mailboxes, aliases, groups and distribution lists." },
+      { title: "User and access management", description: "Manage accounts, permissions and access lifecycles across business services." },
+      { title: "Infrastructure administration", description: "Oversee servers, networks, devices and connectivity settings on an ongoing basis." },
+      { title: "Vendor coordination", description: "Act as a point of contact with technology vendors and service providers." },
+      { title: "Technology planning and budgeting support", description: "Help plan upgrades, migrations and technology spending based on business priorities." },
+      { title: "Routine maintenance scheduling", description: "Coordinate updates, patches, renewals and other recurring technology tasks." },
+      { title: "System documentation", description: "Maintain clear records of systems, access, vendors and configurations." },
     ],
     benefits: [
-      "A single point of contact for technology administration",
-      "Consistent management of accounts and access",
-      "Proactive planning instead of reactive fixes",
-      "Better vendor and service coordination",
-      "Clear documentation for audits and transitions",
+      "A single point of contact for technology administration and questions",
+      "Consistent management of accounts, access and vendors",
+      "Proactive planning instead of only reactive troubleshooting",
+      "Better coordination between multiple technology providers",
+      "Clear documentation that helps during audits, transitions or emergencies",
+      "A practical alternative to building a full internal IT department",
     ],
     scenarios: [
       {
         title: "No internal IT department",
         description:
-          "A small business needs reliable technology administration without hiring full-time IT staff.",
+          "A small business needs reliable technology administration but cannot justify hiring full-time IT staff.",
       },
       {
         title: "Managing multiple technology vendors",
         description:
-          "A company uses several providers for domain, email, hosting and cloud and wants coordination.",
+          "A company uses several providers for domain, email, hosting, cloud and devices and wants a single coordination point.",
       },
       {
         title: "Planning technology changes",
         description:
-          "A business is growing and needs help deciding what technology to add, replace or scale.",
+          "A business is growing and needs help deciding what technology to add, replace or scale without making expensive mistakes.",
       },
       {
         title: "Employee onboarding and offboarding",
         description:
-          "A company needs a repeatable process for creating and removing access across systems.",
+          "A company needs a repeatable, documented process for creating and removing access across business systems.",
       },
     ],
     process: [
       {
         step: "01",
-        title: "Discuss",
-        description: "We learn about your environment, providers and administration needs.",
+        title: "Understand",
+        description: "We learn about your environment, providers, users and the administration work that needs consistent ownership.",
       },
       {
         step: "02",
         title: "Review",
-        description: "We assess accounts, access, infrastructure and documentation.",
+        description: "We assess accounts, access, infrastructure, documentation and any outstanding risks or gaps.",
       },
       {
         step: "03",
         title: "Plan",
-        description: "We define an administration plan and technology roadmap.",
+        description: "We define an administration plan, service scope and technology roadmap that match your business needs.",
       },
       {
         step: "04",
         title: "Implement",
-        description: "We take on agreed administration tasks and coordinate changes.",
+        description: "We take on agreed administration tasks, standardize processes and coordinate changes with vendors.",
       },
       {
         step: "05",
+        title: "Operate",
+        description: "We perform routine administration, respond to requests and monitor upcoming renewals or maintenance needs.",
+      },
+      {
+        step: "06",
         title: "Review",
-        description: "We report on work completed, review risks and plan next steps.",
+        description: "We report on work completed, review risks, update documentation and plan next steps.",
       },
     ],
-    securityConsiderations: [
-      "Access reviews should be performed regularly",
-      "Critical accounts should be protected with strong authentication",
-      "Changes should be documented for accountability",
-      "Vendor access should be tracked and limited",
+    considerations: [
+      { title: "Access reviews", description: "User permissions and accounts should be reviewed regularly, especially when employees change roles or leave." },
+      { title: "Critical account protection", description: "Administrator and owner accounts should be protected with strong authentication and limited access." },
+      { title: "Change documentation", description: "Important changes should be documented so their impact and history are clear." },
+      { title: "Vendor access", description: "Third-party and vendor access should be tracked, limited and removed when no longer needed." },
+    ],
+    whoFor: [
+      "Small and medium businesses without a dedicated IT team",
+      "Companies using multiple technology vendors that need coordination",
+      "Businesses planning growth or technology changes",
+      "Organizations needing consistent user and access management",
+      "Companies that want technology oversight without hiring full-time staff",
     ],
     faqs: [
       {
@@ -932,6 +1105,11 @@ export const services: Service[] = [
         question: "Can you work alongside an internal IT team?",
         answer:
           "Yes. We can complement an internal team by handling specific systems, overflow work or specialized tasks.",
+      },
+      {
+        question: "Is this a call center for computer problems?",
+        answer:
+          "No. This is ongoing business technology administration and coordination, not a consumer help desk or break-fix call center.",
       },
     ],
     relatedServices: ["cloud-services", "cybersecurity", "it-infrastructure", "business-email"],

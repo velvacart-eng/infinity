@@ -5,8 +5,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Service Delivery",
-  description:
-    "How Infinity Techiez delivers business IT services, from onboarding to ongoing support.",
+  description: `How ${businessInfo.brandName} delivers business IT services, from onboarding to ongoing support.`,
   path: "/service-delivery",
 });
 

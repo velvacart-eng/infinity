@@ -9,13 +9,51 @@ export function SiteFooter() {
   return (
     <footer className="border-t bg-brand-muted py-10 md:py-12">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
           <div className="space-y-3 lg:col-span-2">
             <Logo />
             <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
               Business IT services and technology solutions for organizations
               that need dependable infrastructure.
             </p>
+          </div>
+
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-foreground">Solutions</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/solutions/business-communication"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Business Communication
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/solutions/web-cloud"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Web & Cloud
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/solutions/infrastructure"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  IT Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/solutions/security-continuity"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Security & Continuity
+                </Link>
+              </li>
+            </ul>
           </div>
 
           <div>

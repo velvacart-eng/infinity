@@ -7,8 +7,7 @@ import { CheckCircle } from "lucide-react";
 
 export const metadata = createMetadata({
   title: "About Infinity Techiez",
-  description:
-    "Infinity Techiez is a brand operated by Advanced Vision Software LLC, helping businesses manage essential IT and technology services.",
+  description: `${businessInfo.brandName} is a brand operated by ${businessInfo.legalName}, helping businesses manage essential IT and technology services.`,
   path: "/about",
 });
 
@@ -43,6 +42,20 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
             <div>
+              <h2 className="text-h2 font-semibold tracking-tight">Who we are</h2>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                {businessInfo.brandName} is a brand operated by {businessInfo.legalName}.
+                We provide business IT services and technology solutions to organizations
+                that need dependable communication, infrastructure, security and ongoing
+                technology management.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Our focus is on practical delivery, clear communication and responsible
+                technology practices. We do not promise guarantees we cannot support, and
+                we do not claim partnerships or certifications that are not in place.
+              </p>
+            </div>
+            <div>
               <h2 className="text-h2 font-semibold tracking-tight">What we do</h2>
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 {businessInfo.brandName} provides a modular portfolio of business
@@ -55,6 +68,27 @@ export default function AboutPage() {
                 Our focus is on making these services work together so your
                 business has dependable communication, infrastructure and data
                 protection.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y bg-brand-muted py-14 md:py-20">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div>
+              <h2 className="text-h2 font-semibold tracking-tight">How we engage with clients</h2>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                We begin by understanding the business requirement, then recommend a
+                practical scope and implementation approach. Work is delivered in
+                clearly defined stages with regular communication, and we document
+                what is configured so the environment remains manageable over time.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Clients can engage us for one-time projects, ongoing administration
+                or a combination of both. Service levels and response expectations
+                are defined in each client agreement based on the scope of work.
               </p>
             </div>
             <div>

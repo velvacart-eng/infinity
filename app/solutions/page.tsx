@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTAButton } from "@/components/cta-button";
-import { ArrowRight, Cloud, Mail, Network, Shield, Settings } from "lucide-react";
+import { ArrowRight, Cloud, Mail, Network, Shield } from "lucide-react";
 import { createMetadata } from "@/lib/seo";
 
 const solutions = [
@@ -12,15 +12,15 @@ const solutions = [
       "Professional email, domain-based identities and DNS management that keep your business connected and reachable.",
     icon: Mail,
     services: ["Business Email", "Domains & DNS"],
-    href: "/services/business-email",
+    href: "/solutions/business-communication",
   },
   {
-    title: "Website & Online Infrastructure",
+    title: "Web & Cloud",
     description:
       "Web hosting, domain connection and cloud services that keep your website and online tools accessible.",
     icon: Cloud,
     services: ["Web Hosting", "Cloud Services"],
-    href: "/services/web-hosting",
+    href: "/solutions/web-cloud",
   },
   {
     title: "IT Infrastructure",
@@ -28,23 +28,15 @@ const solutions = [
       "Networks, servers, systems and connectivity configured to support your business operations.",
     icon: Network,
     services: ["IT Infrastructure", "Cloud Services"],
-    href: "/services/it-infrastructure",
+    href: "/solutions/infrastructure",
   },
   {
-    title: "Security & Data Protection",
+    title: "Security & Continuity",
     description:
       "Cybersecurity, access controls, backup strategies and recovery planning to reduce business risk.",
     icon: Shield,
     services: ["Cybersecurity", "Backup & Recovery"],
-    href: "/services/cybersecurity",
-  },
-  {
-    title: "Technology Management",
-    description:
-      "Ongoing administration, vendor coordination and technology management for businesses without a large internal IT team.",
-    icon: Settings,
-    services: ["IT Management"],
-    href: "/services/it-management",
+    href: "/solutions/security-continuity",
   },
 ];
 
