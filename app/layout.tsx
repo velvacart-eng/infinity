@@ -60,7 +60,7 @@ export default function RootLayout({
         <WebsiteSchema />
         <Analytics />
         <SiteHeader />
-        <main id="main-content" className="flex-1 pt-[6.5rem]">
+        <main id="main-content" className="flex-1 pt-[4.5rem] sm:pt-[6.5rem]">
           {children}
         </main>
         <SiteFooter />

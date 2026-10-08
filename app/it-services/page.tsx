@@ -2,8 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { SectionHeading } from "@/components/section-heading";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
+import { StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
 import { landingPages } from "@/lib/landing-pages-data";
 import { createMetadata } from "@/lib/seo";
 
@@ -27,13 +26,6 @@ export default function LandingIndexPage() {
       />
       <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <SectionHeading
-              eyebrow="Browse"
-              title="Service guides"
-              description="Each guide covers a specific service area in detail — what it includes, how we work, and answers to common questions."
-            />
-          </FadeIn>
           <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
             {landingPages.map((page) => (
               <StaggerItem key={page.slug}>

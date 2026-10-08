@@ -60,13 +60,6 @@ export default function ResourcesPage() {
 
       <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <SectionHeading
-              eyebrow="Browse by Topic"
-              title="Resource categories"
-              description="Browse practical information by topic. Each category links to the related service area where you can learn more about how we help."
-            />
-          </FadeIn>
           <StaggerContainer className="grid gap-5 md:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
             {categories.map((category) => (
               <StaggerItem key={category.title}>
