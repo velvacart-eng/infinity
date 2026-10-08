@@ -9,7 +9,7 @@ interface PageHeroProps {
 
 export function PageHero({ title, description, icon: Icon, gradient = false }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden border-b border-border/40 bg-background py-20 md:py-28">
+    <section className="relative overflow-hidden border-b border-border/40 bg-background py-16 md:py-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.12),transparent_55%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.08),transparent_50%)]" />
       <div className="container relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

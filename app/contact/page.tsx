@@ -26,7 +26,7 @@ export default function ContactPage() {
         gradient
       />
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">

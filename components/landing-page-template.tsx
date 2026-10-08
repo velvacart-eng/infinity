@@ -42,7 +42,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Hero */}
       <section
-        className="relative overflow-hidden border-b border-border/40 bg-background py-20 md:py-28"
+        className="relative overflow-hidden border-b border-border/40 bg-background py-16 md:py-20"
         data-landing-page={page.slug}
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.12),transparent_55%)]" />
@@ -113,7 +113,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
       )}
 
       {/* Quick service summary */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <FadeIn direction="up">
             <span className="text-xs font-bold uppercase tracking-[0.12em] text-primary">
@@ -183,7 +183,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
       </section>
 
       {/* What we help with */}
-      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-24">
+      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -208,7 +208,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <FadeIn direction="up" className="lg:col-span-4">
@@ -234,7 +234,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Detailed sections */}
       {page.detailedSections && page.detailedSections.length > 0 && (
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-20">
           <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-12">
               {page.detailedSections.map((section) => (
@@ -256,7 +256,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Scenarios */}
       {page.scenarios && page.scenarios.length > 0 && (
-        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-24">
+        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <FadeIn>
               <SectionHeading
@@ -283,7 +283,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Technical considerations */}
       {page.technicalConsiderations && page.technicalConsiderations.length > 0 && (
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
               <FadeIn direction="up" className="lg:col-span-4">
@@ -315,7 +315,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Security considerations */}
       {page.securityConsiderations && page.securityConsiderations.length > 0 && (
-        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-24">
+        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
               <FadeIn direction="up" className="lg:col-span-4">
@@ -347,7 +347,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Process */}
       {page.process && page.process.length > 0 && (
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <FadeIn>
               <SectionHeading
@@ -380,7 +380,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Who it is for */}
       {page.whoItIsFor && page.whoItIsFor.length > 0 && (
-        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-24">
+        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
               <FadeIn direction="up" className="lg:col-span-4">
@@ -407,7 +407,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* Related services */}
       {(relatedServices.length > 0 || relatedLandingPages.length > 0) && (
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <FadeIn>
               <SectionHeading
@@ -449,7 +449,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* FAQ */}
       {page.faqs.length > 0 && (
-        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-24">
+        <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
           <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <FadeIn>
               <SectionHeading
@@ -468,7 +468,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
       {/* CTA */}
       <section
-        className="relative overflow-hidden bg-brand-ink py-20 md:py-28"
+        className="relative overflow-hidden bg-brand-ink py-16 md:py-20"
         data-landing-page={page.slug}
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(37,99,235,0.2),transparent_45%)]" />

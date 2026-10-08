@@ -20,7 +20,7 @@ export default function AcceptableUsePage() {
         description="Rules and expectations for using our website and services responsibly."
         gradient
       />
-      <section className="py-14 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="leading-relaxed text-muted-foreground">
             This Acceptable Use Policy sets out the rules for using the website and services

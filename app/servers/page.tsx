@@ -91,7 +91,7 @@ export default function ServersLandingPage() {
       />
 
       {/* Intro */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <FadeIn direction="right">
@@ -131,7 +131,7 @@ export default function ServersLandingPage() {
       </section>
 
       {/* Features */}
-      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-24">
+      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -157,7 +157,7 @@ export default function ServersLandingPage() {
       </section>
 
       {/* Process */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -186,7 +186,7 @@ export default function ServersLandingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-24">
+      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -210,7 +210,7 @@ export default function ServersLandingPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-brand-ink py-20 md:py-28">
+      <section className="relative overflow-hidden bg-brand-ink py-16 md:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(37,99,235,0.2),transparent_45%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.12),transparent_45%)]" />
         <FadeIn className="container relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">

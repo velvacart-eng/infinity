@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
         description="How we handle information in connection with our business technology services."
         gradient
       />
-      <section className="py-14 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="leading-relaxed text-muted-foreground">
             {businessInfo.brandName} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) is a brand operated by{" "}

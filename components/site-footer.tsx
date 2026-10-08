@@ -7,11 +7,11 @@ export function SiteFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-brand-ink py-14 text-slate-300 md:py-20">
+    <footer className="border-t border-white/10 bg-brand-ink py-12 text-slate-300 md:py-16">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
           {/* Brand & contact */}
-          <div className="space-y-6 lg:col-span-5">
+          <div className="space-y-6 sm:col-span-2 lg:col-span-2">
             <Logo className="text-white" />
             <p className="max-w-md text-sm leading-relaxed text-slate-400">
               Business IT services and technology solutions for organizations
@@ -69,7 +69,7 @@ export function SiteFooter() {
           </div>
 
           {/* Solutions */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white">Solutions</h3>
             <ul className="space-y-3">
               <li>
@@ -95,8 +95,40 @@ export function SiteFooter() {
             </ul>
           </div>
 
+          {/* Service guides */}
+          <div className="lg:col-span-1">
+            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white">Service Guides</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/landing/business-email-setup" className="text-sm text-slate-400 transition-colors hover:text-white">
+                  Business Email Setup
+                </Link>
+              </li>
+              <li>
+                <Link href="/landing/business-email-migration" className="text-sm text-slate-400 transition-colors hover:text-white">
+                  Email Migration
+                </Link>
+              </li>
+              <li>
+                <Link href="/landing/business-domain-dns" className="text-sm text-slate-400 transition-colors hover:text-white">
+                  Domain & DNS
+                </Link>
+              </li>
+              <li>
+                <Link href="/landing/email-security-authentication" className="text-sm text-slate-400 transition-colors hover:text-white">
+                  Email Security
+                </Link>
+              </li>
+              <li>
+                <Link href="/landing" className="text-sm font-medium text-slate-300 transition-colors hover:text-white">
+                  All Service Guides
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Company */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white">Company</h3>
             <ul className="space-y-3">
               {mainNav
@@ -112,7 +144,7 @@ export function SiteFooter() {
           </div>
 
           {/* Legal */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-1">
             <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white">Legal & Compliance</h3>
             <ul className="space-y-3">
               {footerNav.map((item) => (

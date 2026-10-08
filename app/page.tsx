@@ -9,7 +9,6 @@ import {
   LayoutGrid,
   Mail,
   Network,
-  Server,
   Shield,
   Users,
   Zap,
@@ -98,9 +97,6 @@ const faqItems = [
 ];
 
 export default function HomePage() {
-  const featuredService = services[0];
-  const remainingServices = services.slice(1);
-
   return (
     <>
       {/* Hero */}
@@ -119,7 +115,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(37,99,235,0.25),transparent_50%)]" />
         </div>
 
-        <div className="container relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <div className="container relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 md:py-20">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <FadeIn direction="up" className="max-w-3xl">
               <span className="mb-5 inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-white">
@@ -165,8 +161,8 @@ export default function HomePage() {
                       <Zap className="h-6 w-6" />
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-white">2026</p>
-                      <p className="text-sm text-slate-400">Ready IT solutions</p>
+                      <p className="text-2xl font-bold text-white">One partner</p>
+                      <p className="text-sm text-slate-400">for your entire IT setup</p>
                     </div>
                   </div>
                 </div>
@@ -183,7 +179,7 @@ export default function HomePage() {
             {stats.map((stat) => (
               <StaggerItem
                 key={stat.label}
-                className="flex flex-col items-center text-center lg:items-start lg:text-left"
+                className="flex flex-col items-center text-center"
               >
                 <p className="text-4xl font-bold text-foreground">{stat.value}</p>
                 <p className="mt-1 text-sm font-medium uppercase tracking-wide text-muted-foreground">
@@ -198,35 +194,56 @@ export default function HomePage() {
       {/* Service strip */}
       <ServiceStrip />
 
-      {/* Featured landing pages */}
-      <section className="border-b border-border/40 bg-brand-muted py-10">
+      {/* Featured service guides */}
+      <section className="border-b border-border/40 bg-brand-muted py-16 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-4 sm:grid-cols-3">
-            {[
-              { title: "Business Email", href: "/email", icon: Mail },
-              { title: "Domain & DNS", href: "/domains", icon: Globe },
-              { title: "Servers & Infrastructure", href: "/servers", icon: Server },
-            ].map((item) => (
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <FadeIn className="max-w-xl">
+              <span className="text-xs font-bold uppercase tracking-[0.12em] text-primary">
+                In-Depth Guides
+              </span>
+              <h2 className="mt-3 text-h2 font-bold tracking-tight">
+                Focused help for specific IT needs
+              </h2>
+            </FadeIn>
+            <FadeIn>
               <Link
-                key={item.href}
-                href={item.href}
-                className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md hover:shadow-primary/5"
+                href="/landing"
+                className="group inline-flex items-center gap-1.5 text-sm font-bold text-primary transition-colors hover:text-brand-violet"
               >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-brand-violet text-white shadow-md shadow-primary/15">
-                  <item.icon className="h-5 w-5" aria-hidden="true" />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-foreground">{item.title}</p>
-                  <p className="text-xs text-muted-foreground">Dedicated service page</p>
-                </div>
+                View all service guides
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </Link>
-            ))}
+            </FadeIn>
           </div>
+          <StaggerContainer className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" staggerDelay={0.08}>
+            {[
+              { title: "Business Email Setup", href: "/landing/business-email-setup", icon: Mail },
+              { title: "Email Migration", href: "/landing/business-email-migration", icon: ArrowRight },
+              { title: "Domain & DNS Management", href: "/landing/business-domain-dns", icon: Globe },
+              { title: "Email Security", href: "/landing/email-security-authentication", icon: Shield },
+            ].map((item) => (
+              <StaggerItem key={item.href}>
+                <Link
+                  href={item.href}
+                  className="group flex h-full items-center gap-4 rounded-2xl border border-border/60 bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md hover:shadow-primary/5"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-brand-violet text-white shadow-md shadow-primary/15">
+                    <item.icon className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-foreground">{item.title}</p>
+                    <p className="text-xs text-muted-foreground">Detailed service guide</p>
+                  </div>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Core Services */}
-      <section className="py-20 md:py-28" id="services">
+      <section className="py-16 md:py-20" id="services">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -235,13 +252,10 @@ export default function HomePage() {
               description="A modular set of business technology services that can be added, removed or scaled as your needs change."
             />
           </FadeIn>
-          <StaggerContainer className="mt-12 grid gap-5 lg:grid-cols-3" staggerDelay={0.08}>
-            <StaggerItem className="lg:col-span-1 lg:row-span-2">
-              <ServiceCard service={featuredService} variant="featured" />
-            </StaggerItem>
-            {remainingServices.map((service, index) => (
+          <StaggerContainer className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4" staggerDelay={0.08}>
+            {services.map((service, index) => (
               <StaggerItem key={service.slug}>
-                <ServiceCard service={service} index={index + 1} />
+                <ServiceCard service={service} index={index} />
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -254,7 +268,7 @@ export default function HomePage() {
       </section>
 
       {/* Solutions */}
-      <section className="border-y border-border/40 bg-brand-muted py-20 md:py-28" id="solutions">
+      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20" id="solutions">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -303,7 +317,7 @@ export default function HomePage() {
       </section>
 
       {/* How We Work */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
@@ -319,7 +333,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Infinity Techiez */}
-      <section className="relative overflow-hidden border-y border-border/40 bg-brand-ink py-20 md:py-28">
+      <section className="relative overflow-hidden border-y border-border/40 bg-brand-ink py-16 md:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(37,99,235,0.18),transparent_45%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.12),transparent_45%)]" />
         <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -352,7 +366,7 @@ export default function HomePage() {
       </section>
 
       {/* About preview */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <FadeIn direction="right" className="order-2 lg:order-1">
@@ -406,7 +420,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="border-y border-border/40 bg-brand-muted py-20 md:py-28">
+      <section className="border-y border-border/40 bg-brand-muted py-16 md:py-20">
         <FAQPageSchema items={faqItems} />
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn className="mx-auto max-w-2xl">
@@ -423,7 +437,7 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative overflow-hidden bg-brand-ink py-24 md:py-32">
+      <section className="relative overflow-hidden bg-brand-ink py-16 md:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(37,99,235,0.2),transparent_45%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.15),transparent_45%)]" />
         <div className="container relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">

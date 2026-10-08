@@ -25,7 +25,7 @@ export default function LandingIndexPage() {
         description="Focused pages for specific business technology needs, from business email setup to provider-specific configuration and administration."
         gradient
       />
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeading
