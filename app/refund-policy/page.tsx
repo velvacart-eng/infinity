@@ -20,38 +20,37 @@ export default function RefundPolicyPage() {
         title="Refund Policy"
         description="Our approach to refunds and service credits."
       />
-      <section className="py-16 md:py-24">
+      <section className="py-14 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-slate max-w-none">
-            <p>
-              {businessInfo.brandName}, a brand operated by{" "}
-              {businessInfo.legalName}, aims to deliver services as agreed with
-              each client. This refund policy outlines how we handle refund
-              requests.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">Service fees</h2>
-            <p>
-              Fees for one-time projects and recurring services are agreed in
-              writing before work begins. Details are included in the service
-              agreement or statement of work.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">Refund requests</h2>
-            <p>
-              Refund requests are reviewed on a case-by-case basis. We consider
-              factors such as the services already delivered, the reason for the
-              request and the terms of the applicable agreement.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">Third-party costs</h2>
-            <p>
-              Costs paid to third-party providers such as domain registrars,
-              hosting platforms or cloud providers are generally non-refundable
-              according to those providers&apos; policies.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">Contact us</h2>
-            <p>
-              To discuss a refund or billing concern, please contact us through the
-              information on our Contact page.
-            </p>
+          <p className="leading-relaxed text-muted-foreground">
+            {businessInfo.brandName}, a brand operated by{" "}
+            {businessInfo.legalName}, aims to deliver services as agreed with each
+            client. This refund policy outlines how we handle refund requests.
+          </p>
+          <div className="mt-10 space-y-8">
+            {[
+              {
+                title: "Service fees",
+                text: "Fees for one-time projects and recurring services are agreed in writing before work begins. Details are included in the service agreement or statement of work.",
+              },
+              {
+                title: "Refund requests",
+                text: "Refund requests are reviewed on a case-by-case basis. We consider factors such as the services already delivered, the reason for the request and the terms of the applicable agreement.",
+              },
+              {
+                title: "Third-party costs",
+                text: "Costs paid to third-party providers such as domain registrars, hosting platforms or cloud providers are generally non-refundable according to those providers' policies.",
+              },
+              {
+                title: "Contact us",
+                text: "To discuss a refund or billing concern, please contact us through the information on our Contact page.",
+              },
+            ].map((item) => (
+              <div key={item.title}>
+                <h2 className="text-h3 font-semibold tracking-tight">{item.title}</h2>
+                <p className="mt-2 leading-relaxed text-muted-foreground">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

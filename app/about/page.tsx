@@ -1,10 +1,9 @@
 import { PageHero } from "@/components/page-hero";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTAButton } from "@/components/cta-button";
-import { FeatureCard } from "@/components/feature-card";
 import { businessInfo } from "@/lib/config";
 import { createMetadata } from "@/lib/seo";
-import { Target, MessageSquare, Wrench, TrendingUp } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 export const metadata = createMetadata({
   title: "About Infinity Techiez",
@@ -14,26 +13,19 @@ export const metadata = createMetadata({
 });
 
 const approach = [
-  {
-    title: "Business First",
-    description: "We start with your business objectives before recommending technology.",
-    icon: Target,
-  },
-  {
-    title: "Clear Communication",
-    description: "We explain options in plain language so you stay in control.",
-    icon: MessageSquare,
-  },
-  {
-    title: "Practical Solutions",
-    description: "We avoid unnecessary complexity and focus on what works.",
-    icon: Wrench,
-  },
-  {
-    title: "Long-Term Thinking",
-    description: "We build technology that can grow with your business.",
-    icon: TrendingUp,
-  },
+  "Start with business objectives before recommending technology",
+  "Explain options in plain language so clients stay informed",
+  "Avoid unnecessary complexity and focus on practical solutions",
+  "Plan for long-term manageability, not just immediate setup",
+];
+
+const technologyAreas = [
+  "Business email and domain management",
+  "Web hosting and cloud services",
+  "IT infrastructure and connectivity",
+  "Cybersecurity and data protection",
+  "Backup, recovery and continuity planning",
+  "Ongoing IT management and administration",
 ];
 
 export default function AboutPage() {
@@ -47,69 +39,100 @@ export default function AboutPage() {
         description={`${businessInfo.brandName} is a brand operated by ${businessInfo.legalName}. We help businesses manage essential IT and technology services through a practical, business-friendly approach.`}
       />
 
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+      <section className="py-14 md:py-20">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
             <div>
-              <h2 className="text-h2 font-bold tracking-tight">What We Do</h2>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              <h2 className="text-h2 font-semibold tracking-tight">What we do</h2>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
                 {businessInfo.brandName} provides a modular portfolio of business
-                technology services, including business email, domains and DNS,
-                web hosting, cloud services, IT infrastructure, cybersecurity,
-                backup and recovery, and IT management.
+                technology services. We help organizations set up, manage and
+                maintain the systems they rely on every day, from business email
+                and domains to hosting, cloud services, infrastructure, security,
+                backup and ongoing IT administration.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-4 leading-relaxed text-muted-foreground">
                 Our focus is on making these services work together so your
                 business has dependable communication, infrastructure and data
                 protection.
               </p>
             </div>
             <div>
-              <h2 className="text-h2 font-bold tracking-tight">Who We Serve</h2>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                We work with small and medium businesses, startups, professional
-                services firms, remote teams and growing organizations that need
-                reliable technology administration without the overhead of a
-                large internal IT department.
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                We do not claim to serve specific industries unless we have an
-                established relationship; we tailor each engagement to the
-                client&apos;s environment.
-              </p>
+              <h2 className="text-h2 font-semibold tracking-tight">Our approach</h2>
+              <ul className="mt-4 space-y-3">
+                {approach.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-accent-dark" aria-hidden="true" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y bg-brand-muted/30 py-16 md:py-24">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-10 text-center text-h2 font-bold tracking-tight">
-            Our Approach
-          </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {approach.map((item) => (
-              <FeatureCard
-                key={item.title}
-                title={item.title}
-                description={item.description}
-                icon={item.icon}
-              />
-            ))}
+      <section className="border-y bg-brand-muted py-14 md:py-20">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div>
+              <h2 className="text-h2 font-semibold tracking-tight">Areas of technology</h2>
+              <p className="mt-4 text-muted-foreground">
+                We support businesses across the core technology areas that keep
+                operations running.
+              </p>
+            </div>
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {technologyAreas.map((area) => (
+                <li key={area} className="flex items-start gap-3">
+                  <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-accent-dark" aria-hidden="true" />
+                  <span className="text-sm text-muted-foreground">{area}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-14 md:py-20">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div>
+              <h2 className="text-h2 font-semibold tracking-tight">Why businesses work with us</h2>
+              <p className="mt-4 text-muted-foreground">
+                We keep technology decisions practical and aligned with business
+                needs. Our clients value clear communication, reliable delivery
+                and a service model that does not require building a large
+                internal IT team.
+              </p>
+            </div>
+            <ul className="space-y-3">
+              {[
+                "Modular services that scale with your business",
+                "Plain-language explanations and transparent scope",
+                "Security-conscious, responsible technology practices",
+                "Ongoing administration and technology management options",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-accent-dark" aria-hidden="true" />
+                  <span className="text-muted-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y bg-brand-muted py-14 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-h2 font-bold tracking-tight">Let&apos;s Talk</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <h2 className="text-h2 font-semibold tracking-tight">Let&apos;s Talk</h2>
+          <p className="mt-4 text-muted-foreground">
             Tell us what your business needs help with and our team can review
             your requirements.
           </p>
-          <div className="mt-8">
+          <div className="mt-6">
             <CTAButton href="/contact" size="lg" showArrow>
-              Talk to Our Team
+              Talk to Us
             </CTAButton>
           </div>
         </div>

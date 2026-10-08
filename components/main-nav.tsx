@@ -11,20 +11,17 @@ export function MainNav() {
   return (
     <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
       {mainNav.map((item) => {
-        const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+        const active = pathname === item.href || (item.href !== "/" && pathname.startsWith(`${item.href}/`));
         return (
           <Link
             key={item.href}
             href={item.href}
             className={cn(
-              "relative rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring",
-              active ? "text-foreground" : "text-muted-foreground"
+              "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring",
+              active && "text-foreground"
             )}
           >
             {item.label}
-            {active && (
-              <span className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-brand-accent" />
-            )}
           </Link>
         );
       })}

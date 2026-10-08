@@ -1,5 +1,4 @@
 import { PageHero } from "@/components/page-hero";
-import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTAButton } from "@/components/cta-button";
@@ -13,6 +12,27 @@ export const metadata = createMetadata({
   path: "/services",
 });
 
+const groups = [
+  {
+    title: "Communication",
+    slugs: ["business-email", "domains-dns"],
+  },
+  {
+    title: "Infrastructure",
+    slugs: ["web-hosting", "cloud-services", "it-infrastructure"],
+  },
+  {
+    title: "Protection",
+    slugs: ["cybersecurity", "backup-recovery"],
+  },
+  {
+    title: "Management",
+    slugs: ["it-management"],
+  },
+];
+
+const serviceMap = new Map(services.map((s) => [s.slug, s]));
+
 export default function ServicesPage() {
   return (
     <>
@@ -25,20 +45,28 @@ export default function ServicesPage() {
       />
       <section className="py-16 md:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            title="Core services"
-            description="Services we deliver to help businesses operate reliably and securely."
-          />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+          <div className="space-y-14">
+            {groups.map((group) => (
+              <div key={group.title}>
+                <h2 className="mb-6 text-h3 font-semibold tracking-tight">
+                  {group.title}
+                </h2>
+                <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {group.slugs
+                    .map((slug) => serviceMap.get(slug))
+                    .filter(Boolean)
+                    .map((service) => (
+                      <ServiceCard key={service!.slug} service={service!} />
+                    ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
-      <section className="border-y bg-brand-muted/30 py-16 md:py-24">
+      <section className="border-y bg-brand-muted py-16 md:py-24">
         <div className="container mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-h2 font-bold tracking-tight">
+          <h2 className="text-h2 font-semibold tracking-tight">
             Need help choosing the right service?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -46,7 +74,7 @@ export default function ServicesPage() {
           </p>
           <div className="mt-8">
             <CTAButton href="/contact" size="lg" showArrow>
-              Talk to Our Team
+              Talk to Us
             </CTAButton>
           </div>
         </div>

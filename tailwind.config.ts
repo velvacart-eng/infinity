@@ -63,12 +63,20 @@ const config: Config = {
       },
       fontSize: {
         display: [
-          "clamp(2.25rem, 5vw + 1rem, 3.5rem)",
-          { lineHeight: "1.1", letterSpacing: "-0.02em" },
+          "clamp(2.25rem, 4vw + 0.5rem, 2.75rem)",
+          { lineHeight: "1.15", letterSpacing: "-0.02em" },
+        ],
+        h1: [
+          "clamp(1.75rem, 2.5vw + 0.5rem, 2rem)",
+          { lineHeight: "1.2", letterSpacing: "-0.01em" },
         ],
         h2: [
-          "clamp(1.75rem, 2.5vw + 0.5rem, 2.25rem)",
-          { lineHeight: "1.2", letterSpacing: "-0.01em" },
+          "clamp(1.5rem, 2vw + 0.25rem, 1.625rem)",
+          { lineHeight: "1.25", letterSpacing: "-0.01em" },
+        ],
+        h3: [
+          "1.125rem",
+          { lineHeight: "1.35", letterSpacing: "-0.01em" },
         ],
       },
     },

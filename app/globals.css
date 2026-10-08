@@ -4,40 +4,40 @@
 
 @layer base {
   :root {
-    /* Brand palette */
-    --brand-navy: 222 47% 11%;
-    --brand-slate: 215 25% 27%;
-    --brand-accent: 217 91% 60%;
-    --brand-accent-dark: 221 83% 53%;
-    --brand-muted: 210 40% 96%;
+    /* Brand palette — restrained corporate */
+    --brand-navy: 220 18% 16%;
+    --brand-slate: 215 14% 38%;
+    --brand-accent: 205 65% 40%;
+    --brand-accent-dark: 205 70% 34%;
+    --brand-muted: 210 20% 97%;
     --brand-surface: 0 0% 100%;
 
     --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --foreground: 220 18% 16%;
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 220 18% 16%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 217 91% 60%;
+    --popover-foreground: 220 18% 16%;
+    --primary: 205 65% 40%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 215 25% 27%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222 47% 11%;
-    --destructive: 0 84% 60%;
+    --secondary: 210 20% 97%;
+    --secondary-foreground: 220 18% 16%;
+    --muted: 210 20% 97%;
+    --muted-foreground: 215 14% 45%;
+    --accent: 210 20% 97%;
+    --accent-foreground: 220 18% 16%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 205 65% 40%;
     --radius: 0.5rem;
 
     /* Typography scale */
-    --text-display: 3rem;
-    --text-h1: 2.25rem;
-    --text-h2: 1.875rem;
-    --text-h3: 1.25rem;
+    --text-display: 2.75rem;
+    --text-h1: 2rem;
+    --text-h2: 1.625rem;
+    --text-h3: 1.125rem;
     --text-body: 1rem;
     --text-lead: 1.125rem;
     --text-sm: 0.875rem;

@@ -1,61 +1,57 @@
+import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
-import { SectionHeading } from "@/components/section-heading";
-import { FeatureCard } from "@/components/feature-card";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTAButton } from "@/components/cta-button";
-import {
-  Building2,
-  Cloud,
-  Mail,
-  Shield,
-  Server,
-  Settings,
-} from "lucide-react";
+import { ArrowRight, Cloud, Mail, Network, Shield, Settings } from "lucide-react";
 import { createMetadata } from "@/lib/seo";
 
 const solutions = [
   {
-    title: "Small Business IT",
-    description:
-      "Technology foundations for growing businesses: reliable email, domains, hosting and manageable IT support.",
-    icon: Building2,
-  },
-  {
     title: "Business Communication",
     description:
-      "Professional email, domain-based identities and collaboration tools that keep teams connected.",
+      "Professional email, domain-based identities and DNS management that keep your business connected and reachable.",
     icon: Mail,
+    services: ["Business Email", "Domains & DNS"],
+    href: "/services/business-email",
   },
   {
-    title: "Cloud & Infrastructure",
+    title: "Website & Online Infrastructure",
     description:
-      "Cloud services, hosting, servers and networking configured to support business operations.",
+      "Web hosting, domain connection and cloud services that keep your website and online tools accessible.",
     icon: Cloud,
+    services: ["Web Hosting", "Cloud Services"],
+    href: "/services/web-hosting",
   },
   {
-    title: "Security & Continuity",
+    title: "IT Infrastructure",
     description:
-      "Cybersecurity reviews, access controls, backup strategies and recovery planning to reduce business risk.",
+      "Networks, servers, systems and connectivity configured to support your business operations.",
+    icon: Network,
+    services: ["IT Infrastructure", "Cloud Services"],
+    href: "/services/it-infrastructure",
+  },
+  {
+    title: "Security & Data Protection",
+    description:
+      "Cybersecurity, access controls, backup strategies and recovery planning to reduce business risk.",
     icon: Shield,
+    services: ["Cybersecurity", "Backup & Recovery"],
+    href: "/services/cybersecurity",
   },
   {
-    title: "Managed Technology",
+    title: "Technology Management",
     description:
-      "Ongoing administration and technology management for businesses without a large internal IT team.",
+      "Ongoing administration, vendor coordination and technology management for businesses without a large internal IT team.",
     icon: Settings,
-  },
-  {
-    title: "Infrastructure Scale-Up",
-    description:
-      "Servers, networks and cloud resources scaled to the stage and workload requirements of your business.",
-    icon: Server,
+    services: ["IT Management"],
+    href: "/services/it-management",
   },
 ];
 
 export const metadata = createMetadata({
   title: "Business Technology Solutions",
   description:
-    "Explore business technology solutions from Infinity Techiez: small business IT, communication, cloud, security, continuity and managed technology.",
+    "Explore business technology solutions from Infinity Techiez: communication, cloud, infrastructure, security, continuity and managed technology.",
   path: "/solutions",
 });
 
@@ -69,20 +65,33 @@ export default function SolutionsPage() {
         title="Business Technology Solutions"
         description="Technology configurations organized by common business needs. Each solution combines the right services to help your business operate reliably and securely."
       />
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            title="Solutions by business need"
-            description="Practical technology configurations for small businesses, communication, cloud infrastructure, security and ongoing management."
-          />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <section className="py-14 md:py-20">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4">
             {solutions.map((solution) => (
-              <FeatureCard
+              <Link
                 key={solution.title}
-                title={solution.title}
-                description={solution.description}
-                icon={solution.icon}
-              />
+                href={solution.href}
+                className="group flex flex-col gap-4 rounded-lg border bg-card p-5 transition-colors hover:border-primary/30 sm:flex-row sm:items-start sm:gap-6"
+              >
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-primary/10 bg-primary/5 text-brand-accent-dark">
+                  <solution.icon className="h-4 w-4" aria-hidden="true" />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-h3 font-semibold">{solution.title}</h2>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    {solution.description}
+                  </p>
+                  <p className="mt-3 text-xs text-muted-foreground">
+                    Related services:{" "}
+                    <span className="text-foreground">{solution.services.join(", ")}</span>
+                  </p>
+                </div>
+                <span className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-brand-accent-dark transition-colors group-hover:text-brand-accent sm:pt-1">
+                  Learn more
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                </span>
+              </Link>
             ))}
           </div>
           <div className="mt-12 text-center">

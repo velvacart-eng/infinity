@@ -20,38 +20,37 @@ export default function PrivacyPolicyPage() {
         title="Privacy Policy"
         description="How we handle information in connection with our business technology services."
       />
-      <section className="py-16 md:py-24">
+      <section className="py-14 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-slate max-w-none">
-            <p>
-              {businessInfo.brandName} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) is a brand operated by{" "}
-              {businessInfo.legalName}. This Privacy Policy describes how we
-              collect, use and protect information in connection with our
-              website and services.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">Information we collect</h2>
-            <p>
-              We collect information you provide directly, such as name,
-              company, email, phone and service interests, when you complete a
-              contact or service request form.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">How we use information</h2>
-            <p>
-              We use the information we collect to respond to inquiries,
-              evaluate service needs, communicate with you and improve our
-              services.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">How we protect information</h2>
-            <p>
-              We apply reasonable administrative, technical and physical
-              safeguards to protect information. However, no system is
-              completely secure.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">Contact us</h2>
-            <p>
-              If you have questions about this Privacy Policy, please contact us
-              through the information on our Contact page.
-            </p>
+          <p className="leading-relaxed text-muted-foreground">
+            {businessInfo.brandName} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) is a brand operated by{" "}
+            {businessInfo.legalName}. This Privacy Policy describes how we collect,
+            use and protect information in connection with our website and services.
+          </p>
+          <div className="mt-10 space-y-8">
+            {[
+              {
+                title: "Information we collect",
+                text: "We collect information you provide directly, such as name, company, email, phone and service interests, when you complete a contact or service request form.",
+              },
+              {
+                title: "How we use information",
+                text: "We use the information we collect to respond to inquiries, evaluate service needs, communicate with you and improve our services.",
+              },
+              {
+                title: "How we protect information",
+                text: "We apply reasonable administrative, technical and physical safeguards to protect information. However, no system is completely secure.",
+              },
+              {
+                title: "Contact us",
+                text: "If you have questions about this Privacy Policy, please contact us through the information on our Contact page.",
+              },
+            ].map((item) => (
+              <div key={item.title}>
+                <h2 className="text-h3 font-semibold tracking-tight">{item.title}</h2>
+                <p className="mt-2 leading-relaxed text-muted-foreground">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

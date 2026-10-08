@@ -18,54 +18,46 @@ export default function ContactPage() {
         <Breadcrumbs items={[{ label: "Contact", href: "/contact" }]} />
       </div>
       <PageHero
-        title="Let's Talk About Your Technology Needs"
-        description="Tell us what your business needs help with and our team can review your requirements."
+        title="Tell Us About Your Technology Requirement"
+        description="Use the form to request information about any of our services. We will review your message and follow up with next steps."
       />
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight">Send us a message</h2>
-              <p className="mt-4 text-muted-foreground">
-                Use the form to request information about any of our services.
-                We will review your message and follow up with next steps.
+      <section className="py-14 md:py-20">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-5 lg:gap-12">
+            <div className="lg:col-span-2">
+              <h2 className="text-h3 font-semibold tracking-tight">Contact information</h2>
+              <p className="mt-3 text-muted-foreground">
+                We will use the information you provide only to respond to your
+                inquiry.
               </p>
-              <div className="mt-8 space-y-4 text-muted-foreground">
+              <div className="mt-6 space-y-4 text-sm text-muted-foreground">
                 {businessInfo.email && (
                   <p>
-                    <strong className="block text-sm font-medium uppercase tracking-wide text-foreground">
-                      Email
-                    </strong>
+                    <strong className="block text-foreground">Email</strong>
                     {businessInfo.email}
                   </p>
                 )}
                 {businessInfo.phone && (
                   <p>
-                    <strong className="block text-sm font-medium uppercase tracking-wide text-foreground">
-                      Phone
-                    </strong>
+                    <strong className="block text-foreground">Phone</strong>
                     {businessInfo.phone}
                   </p>
                 )}
                 {businessInfo.address && (
                   <p>
-                    <strong className="block text-sm font-medium uppercase tracking-wide text-foreground">
-                      Address
-                    </strong>
+                    <strong className="block text-foreground">Address</strong>
                     {businessInfo.address}
                   </p>
                 )}
                 {businessInfo.hours && (
                   <p>
-                    <strong className="block text-sm font-medium uppercase tracking-wide text-foreground">
-                      Hours
-                    </strong>
+                    <strong className="block text-foreground">Hours</strong>
                     {businessInfo.hours}
                   </p>
                 )}
               </div>
             </div>
-            <div className="rounded-xl border bg-card p-6 shadow-sm sm:p-8">
+            <div className="rounded-lg border bg-card p-5 sm:p-8 lg:col-span-3">
               <ContactForm />
             </div>
           </div>

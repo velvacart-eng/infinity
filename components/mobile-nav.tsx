@@ -12,9 +12,8 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { mainNav, contactNav } from "@/lib/config";
+import { mainNav } from "@/lib/config";
 
 export function MobileNav() {
   const pathname = usePathname();
@@ -32,14 +31,14 @@ export function MobileNav() {
         </SheetHeader>
         <nav aria-label="Mobile" className="mt-6 flex flex-1 flex-col gap-1">
           {mainNav.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            const active = pathname === item.href || (item.href !== "/" && pathname.startsWith(`${item.href}/`));
             return (
               <SheetClose asChild key={item.href}>
                 <Link
                   href={item.href}
                   className={cn(
-                    "rounded-md px-3 py-2.5 text-base font-medium transition-colors hover:bg-muted hover:text-foreground",
-                    active ? "bg-muted text-foreground" : "text-muted-foreground"
+                    "rounded-md px-3 py-2.5 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground",
+                    active && "bg-muted text-foreground"
                   )}
                 >
                   {item.label}
@@ -47,23 +46,11 @@ export function MobileNav() {
               </SheetClose>
             );
           })}
-          <Separator className="my-3" />
-          <SheetClose asChild>
-            <Link
-              href={contactNav.href}
-              className={cn(
-                "rounded-md px-3 py-2.5 text-base font-medium transition-colors hover:bg-muted hover:text-foreground",
-                pathname === contactNav.href ? "bg-muted text-foreground" : "text-muted-foreground"
-              )}
-            >
-              {contactNav.label}
-            </Link>
-          </SheetClose>
         </nav>
         <div className="mt-auto pt-6">
           <SheetClose asChild>
             <Button asChild className="w-full">
-              <Link href="/contact">Talk to Our Team</Link>
+              <Link href="/contact">Talk to Us</Link>
             </Button>
           </SheetClose>
         </div>

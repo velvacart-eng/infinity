@@ -20,40 +20,40 @@ export default function ServiceDeliveryPage() {
         title="Service Delivery"
         description="How we scope, deliver and support business technology services."
       />
-      <section className="py-16 md:py-24">
+      <section className="py-14 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-slate max-w-none">
-            <p>
-              {businessInfo.brandName} follows a structured approach to service
-              delivery so clients understand what to expect at each stage.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">1. Discovery</h2>
-            <p>
-              We start by understanding your business, existing technology and the
-              outcomes you need. This may involve questionnaires, interviews and
-              reviews of current systems.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">2. Proposal</h2>
-            <p>
-              We provide a clear proposal or statement of work describing scope,
-              deliverables, timelines and pricing before work begins.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">3. Implementation</h2>
-            <p>
-              We implement the agreed solution with minimal disruption to your
-              operations, communicating progress throughout the process.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">4. Handover and support</h2>
-            <p>
-              After delivery, we provide documentation, training if needed and
-              ongoing support according to the agreed service level.
-            </p>
-            <h2 className="mt-8 text-2xl font-semibold">Service levels</h2>
-            <p>
-              Support response times and availability are defined in each client
-              agreement. Standard business hours apply unless an extended support
-              plan is in place.
-            </p>
+          <p className="leading-relaxed text-muted-foreground">
+            {businessInfo.brandName} follows a structured approach to service
+            delivery so clients understand what to expect at each stage.
+          </p>
+          <div className="mt-10 space-y-8">
+            {[
+              {
+                title: "1. Discovery",
+                text: "We start by understanding your business, existing technology and the outcomes you need. This may involve questionnaires, interviews and reviews of current systems.",
+              },
+              {
+                title: "2. Proposal",
+                text: "We provide a clear proposal or statement of work describing scope, deliverables, timelines and pricing before work begins.",
+              },
+              {
+                title: "3. Implementation",
+                text: "We implement the agreed solution with minimal disruption to your operations, communicating progress throughout the process.",
+              },
+              {
+                title: "4. Handover and support",
+                text: "After delivery, we provide documentation, training if needed and ongoing support according to the agreed service level.",
+              },
+              {
+                title: "Service levels",
+                text: "Support response times and availability are defined in each client agreement. Standard business hours apply unless an extended support plan is in place.",
+              },
+            ].map((item) => (
+              <div key={item.title}>
+                <h2 className="text-h3 font-semibold tracking-tight">{item.title}</h2>
+                <p className="mt-2 leading-relaxed text-muted-foreground">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

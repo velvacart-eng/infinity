@@ -26,7 +26,7 @@ export function CTAButton({
       variant={variant}
       size={size}
       className={cn(
-        "group inline-flex items-center gap-2 transition-transform hover:-translate-y-px",
+        "group inline-flex items-center gap-2 transition-colors",
         className
       )}
     >
