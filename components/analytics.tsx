@@ -3,6 +3,8 @@ import Script from "next/script";
 export function Analytics() {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+  const gtagIds = [gaId, adsId].filter(Boolean) as string[];
 
   return (
     <>
@@ -15,17 +17,19 @@ export function Analytics() {
           }}
         />
       )}
-      {gaId && (
+      {gtagIds.length > 0 && (
         <>
           <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${gtagIds[0]}`}
             strategy="afterInteractive"
           />
           <Script
-            id="ga"
+            id="gtag-config"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
-              __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gaId}');`,
+              __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); ${gtagIds
+                .map((id) => `gtag('config', '${id}');`)
+                .join(" ")}`,
             }}
           />
         </>

@@ -2093,6 +2093,192 @@ export const landingPages: LandingPage[] = [
     canonical: `${businessInfo.siteUrl}/it-services/business-email-configuration`,
     breadcrumbs: baseBreadcrumbs("Business Email Configuration", "business-email-configuration"),
   },
+  {
+    slug: "email-diagnostics",
+    image: {
+      src: "/images/lp-email-client.png",
+      alt: "Illustration of email delivery diagnostics across business devices and mail servers",
+    },
+    title: "Email Diagnostics & Issue Resolution Services",
+    eyebrow: "Business Email Diagnostics",
+    shortDescription:
+      "Independent business email diagnostics and issue resolution — email not sending or receiving, client configuration failures, Outlook connectivity, spam cleanup and bulk mailbox deletion.",
+    intro: [
+      "When business email stops working, the cause can sit anywhere in the chain: the mailbox platform, the domain's DNS records, authentication policies, the email client on each device, or the account itself. Diagnosing these problems requires checking each layer methodically rather than guessing at settings.",
+      "Infinity Techiez provides independent email diagnostics and issue resolution for businesses. We locate where delivery, connectivity or configuration is breaking down, correct what is within scope, and tell you clearly when a problem is controlled by your provider and must be handled through their official process. We work with your existing email platform as an independent service provider — not on behalf of any vendor.",
+    ],
+    serviceCategory: "Business Email",
+    searchIntent:
+      "email not working, email not sending, email not receiving, email not working outlook, email client issues, business email diagnostics, email issue resolution services",
+    whatWeHelpWith: [
+      {
+        title: "Email not sending",
+        description: "Diagnose outbound delivery failures — SMTP authentication errors, wrong ports, blocked sending, full mailboxes or messages stuck in outboxes and queues.",
+      },
+      {
+        title: "Email not receiving",
+        description: "Trace inbound delivery through MX records, forwarding rules, spam filters, mailbox quotas and server-side rules to find where messages are being lost.",
+      },
+      {
+        title: "Email not working at all",
+        description: "Methodical diagnostics when email fails completely — sign-in issues, expired configurations, suspended mailboxes or provider-side outages and account changes.",
+      },
+      {
+        title: "Email not configuring",
+        description: "Correct failed account setups — invalid server settings, authentication mismatches, legacy protocol deprecation and incorrect port or encryption choices.",
+      },
+      {
+        title: "Email not working in Outlook",
+        description: "Resolve Outlook profile corruption, cached credential loops, send/receive errors, add-in conflicts and incorrect account settings after provider changes.",
+      },
+      {
+        title: "Email not working in other clients",
+        description: "Diagnose connectivity in Apple Mail, Thunderbird, webmail and mobile apps — including IMAP/POP setting mismatches and sync failures across devices.",
+      },
+      {
+        title: "Spam and unwanted email removal",
+        description: "Clean accumulated junk mail, create filtering rules that keep it out, and review blocklists and allowlists so legitimate business mail is not caught.",
+      },
+      {
+        title: "Bulk email deletion",
+        description: "Remove large volumes of old or unwanted messages safely, free up mailbox storage and archive what must be kept — without losing anything important.",
+      },
+    ],
+    benefits: [
+      "Faster diagnosis because every layer is checked in the right order",
+      "Outbound and inbound mail tested and verified, not just adjusted",
+      "Clients on desktop and mobile configured to a documented standard",
+      "Clear answers on which problems are provider-side versus yours",
+      "Documented fixes so the same issue is resolved faster next time",
+      "Storage reclaimed and mailboxes cleaned without data loss",
+    ],
+    scenarios: [
+      {
+        title: "Email stopped sending",
+        description: "Outbound mail is stuck or rejected — often after a provider password change, a disabled legacy authentication method or a blacklisted IP.",
+      },
+      {
+        title: "Email stopped arriving",
+        description: "Inbound mail goes missing — a changed MX record, an expired domain, a full mailbox or an over-aggressive spam rule is usually responsible.",
+      },
+      {
+        title: "Outlook keeps asking for credentials",
+        description: "Outlook prompts repeatedly after a provider security change — modern authentication requirements, stale profiles or server setting updates are the usual causes.",
+      },
+      {
+        title: "New devices will not configure",
+        description: "Account setup fails on phones or desktops because the provider now requires app passwords, OAuth sign-in or updated server addresses.",
+      },
+      {
+        title: "Mailbox full of junk and old mail",
+        description: "Years of spam and outdated messages have filled the mailbox, storage warnings are appearing and important mail needs protecting during cleanup.",
+      },
+      {
+        title: "Works on one device, not another",
+        description: "Mail syncs on a laptop but not a phone — typically an IMAP versus POP mismatch, a missing account on one device or divergent settings.",
+      },
+    ],
+    detailedSections: [
+      {
+        title: "How we diagnose email problems",
+        paragraphs: [
+          "Effective email diagnostics follow the path a message takes. For sending problems we check the client's SMTP settings and authentication, then the account's sending permissions, then server-side queues and reputation. For receiving problems we check the domain's MX records and expiry, then forwarding and server-side rules, then filters and mailbox storage, and finally the client itself.",
+          "This order matters because most email failures are boundary problems: the account is fine but the DNS changed, the server is fine but the client holds stale credentials, or the client is fine but a spam filter quietly drops messages. Checking layers in the wrong order wastes time and leaves the real cause untouched.",
+        ],
+      },
+      {
+        title: "Email client and device issues",
+        paragraphs: [
+          "Outlook, Apple Mail, Thunderbird and mobile mail apps each store account settings differently, and each fails in characteristic ways. Outlook profiles corrupt and cached credentials loop; Apple Mail breaks when providers change OAuth flows; mobile apps fail when legacy password authentication is disabled.",
+          "When a provider tightens security — deprecating basic authentication, requiring app-specific passwords or changing server hostnames — previously working clients fail together. We update client settings to the provider's current requirements and document them so your environment stays consistent.",
+        ],
+      },
+      {
+        title: "When the problem is on the provider's side",
+        paragraphs: [
+          "Some email problems can only be resolved by the mailbox provider: suspended accounts, sign-in verification, provider outages, blacklisted sending addresses controlled by their platform, and provider-initiated platform migrations.",
+          "In those cases we identify the exact issue, tell you precisely what to ask the provider for, and handle everything on our side — reconfiguring clients, updating DNS records, updating authentication — once the provider completes their part.",
+        ],
+      },
+      {
+        title: "Spam removal and mailbox cleanup",
+        paragraphs: [
+          "Mailbox cleanup is a storage and hygiene exercise as much as a comfort one. We remove spam, expired notifications and years of accumulated clutter in bulk, configure filters so junk stops arriving, and protect folders and messages flagged as important before any deletion happens.",
+          "For mailboxes nearing storage limits we combine bulk deletion with archiving — moving older mail to archive storage or local archives — so the active mailbox stays within quota while history remains accessible.",
+        ],
+      },
+    ],
+    process: [
+      { step: "01", title: "Scope", description: "Define exactly what is failing — sending, receiving, configuring or specific devices — and on which accounts and clients." },
+      { step: "02", title: "Diagnose", description: "Check each layer in order: client settings, account state, DNS records, authentication and provider-side status." },
+      { step: "03", title: "Resolve", description: "Correct the settings, records or configurations identified as the cause, layer by layer." },
+      { step: "04", title: "Refer", description: "Where the cause is provider-controlled, document the issue and guide you through the provider's official process." },
+      { step: "05", title: "Verify", description: "Send and receive test mail on every affected device and confirm sync, filters and delivery." },
+      { step: "06", title: "Document", description: "Record the corrected settings and the root cause so the environment stays maintainable." },
+    ],
+    technicalConsiderations: [
+      { title: "Authentication requirements", description: "Providers increasingly require modern authentication; legacy basic-auth clients fail silently or loop on credential prompts." },
+      { title: "DNS dependencies", description: "MX, SPF, DKIM and DMARC records all affect delivery — a single expired domain or edited record can stop inbound mail entirely." },
+      { title: "Client-side caches", description: "Outlook profiles, cached credentials and mobile app states can hold stale settings long after the server-side problem is fixed." },
+      { title: "Provider changes", description: "Server hostnames, port requirements and security policies change without notice; working configurations can break overnight." },
+      { title: "Storage limits", description: "Full mailboxes silently reject inbound mail; bulk cleanup and archiving restore capacity but must protect retained messages." },
+      { title: "Filter and rule side-effects", description: "Server-side rules and filters can drop, forward or file mail in ways that look like delivery failure." },
+    ],
+    securityConsiderations: [
+      { title: "Credential handling", description: "Access to mailboxes during diagnostics uses the least privilege needed; credentials shared with us should be rotated after the engagement." },
+      { title: "Phishing look-alikes", description: "Failed sign-ins are sometimes caused by security blocks after suspicious activity — we check before treating them as configuration faults." },
+      { title: "Forwarding audits", description: "Unexpected missing mail can indicate unauthorized forwarding rules; we audit rules and delegates during diagnostics." },
+      { title: "Data protection during cleanup", description: "Bulk deletion is preceded by identifying what must be retained or archived so nothing business-critical is removed." },
+    ],
+    whoItIsFor: [
+      "Businesses whose email has stopped sending or receiving",
+      "Teams with Outlook or other email clients failing to connect",
+      "Companies struggling to configure accounts on new devices",
+      "Organizations with mailboxes full of spam or old mail",
+      "Businesses that need a methodical diagnosis rather than trial and error",
+    ],
+    relatedServices: ["business-email-configuration", "business-email-setup", "business-email-dns", "email-security-authentication"],
+    faqs: [
+      {
+        question: "Our email stopped sending or receiving — what do you check first?",
+        answer:
+          "We work through the delivery chain in order: the client settings, the account status, the domain's MX and authentication records, server-side rules and filters, and provider-side service status. Most failures trace to one specific layer, and checking in order finds it quickly.",
+      },
+      {
+        question: "Email is not working in Outlook — can you resolve that?",
+        answer:
+          "Yes. We resolve Outlook profile corruption, cached credential loops, send/receive errors, add-in conflicts and account settings that went stale after provider changes — including updates required for modern authentication.",
+      },
+      {
+        question: "Can you configure email on phones and other clients?",
+        answer:
+          "Yes. We set up and correct accounts in Outlook, Apple Mail, Thunderbird, webmail and mobile apps using the correct server settings, ports and authentication methods for your provider, to a consistent documented standard.",
+      },
+      {
+        question: "Can you remove spam and delete old mail in bulk?",
+        answer:
+          "Yes. We clean junk mail, create filtering rules so it stops arriving, and perform bulk deletion of old or unwanted messages — always after identifying and protecting what must be retained or archived.",
+      },
+      {
+        question: "What if the problem is on our provider's side?",
+        answer:
+          "We identify exactly what the provider needs to do, document the issue for you, and handle every step within our scope once their part is complete. Provider-controlled actions — like account verification — remain with the provider's official process.",
+      },
+      {
+        question: "Are you affiliated with our email provider?",
+        answer:
+          "No. Infinity Techiez is an independent technology services provider and is not affiliated with, sponsored by or endorsed by any email platform vendor. We work with the platform your business already uses.",
+      },
+    ],
+    ctaTitle: "Business email not working the way it should?",
+    ctaDescription:
+      "Tell us what is failing — sending, receiving, configuring or specific devices — and we can diagnose the cause and recommend a practical resolution.",
+    seoTitle: "Email Diagnostics & Issue Resolution Services for Businesses",
+    seoDescription:
+      "Independent business email diagnostics and issue resolution: email not sending or receiving, Outlook and email client problems, configuration failures, spam removal and bulk deletion.",
+    canonical: `${businessInfo.siteUrl}/it-services/email-diagnostics`,
+    breadcrumbs: baseBreadcrumbs("Email Diagnostics & Issue Resolution", "email-diagnostics"),
+  },
 ];
 
 export function getLandingPageBySlug(slug: string): LandingPage | undefined {
