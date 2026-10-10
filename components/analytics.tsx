@@ -1,9 +1,11 @@
 import Script from "next/script";
 
+const GOOGLE_ADS_ID = "AW-18505778292";
+
 export function Analytics() {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
-  const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+  const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || GOOGLE_ADS_ID;
   const gtagIds = [gaId, adsId].filter(Boolean) as string[];
 
   return (
@@ -21,11 +23,11 @@ export function Analytics() {
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${gtagIds[0]}`}
-            strategy="afterInteractive"
+            strategy="beforeInteractive"
           />
           <Script
             id="gtag-config"
-            strategy="afterInteractive"
+            strategy="beforeInteractive"
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); ${gtagIds
                 .map((id) => `gtag('config', '${id}');`)
