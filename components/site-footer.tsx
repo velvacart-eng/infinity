@@ -29,7 +29,7 @@ export function SiteFooter() {
               )}
               {businessInfo.phone && (
                 <a
-                  href={`tel:${businessInfo.phone}`}
+                  href={`tel:${businessInfo.phone.replace(/[^+\d]/g, "")}`}
                   className="flex items-center gap-3 text-slate-400 transition-colors hover:text-white"
                 >
                   <Phone className="h-4 w-4 text-primary" />

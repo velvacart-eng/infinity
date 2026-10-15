@@ -113,7 +113,10 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error("[api/contact] Resend rejected the email:", error);
+      console.error(
+        "[api/contact] Resend rejected the email:",
+        JSON.stringify({ name: error.name, message: error.message, statusCode: (error as { statusCode?: number }).statusCode })
+      );
       return NextResponse.json(
         { ok: false, error: "Could not send your message right now. Please try again or call us." },
         { status: 500 }

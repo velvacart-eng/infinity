@@ -77,9 +77,9 @@ export default function RefundPolicyPage() {
                 ],
               },
               {
-                title: "7. How to request a refund or re-fix",
+                title: "7. How to request a refund or repeat service",
                 paragraphs: [
-                  `Contact us at ${businessInfo.email || "our Contact page"} or call ${businessInfo.phone || "our listed phone number"} within 30 days of the service. Include the email used at purchase, the approximate service date, a description of the issue, and whether you are requesting a re-fix or a refund. We acknowledge requests within 1 business day and provide a decision within 5 business days.`,
+                  `Contact us at ${businessInfo.email || "our Contact page"} or call ${businessInfo.phone || "our listed phone number"} within 30 days of the service. Include the email used at purchase, the approximate service date, a description of the issue, and whether you are requesting repeat service or a refund. We acknowledge requests within 1 business day and provide a decision within 5 business days.`,
                 ],
               },
               {
