@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { SectionHeading } from "@/components/section-heading";
 import { FAQ } from "@/components/faq";
 import { CTAButton } from "@/components/cta-button";
+import { PhoneCTA } from "@/components/phone-cta";
 import { ServiceCard } from "@/components/service-card";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
 import { LandingPage } from "@/types";
@@ -69,14 +70,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
               {page.shortDescription}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <CTAButton
-                href="/contact"
-                size="lg"
-                showArrow
-                conversionEvent={trackingEvents.landingPageContactClick}
-              >
-                Talk to Us
-              </CTAButton>
+              <PhoneCTA size="lg" />
               {primaryService && (
                 <Link
                   href={`/services/${primaryService.slug}`}

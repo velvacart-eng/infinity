@@ -10,6 +10,7 @@
 
 export const trackingEvents = {
   contactCtaClick: "contact_cta_click",
+  phoneCallClick: "phone_call_click",
   landingPageContactClick: "landing_page_contact_click",
   landingPageFormStart: "landing_page_form_start",
   landingPageFormSubmit: "landing_page_form_submit",

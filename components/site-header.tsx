@@ -28,7 +28,7 @@ export function SiteHeader() {
       {/* Main header */}
       <header className="fixed left-0 right-0 top-0 z-40 border-b border-white/10 bg-white/80 shadow-lg shadow-black/5 backdrop-blur-2xl supports-[backdrop-filter]:bg-white/75 sm:top-8">
         <div className="container mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <Logo />
+          <Logo iconOnMobile />
           <div className="flex items-center gap-4">
             <MainNav />
             {businessInfo.phone && (

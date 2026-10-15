@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { FAQ } from "@/components/faq";
 import { CTAButton } from "@/components/cta-button";
+import { PhoneCTA } from "@/components/phone-cta";
 import { ServiceHeroVisual } from "@/components/service-hero-visual";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
 import { Service } from "@/types";
@@ -56,9 +57,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
                 {service.description}
               </p>
               <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row">
-                <CTAButton href="/contact" size="lg" showArrow>
-                  Talk to Us
-                </CTAButton>
+                <PhoneCTA size="lg" />
               </div>
             </FadeIn>
             <FadeIn direction="left" delay={0.15} className="order-1 lg:order-2">
