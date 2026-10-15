@@ -65,6 +65,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Business Email Services",
     shortDescription:
       "Professional business email setup and configuration using your own domain, with mailbox creation, DNS records and email client setup.",
+    heroDetail:
+      "We handle the technical pieces that make professional email work — choosing the right platform, connecting your domain, configuring authentication records and setting up every device your team uses. You get a documented, ready-to-use email environment without needing in-house IT staff.",
     intro: [
       "Business email is often the first technology a new company needs and one of the last ones to be set up correctly. A professional address such as name@yourcompany.com reinforces your brand every time you send a message, but the setup behind it involves more than creating an inbox. It requires the right platform, correct DNS records, authentication settings and a clear account structure that will scale as your team grows.",
       "Infinity Techiez provides independent business technology services that help organizations establish, configure and administer business email environments. We are not an email provider, a domain registrar or a reseller of email accounts. Our role is to assess your needs, connect the technical pieces and document the setup so your team can use it reliably.",
@@ -213,6 +215,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Email Migration",
     shortDescription:
       "Planned business email migration between providers, including mailbox inventory, DNS planning and post-migration verification.",
+    heroDetail:
+      "Moving email between providers involves more than copying mailboxes. We plan the cutover, preserve folders, calendars and contacts, time the DNS changes correctly and verify every account so your team keeps working through the move.",
     intro: [
       "Email migration is one of the most sensitive technology changes a business can make. Messages, calendars, contacts and years of correspondence need to move from one platform to another without being lost or corrupted. At the same time, users need to keep working and external senders need to keep reaching you.",
       "Infinity Techiez provides independent business email migration services for organizations moving between providers or consolidating email platforms. We do not promise zero downtime or guaranteed outcomes; instead, we plan the work carefully, communicate timing clearly and verify the result before final handover.",
@@ -363,6 +367,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Email Management",
     shortDescription:
       "Ongoing business email administration for mailboxes, users, aliases, DNS records and authentication settings.",
+    heroDetail:
+      "As your team changes, mailboxes, aliases, permissions and security settings need regular attention. We act as your email administrator — handling routine changes, onboarding new users and keeping DNS and authentication records accurate.",
     intro: [
       "Once business email is set up, it still needs ongoing administration. Users join and leave, aliases need updates, DNS records change, authentication needs review and security settings must keep pace with evolving threats. Without a clear owner, these tasks can accumulate until something breaks or is compromised.",
       "Infinity Techiez provides independent business email administration for organizations that need reliable ongoing management without building a large internal IT department. We handle the routine work, document changes and help you stay in control of your email environment.",
@@ -506,6 +512,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Email DNS",
     shortDescription:
       "MX, SPF, DKIM, DMARC and other DNS record setup for business email so messages deliver reliably and authenticate correctly.",
+    heroDetail:
+      "DNS records decide where your email is delivered and whether other servers trust it. We audit your existing records, plan changes with safe TTL values and verify propagation so mail keeps flowing while settings are updated.",
     intro: [
       "Email does not work without the right DNS records. MX records tell the world where to deliver your mail. SPF, DKIM and DMARC records tell receiving servers that your messages are legitimate. TXT records handle verification for third-party services. When these records are missing or wrong, email fails silently or lands in spam.",
       "Infinity Techiez provides independent DNS configuration services for business email. We are not a DNS provider or domain registrar; we help you understand and configure the records needed for reliable email delivery and authentication.",
@@ -649,6 +657,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Email Security",
     shortDescription:
       "SPF, DKIM, DMARC, domain authentication and access controls to reduce spoofing, phishing and email account risk.",
+    heroDetail:
+      "Email remains the most common way attackers reach a business. We put the technical controls in place — authentication records, access policies and account protections — that stop spoofed messages and reduce the risk of account takeover.",
     intro: [
       "Email is the most common way attackers target businesses. Spoofed messages, phishing links and compromised accounts can lead to data loss, financial harm and damaged reputation. Technical controls such as SPF, DKIM and DMARC help, but they are only part of a broader security approach.",
       "Infinity Techiez provides independent email security and authentication services for businesses that want practical protection without fear-based selling. We do not claim that these controls eliminate all phishing or email threats; instead, we help you implement sensible measures that reduce common risks.",
@@ -799,6 +809,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
       "Independent assistance with Comcast business email configuration, migration assistance, account administration, DNS settings and email connectivity.",
+    heroDetail:
+      "Many businesses still rely on email addresses tied to their Comcast service. We help you configure and manage those accounts and, when the time is right, move to business email on a domain you control — without losing messages or contacts.",
     intro: [
       "Many businesses receive email services bundled with their Comcast Business internet or voice packages. These email accounts work like other business email, but the configuration details, DNS settings and account management options can be unfamiliar to teams that did not set them up originally.",
       "Infinity Techiez provides independent technology services for businesses that need help with Comcast Business email. We are not Comcast, we are not affiliated with Comcast, and we are not an official Comcast service channel. Our role is to help you configure, administer and manage the email environment you already have so it works reliably for your business.",
@@ -978,6 +990,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
       "Independent assistance with AT&T business email configuration, mailbox setup, DNS/domain considerations and account administration.",
+    heroDetail:
+      "Provider-hosted email accounts often come with limited settings and aging configurations. We work with your existing AT&T setup, fix connectivity and sync issues, and help you plan a transition to business-grade email on your own domain.",
     intro: [
       "AT&T offers business email services through various plans and bundles. For businesses that rely on these accounts, proper configuration and administration are important for reliable communication and deliverability.",
       "Infinity Techiez provides independent technology services for businesses that need help with AT&T business email. We are not AT&T, we are not affiliated with AT&T, and we are not an official AT&T service channel. Our role is to help you configure, administer and manage your email environment so it works reliably for your business.",
@@ -1125,6 +1139,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
       "Independent help with Outlook business email configuration, Microsoft 365 mailboxes, synchronization and account administration.",
+    heroDetail:
+      "Outlook problems usually trace back to profile settings, server configuration or synchronization — not the app itself. We configure accounts correctly on desktops and mobile devices, resolve send and receive errors and keep Microsoft 365 mailboxes properly administered.",
     intro: [
       "Outlook is one of the most widely used business email clients, and Microsoft 365 is a common platform for business email. Whether you are setting up Outlook for the first time, connecting it to a domain, or resolving synchronization problems, the underlying configuration matters.",
       "Infinity Techiez provides independent technology services for businesses that need help with Outlook business email. We are not Microsoft, we are not affiliated with Microsoft, and we are not an official Microsoft service channel. Our role is to help you configure, administer and manage the email environment you already have.",
@@ -1272,6 +1288,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
       "Independent help with Gmail and Google Workspace business email configuration, DNS, authentication and migration.",
+    heroDetail:
+      "Whether you rely on Gmail directly or run Google Workspace, correct configuration matters. We connect your domain, set up authentication records, migrate existing mail and tune settings so business email stays reliable and secure.",
     intro: [
       "Gmail is familiar to many users, but there is an important distinction between personal Gmail accounts and Google Workspace business email. For business use, a domain-based address with admin controls, security settings and centralized management is usually more appropriate.",
       "Infinity Techiez provides independent technology services for businesses that need help with Gmail or Google Workspace email. We are not Google, we are not affiliated with Google, and we are not an official Google service channel. Our role is to help you configure, administer and manage the email environment you already have or are considering.",
@@ -1419,6 +1437,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
       "Independent help with Yahoo business email, provider platform transitions, configuration, administration and connectivity.",
+    heroDetail:
+      "Yahoo-hosted email was never designed as a business platform. We help you maintain existing accounts where needed and plan a safe move to domain-based email, keeping your history, folders and contacts intact.",
     intro: [
       "Yahoo Mail is primarily known as a personal email service, but some businesses use it for specific purposes or have legacy accounts that need to be managed. Yahoo also offers business email options through certain plans or partnerships. When a business relies on Yahoo email, proper configuration and access control are important.",
       "Infinity Techiez provides independent technology services for businesses that need help with Yahoo email in legitimate business contexts. We are not Yahoo, we are not affiliated with Yahoo, and we are not an official Yahoo service channel. Our role is to help you configure, administer and manage the email environment you already have.",
@@ -1586,6 +1606,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Provider-Specific Email Services",
     shortDescription:
       "Independent help with AOL email configuration, account administration and connectivity for legitimate business scenarios.",
+    heroDetail:
+      "Some businesses still depend on long-standing AOL addresses for daily communication. We secure and configure those accounts, resolve access problems and help you transition to professional domain-based email on your own schedule.",
     intro: [
       "AOL Mail is primarily a personal email service, but some businesses maintain legacy AOL accounts or use AOL email for specific purposes. When a business relies on AOL email, correct configuration and access control help ensure reliable communication.",
       "Infinity Techiez provides independent technology services for businesses that need help with AOL email in legitimate business contexts. We are not AOL, we are not affiliated with AOL, and we are not an official AOL service channel. Our role is to help you configure, administer and manage the email environment you already have.",
@@ -1733,6 +1755,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Domain & DNS Services",
     shortDescription:
       "Business domain and DNS management covering record configuration, email dependencies, websites, subdomains, transfers and business continuity.",
+    heroDetail:
+      "Your domain controls far more than your website — email routing, verification records, subdomains and connected services all depend on correct DNS. We document, manage and update every record so nothing breaks when changes are made.",
     intro: [
       "Your domain name and DNS configuration sit underneath almost every digital service your business uses. Email delivery, website availability, hosted applications and verification records all depend on DNS being correct. When DNS is misconfigured, the symptoms surface elsewhere — undelivered email, unreachable websites or broken services — which makes the root cause easy to miss.",
       "Infinity Techiez provides business domain and DNS management as an independent technology services provider. We help organizations register, configure, transfer and maintain their domains, and we manage the DNS records that connect those domains to email, websites and other services. Our role is to keep this layer accurate, documented and under your control.",
@@ -1918,6 +1942,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Business Email Services",
     shortDescription:
       "Business email configuration covering mailboxes, DNS, MX, SMTP, SPF, DKIM, DMARC and email client setup on desktop and mobile devices.",
+    heroDetail:
+      "Correct email configuration touches every device your team uses. We set up mailboxes, server settings, authentication records and email clients consistently, then document the environment so future changes stay straightforward.",
     intro: [
       "Business email works only when several independent systems agree with each other. The mailbox platform, the domain's DNS records, the sending and receiving protocols, and every email client your team uses all have to be configured consistently. A single incorrect value — an MX priority, an SPF mechanism, an SMTP port — can stop delivery or send messages to spam.",
       "Infinity Techiez provides business email configuration as an independent technology services provider. We configure the full chain: mailboxes and accounts, DNS records, authentication policies and the desktop and mobile clients your staff actually use. We work with the email platform you have chosen rather than reselling a specific provider.",
@@ -2103,6 +2129,8 @@ export const landingPages: LandingPage[] = [
     eyebrow: "Business Email Diagnostics",
     shortDescription:
       "Independent business email diagnostics and issue resolution — email not sending or receiving, client configuration failures, Outlook connectivity, spam cleanup and bulk mailbox deletion.",
+    heroDetail:
+      "Email problems are disruptive and often have more than one cause. We trace the real source — DNS, server settings, filters, quotas or client configuration — resolve it and confirm mail flows correctly before we call the job done.",
     intro: [
       "When business email stops working, the cause can sit anywhere in the chain: the mailbox platform, the domain's DNS records, authentication policies, the email client on each device, or the account itself. Diagnosing these problems requires checking each layer methodically rather than guessing at settings.",
       "Infinity Techiez provides independent email diagnostics and issue resolution for businesses. We locate where delivery, connectivity or configuration is breaking down, correct what is within scope, and tell you clearly when a problem is controlled by your provider and must be handled through their official process. We work with your existing email platform as an independent service provider — not on behalf of any vendor.",

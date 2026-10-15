@@ -69,6 +69,11 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground md:text-xl">
               {page.shortDescription}
             </p>
+            {page.heroDetail && (
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+                {page.heroDetail}
+              </p>
+            )}
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <PhoneCTA size="lg" />
               {primaryService && (

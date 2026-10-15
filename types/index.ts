@@ -58,6 +58,7 @@ export interface LandingPage {
   title: string; // H1
   eyebrow?: string;
   shortDescription: string;
+  heroDetail?: string; // second paragraph shown under shortDescription in the hero
   intro: string[];
   image?: { src: string; alt: string };
   providerName?: string;
