@@ -70,7 +70,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
               {page.shortDescription}
             </p>
             {page.heroDetail && (
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p className="mt-4 hidden text-base leading-relaxed text-muted-foreground sm:block md:text-lg">
                 {page.heroDetail}
               </p>
             )}
